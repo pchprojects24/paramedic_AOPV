@@ -1,1 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bacteriology (Colilert)</title>
+  <meta name="description" content="Bacteriology (Colilert) presence/absence procedure" />
+  <style>
+    :root{
+      --bg: #f7fbff;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: rgba(15, 23, 42, 0.10);
 
+      --shadow: 0 14px 40px rgba(2, 6, 23, 0.12);
+      --radius: 18px;
+      --tap: 56px;
+      --max: 720px;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--text);
+      background:
+        radial-gradient(900px 500px at 10% 0%, rgba(34,197,94,0.18), transparent 55%),
+        radial-gradient(900px 500px at 90% 10%, rgba(168,85,247,0.16), transparent 55%),
+        radial-gradient(900px 500px at 50% 110%, rgba(6,182,212,0.18), transparent 55%),
+        var(--bg);
+      line-height: 1.35;
+    }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px 16px 36px;
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px 16px;
+    }
+
+    h1{
+      margin: 0;
+      font-size: 1.55rem;
+      letter-spacing: 0.2px;
+    }
+
+    .sub{
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 1.0rem;
+    }
+
+    .row{
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .panel{
+      border: 1px solid rgba(15,23,42,0.10);
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(59,130,246,0.06), rgba(6,182,212,0.08));
+      padding: 14px;
+    }
+
+    .panel h2{
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    ul, ol{
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+    ol li{ margin: 8px 0; }
+    ul li{ margin: 6px 0; }
+
+    .note{
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(15,23,42,0.10);
+      background: linear-gradient(135deg, rgba(34,197,94,0.10), rgba(250,204,21,0.14));
+      color: rgba(15,23,42,0.88);
+      font-weight: 650;
+    }
+
+    details{
+      margin-top: 12px;
+      border: 1px solid rgba(15,23,42,0.10);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.75);
+      padding: 10px 12px;
+    }
+    summary{
+      cursor: pointer;
+      font-weight: 750;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+    }
+    summary::-webkit-details-marker{ display:none; }
+
+    .links{
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    a.btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: var(--tap);
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(15,23,42,0.10);
+      background: rgba(255,255,255,0.85);
+      color: rgba(15,23,42,0.92);
+      text-decoration: none;
+      font-weight: 750;
+      box-shadow: 0 10px 22px rgba(2, 6, 23, 0.06);
+      transition: transform 120ms ease, box-shadow 120ms ease;
+    }
+    a.btn:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(2, 6, 23, 0.10);
+    }
+    a.btn:focus-visible{
+      outline: 3px solid rgba(59,130,246,0.45);
+      outline-offset: 3px;
+    }
+
+    .arrow{ color: rgba(15,23,42,0.45); font-weight: 900; }
+
+    .bottom{
+      margin-top: 16px;
+      display: grid;
+      gap: 10px;
+      text-align: center;
+    }
+
+    a.pill{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(15,23,42,0.12);
+      background: rgba(255,255,255,0.75);
+      color: rgba(15,23,42,0.85);
+      text-decoration: none;
+      font-weight: 650;
+      box-shadow: 0 10px 22px rgba(2, 6, 23, 0.06);
+      transition: transform 120ms ease, box-shadow 120ms ease;
+    }
+    a.pill:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(2, 6, 23, 0.10);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Bacteriology (Colilert)</h1>
+      <p class="sub">Presence/absence (100 mL sample).</p>
+
+      <div class="row">
+        <div class="panel">
+          <h2>Before sampling</h2>
+          <ul>
+            <li>Run the tap for <strong>10 minutes</strong> before sampling.</li>
+            <li>Sanitize the outlet with <strong>alcohol swab</strong> or <strong>1:10 bleach/water</strong>.</li>
+            <li>Use aseptic technique (don’t touch the inside of cap/bottle).</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h2>You will need</h2>
+          <ul>
+            <li>Sterile 120 mL sample bottle (non-fluorescing vessel)</li>
+            <li>Colilert reagent packet (for 100 mL sample)</li>
+            <li>Comparator (colour/fluorescence reference)</li>
+            <li>Incubator set to ~<strong>35–36°C</strong></li>
+            <li>365 nm UV lamp (long-wave)</li>
+            <li>Marker/label</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h2>Procedure</h2>
+          <ol>
+            <li>Label bottle with <strong>location</strong>, <strong>date</strong>, and <strong>time</strong>.</li>
+            <li>Open bottle without touching the inside surfaces.</li>
+            <li>Fill to the <strong>100 mL</strong> fill line.</li>
+            <li>Add <strong>one</strong> Colilert reagent packet to the bottle.</li>
+            <li>Cap and mix by inverting/shaking (powder does not have to fully dissolve).</li>
+            <li>Incubate <strong>24 hours</strong> at <strong>~35–36°C</strong>.</li>
+            <li>Read results at <strong>24 hours</strong> (do not interpret new positives after <strong>28 hours</strong>).</li>
+          </ol>
+
+          <div class="note">Record results in the Sick Bay water treatment logbook.</div>
+
+          <details>
+            <summary>Reading results <span class="arrow">▾</span></summary>
+            <ul>
+              <li><strong>Colourless</strong> = negative (total coliforms and E. coli).</li>
+              <li><strong>Yellow</strong> (equal to or greater than comparator) = total coliforms present.</li>
+              <li>If yellow: check for <strong>blue fluorescence</strong> under <strong>365 nm UV</strong> in a dark area.</li>
+              <li>Fluorescence equal to or greater than comparator = <strong>E. coli present</strong>.</li>
+              <li>Tip: use a 6W, 365 nm UV light within ~5 inches of the sample; point the light away from your eyes.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Timing notes <span class="arrow">▾</span></summary>
+            <ul>
+              <li>If clearly positive before 24 hours, it’s a valid positive.</li>
+              <li>If incubated past 28 hours: colourless remains a valid negative; a yellow colour appearing after 28 hours is not valid and should be repeated/verified.</li>
+            </ul>
+          </details>
+        </div>
+
+        <div class="panel">
+          <h2>Links</h2>
+          <div class="links">
+            <a class="btn" href="https://ca.idexx.com/en-ca/water/water-products-services/colilert/" target="_blank" rel="noopener">Official IDEXX info <span class="arrow">›</span></a>
+            <a class="btn" href="https://www.nemi.gov/methods/method_summary/5584/" target="_blank" rel="noopener">Method summary (NEMI) <span class="arrow">›</span></a>
+            <a class="btn" href="./index.html">Back to Water Testing <span class="arrow">›</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <a class="pill" href="../equipment/">DR900 Equipment</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
