@@ -1,1 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Water Testing (DR900 + IDEXX)</title>
+  <meta name="description" content="Shipboard water testing hub: cadence, procedures, references, and ordering info." />
+  <style>
+    :root{
+      --bg: #0b1220;
+      --panel: rgba(255,255,255,0.06);
+      --panel2: rgba(255,255,255,0.09);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.70);
+      --muted2: rgba(255,255,255,0.55);
+      --accent: #6ee7ff;
+      --accent2: #a78bfa;
+      --good: #34d399;
+      --warn: #fbbf24;
+      --bad: #fb7185;
+      --border: rgba(255,255,255,0.12);
+      --shadow: 0 12px 35px rgba(0,0,0,0.35);
+      --radius: 18px;
+      --tap: 52px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
 
+    *{ box-sizing: border-box; }
+    html, body{ height:100%; }
+    body{
+      margin:0;
+      font-family: var(--sans);
+      color: var(--text);
+      background:
+        radial-gradient(1200px 800px at 15% 10%, rgba(110,231,255,0.18), transparent 55%),
+        radial-gradient(900px 700px at 85% 20%, rgba(167,139,250,0.18), transparent 55%),
+        radial-gradient(800px 900px at 50% 110%, rgba(52,211,153,0.10), transparent 60%),
+        var(--bg);
+      line-height: 1.35;
+    }
+
+    a{ color: inherit; text-decoration: none; }
+    a:focus-visible, button:focus-visible, summary:focus-visible{
+      outline: 3px solid rgba(110,231,255,0.7);
+      outline-offset: 3px;
+      border-radius: 10px;
+    }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px 16px 40px;
+    }
+
+    header{
+      padding: 18px 16px 8px;
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(110,231,255,0.10), rgba(167,139,250,0.10));
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+    }
+
+    .title{
+      display:flex;
+      align-items:flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    h1{
+      margin: 0;
+      font-size: 1.35rem;
+      letter-spacing: 0.2px;
+    }
+
+    .subtitle{
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 62ch;
+    }
+
+    .pillRow{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid var(--border);
+      min-height: 40px;
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+
+    .pill small{
+      color: var(--muted2);
+      font-size: 0.82rem;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    @media(min-width: 760px){
+      .grid{ grid-template-columns: 1.2fr 0.8fr; }
+    }
+
+    .card{
+      border: 1px solid var(--border);
+      background: var(--panel);
+      border-radius: var(--radius);
+      padding: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h2{
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+      letter-spacing: 0.2px;
+    }
+
+    .card p{
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .schedule{
+      display:grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .row{
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .row strong{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      font-size: 0.98rem;
+    }
+
+    .tag{
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      padding: 6px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      color: rgba(255,255,255,0.85);
+      background: rgba(255,255,255,0.06);
+      white-space: nowrap;
+    }
+
+    .tag.good{ border-color: rgba(52,211,153,0.35); }
+    .tag.warn{ border-color: rgba(251,191,36,0.35); }
+    .tag.info{ border-color: rgba(110,231,255,0.35); }
+
+    .btnGrid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    @media(min-width: 520px){
+      .btnGrid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .btn{
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: var(--tap);
+      padding: 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+      transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+    }
+
+    .btn:hover{ transform: translateY(-1px); border-color: rgba(110,231,255,0.35); }
+    .btn .top{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+    .btn .name{
+      font-weight: 700;
+      font-size: 1.0rem;
+      letter-spacing: 0.2px;
+    }
+    .btn .meta{
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.78);
+      padding: 6px 8px;
+      border-radius: 999px;
+      background: rgba(110,231,255,0.08);
+      border: 1px solid rgba(110,231,255,0.22);
+      white-space: nowrap;
+    }
+    .btn .desc{
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin: 0;
+    }
+
+    details{
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.05);
+      padding: 10px 12px;
+    }
+
+    details + details{ margin-top: 10px; }
+
+    summary{
+      cursor: pointer;
+      list-style: none;
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 10px;
+      font-weight: 700;
+      min-height: var(--tap);
+    }
+    summary::-webkit-details-marker{ display:none; }
+
+    .kicker{
+      color: var(--muted2);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+    }
+
+    .list{
+      margin: 8px 0 0;
+      padding: 0 0 0 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .list li{ margin: 6px 0; }
+
+    .refBox{
+      margin-top: 10px;
+      padding: 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(0,0,0,0.18);
+    }
+
+    .refBox a{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 10px 12px;
+      margin: 6px 8px 0 0;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      min-height: 40px;
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .mutedNote{
+      margin-top: 10px;
+      color: var(--muted2);
+      font-size: 0.9rem;
+    }
+
+    footer{
+      margin-top: 16px;
+      color: rgba(255,255,255,0.55);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .tiny{
+      font-size: 0.86rem;
+      color: var(--muted2);
+    }
+
+    .hr{
+      height: 1px;
+      background: rgba(255,255,255,0.10);
+      margin: 12px 0;
+      border-radius: 999px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="title">
+        <div>
+          <h1>Water Testing Hub</h1>
+          <p class="subtitle">
+            DR 900 colorimeter + IDEXX/Colilert workflow. Procedures are written on-page for quick use; official manufacturer PDFs are linked as references.
+          </p>
+        </div>
+      </div>
+
+      <div class="pillRow" aria-label="Quick links">
+        <!-- Update these paths later when those sections exist -->
+        <a class="pill" href="../equipment/dr900.html" title="Equipment page (create later)">
+          DR 900 Equipment Page <small>(link)</small>
+        </a>
+        <a class="pill" href="../admin/" title="Administration area (create later)">
+          Admin Area <small>(logbook)</small>
+        </a>
+        <span class="pill" title="Where the physical logbook is stored">
+          Logbook kept in Admin area <small>(per local practice)</small>
+        </span>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section class="card" aria-label="Routine and cadence">
+        <p class="kicker">Routine</p>
+        <h2>Cadence (AOPV)</h2>
+        <p>Keep this visible and simple. Detailed steps are inside each test page.</p>
+
+        <div class="schedule">
+          <div class="row">
+            <strong>Tuesday <span class="tag info">Routine</span></strong>
+            <span class="tiny">pH + Free Chlorine</span>
+          </div>
+          <div class="row">
+            <strong>Thursday <span class="tag warn">Routine + Incubate</span></strong>
+            <span class="tiny">pH + Free Chlorine + set 24h incubated sample</span>
+          </div>
+          <div class="row">
+            <strong>Foreign port (on request) <span class="tag good">Jetty</span></strong>
+            <span class="tiny">pH + Free Chlorine + incubate sample (24h)</span>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <details>
+          <summary>Sampling notes (shipboard)</summary>
+          <ul class="list">
+            <li>Run tap for <strong>10 minutes</strong> before sampling.</li>
+            <li>Include the <strong>farthest distribution point</strong> in test locations.</li>
+            <li>For bacteriology sampling, sanitize faucet/outlet first (per procedure page).</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>How this hub is organized</summary>
+          <ul class="list">
+            <li>Hub = cadence + buttons + ordering + reference links.</li>
+            <li>Each test page = step-by-step + “what you need” + references + back button.</li>
+            <li>Device operation details live on the DR 900 equipment page (linked above) to avoid duplication.</li>
+          </ul>
+        </details>
+
+        <p class="mutedNote">
+          Note: Manufacturer documents are the source of truth. Local “quick steps” should be kept aligned with those PDFs/IFUs.
+        </p>
+      </section>
+
+      <section class="card" aria-label="Start testing buttons">
+        <p class="kicker">Start here</p>
+        <h2>Procedures</h2>
+        <p>Tap a test to open the step-by-step procedure page.</p>
+
+        <div class="btnGrid">
+          <a class="btn" href="./free-chlorine.html" aria-label="Free Available Chlorine procedure">
+            <div class="top">
+              <div class="name">Free Available Chlorine</div>
+              <div class="meta">DPD 8021</div>
+            </div>
+            <p class="desc">Routine chlorine check (local minimum action threshold captured on-page).</p>
+          </a>
+
+          <a class="btn" href="./total-chlorine.html" aria-label="Total Chlorine Residual procedure">
+            <div class="top">
+              <div class="name">Total Chlorine Residual</div>
+              <div class="meta">DPD 8167</div>
+            </div>
+            <p class="desc">Optional capability (useful where chloramine is primary disinfectant).</p>
+          </a>
+
+          <a class="btn" href="./ph.html" aria-label="pH procedure">
+            <div class="top">
+              <div class="name">pH</div>
+              <div class="meta">10076</div>
+            </div>
+            <p class="desc">Phenol Red method. Confirm temp and ranges per official method.</p>
+          </a>
+
+          <a class="btn" href="./bacteriology-colilert.html" aria-label="Bacteriology Colilert procedure">
+            <div class="top">
+              <div class="name">Bacteriology (IDEXX/Colilert)</div>
+              <div class="meta">24h @ 35°C</div>
+            </div>
+            <p class="desc">Weekly incubation (Thursday) + foreign-port jetty sampling on request.</p>
+          </a>
+        </div>
+
+        <div class="refBox" aria-label="Official references">
+          <div class="tiny"><strong>Official references</strong> (add/adjust links anytime)</div>
+
+          <!-- Replace # with the exact URLs you want to use.
+               Tip: keep official links (Hach/IDEXX) rather than re-hosting PDFs in your repo. -->
+          <a href="#" title="Add official Hach method PDF link for Free Chlorine 8021">Hach PDF: 8021</a>
+          <a href="#" title="Add official Hach method PDF link for pH 10076">Hach PDF: 10076</a>
+          <a href="#" title="Add official reference link for IDEXX/Colilert workflow">IDEXX/Colilert</a>
+          <a href="#" title="Add DR 900 manual/spec downloads link if desired">DR 900 Downloads</a>
+
+          <div class="mutedNote">
+            If a link changes, the on-page procedure stays usable. References are backup + authority.
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="card" aria-label="Consumables and ordering">
+      <p class="kicker">Consumables</p>
+      <h2>Ordering (NSN / MPP quick list)</h2>
+      <p>From Preventive Med sheet. Use as a quick crosswalk for resupply.</p>
+
+      <details open>
+        <summary>Show consumables list</summary>
+        <ul class="list">
+          <li><strong>DR900 colorimeter kit</strong> — Hach (9385100) — NSN/MPP: 6630-01-623-0976 — Req: 1 kit</li>
+          <li><strong>Hard sided carrying case</strong> — Hach (4942500) — NSN/MPP: 8145-01-620-7942 — Req: 1 ea</li>
+          <li><strong>SpecCheck Secondary (Gel Standards)</strong> — Hach (2635300) — NSN/MPP: 6550-01-504-0944 — Req: 4 vials / 1 kit</li>
+          <li><strong>Glass sample cell, 25 mL</strong> — Hach (2401906) — NSN/MPP: 6630-01-504-0940 — Req: 6 vials</li>
+          <li><strong>Free chlorine reagent pillows, 10 mL</strong> — Hach (2105569-CA) — NSN/MPP: 6550-01-456-8981 — Req: 1 pk (100 tests)</li>
+          <li><strong>Total chlorine reagent pillows, 10 mL</strong> — Hach (2105669-CA) — NSN/MPP: 6550-01-460-7597 — Req: 1 pk (100 tests)</li>
+          <li><strong>Phenol Red Indicator Solution, 50 mL</strong> — Hach (2657512) — NSN/MPP: 6810-01-457-5431 — Req: 2 bt (200 tests)</li>
+          <li><strong>Colilert powder (100 mL samples)</strong> — IDEXX — NSN/MPP: 6630-01-362-8299 — Req: 1 pk (200 tests)</li>
+          <li><strong>IDEXX sample bottle, 120 mL</strong> — IDEXX — NSN/MPP: 6640-01-389-7029 — Req: 1 bt (1 test)</li>
+          <li><strong>IDEXX comparator</strong> — IDEXX — NSN/MPP: 6630-01-388-4098 — Req: 1 kit</li>
+          <li><strong>Long wave UV lamp</strong> — NSN/MPP: 6240-01-465-7702 — Req: 1 ea</li>
+          <li><strong>UV light bulb</strong> — NSN/MPP: 6240-01-465-7712 — Req: 1 ea</li>
+          <li><strong>Portable single-chamber incubator</strong> — Millipore — NSN/MPP: 6640-00-234-0185 — Req: 1 ea</li>
+        </ul>
+      </details>
+
+      <p class="mutedNote">
+        Tip: If you later want this searchable, we can convert this list into a searchable table/cards without adding any backend.
+      </p>
+    </section>
+
+    <footer>
+      Water Testing • Smartphone-first • Static site (no backend)
+    </footer>
+  </div>
+</body>
+</html>
