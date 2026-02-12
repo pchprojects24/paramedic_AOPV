@@ -192,6 +192,99 @@ body.home {
   color: #4a4a4a;
 }
 
+/* ── Carousel of sections ── */
+.section-carousel {
+  margin: 0.75rem 0 1.25rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.carousel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.carousel-instruction {
+  color: #0f2a43;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.carousel-btn {
+  border: 1px solid #0e3158;
+  background: #0e3158;
+  color: #fff;
+  padding: 0.45rem 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 3.5rem;
+  min-height: 42px;
+}
+
+.carousel-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.carousel-status {
+  font-size: 0.9rem;
+  color: #3a3a3a;
+  min-width: 7.5rem;
+}
+
+.carousel-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(100%, 100%);
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.35rem;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-slide {
+  scroll-snap-align: center;
+}
+
+.section-carousel .card-section {
+  margin: 0;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid #0e3158;
+  background: #d0d7de;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.carousel-dot[aria-current="true"] {
+  background: #0e3158;
+  opacity: 1;
+}
+
 /* ── Card grid (big tap targets) ── */
 .card-grid {
   display: grid;

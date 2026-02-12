@@ -24,52 +24,67 @@
     </div>
   </section>
 
-  <section class="card-section diagnostics">
-    <div class="section-header">
-      <span class="section-tag">Diagnostics &amp; Testing</span>
-      <p>Lab and device workflows to keep results flowing.</p>
+  <div class="section-carousel" aria-label="Browse primary sections">
+    <div class="carousel-head">
+      <p class="carousel-instruction">Swipe sideways to move between sections; scroll within a section to explore its links.</p>
+      <div class="carousel-controls">
+        <button type="button" class="carousel-btn" data-action="prev" aria-label="Previous section">Prev</button>
+        <span class="carousel-status" aria-live="polite">Section 1 of 4</span>
+        <button type="button" class="carousel-btn" data-action="next" aria-label="Next section">Next</button>
+      </div>
     </div>
-    <div class="card-grid">
-      <a href="sections/water-testing/index.html">Water Testing</a>
-      <a href="sections/istat/index.html">i-STAT</a>
-      <a href="sections/point-of-care-tests/index.html">Point-of-Care Tests (non-iSTAT)</a>
-    </div>
-  </section>
 
-  <section class="card-section equipment">
-    <div class="section-header">
-      <span class="section-tag">Monitoring &amp; Equipment</span>
-      <p>Device checklists and readiness guides.</p>
-    </div>
-    <div class="card-grid">
-      <a href="sections/zoll-propaq/index.html">ZOLL Propaq MD</a>
-      <a href="sections/zoll-emv-731/index.html">Ventilator (ZOLL EMV+ 731)</a>
-      <a href="sections/equipment/index.html">Other Equipment</a>
-    </div>
-  </section>
+    <div class="carousel-track" aria-live="off">
+      <section class="card-section diagnostics carousel-slide" data-title="Diagnostics &amp; Testing">
+        <div class="section-header">
+          <span class="section-tag">Diagnostics &amp; Testing</span>
+          <p>Lab and device workflows to keep results flowing.</p>
+        </div>
+        <div class="card-grid">
+          <a href="sections/water-testing/index.html">Water Testing</a>
+          <a href="sections/istat/index.html">i-STAT</a>
+          <a href="sections/point-of-care-tests/index.html">Point-of-Care Tests (non-iSTAT)</a>
+        </div>
+      </section>
 
-  <section class="card-section operations">
-    <div class="section-header">
-      <span class="section-tag">Operations &amp; Logistics</span>
-      <p>Keep the ship's medical footprint organized.</p>
-    </div>
-    <div class="card-grid">
-      <a href="sections/inventory/index.html">Inventory &amp; Ordering</a>
-      <a href="sections/casualty-clearing/index.html">Casualty Clearing</a>
-      <a href="sections/routines/index.html">Ship Routines</a>
-    </div>
-  </section>
+      <section class="card-section equipment carousel-slide" data-title="Monitoring &amp; Equipment">
+        <div class="section-header">
+          <span class="section-tag">Monitoring &amp; Equipment</span>
+          <p>Device checklists and readiness guides.</p>
+        </div>
+        <div class="card-grid">
+          <a href="sections/zoll-propaq/index.html">ZOLL Propaq MD</a>
+          <a href="sections/zoll-emv-731/index.html">Ventilator (ZOLL EMV+ 731)</a>
+          <a href="sections/equipment/index.html">Other Equipment</a>
+        </div>
+      </section>
 
-  <section class="card-section reference">
-    <div class="section-header">
-      <span class="section-tag">Reference &amp; Admin</span>
-      <p>Policy, reporting, and core protocols.</p>
+      <section class="card-section operations carousel-slide" data-title="Operations &amp; Logistics">
+        <div class="section-header">
+          <span class="section-tag">Operations &amp; Logistics</span>
+          <p>Keep the ship's medical footprint organized.</p>
+        </div>
+        <div class="card-grid">
+          <a href="sections/inventory/index.html">Inventory &amp; Ordering</a>
+          <a href="sections/casualty-clearing/index.html">Casualty Clearing</a>
+          <a href="sections/routines/index.html">Ship Routines</a>
+        </div>
+      </section>
+
+      <section class="card-section reference carousel-slide" data-title="Reference &amp; Admin">
+        <div class="section-header">
+          <span class="section-tag">Reference &amp; Admin</span>
+          <p>Policy, reporting, and core protocols.</p>
+        </div>
+        <div class="card-grid">
+          <a href="sections/protocol-book/index.html">Protocol Book</a>
+          <a href="sections/admin/index.html">Admin</a>
+        </div>
+      </section>
     </div>
-    <div class="card-grid">
-      <a href="sections/protocol-book/index.html">Protocol Book</a>
-      <a href="sections/admin/index.html">Admin</a>
-    </div>
-  </section>
+
+    <div class="carousel-dots" aria-label="Section tabs"></div>
+  </div>
 
   <p class="legacy-note"><small>Legacy site: <a href="water-testing/index.html">Water Testing (original)</a> | <a href="water-testing/">Water Testing folder</a></small></p>
 </main>
