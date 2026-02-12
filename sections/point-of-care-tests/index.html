@@ -9,20 +9,78 @@
 </head>
 <body>
 <header class="site-header">
-  <span class="site-title">Paramedic Aid Memoir</span>
-  <a href="../../index.html">Home</a>
-
+  <div class="header-inner">
+    <span class="site-title">Paramedic Aid Memoir</span>
+    <a href="../../index.html">Home</a>
+    <button class="btn-dark-mode" aria-label="Toggle dark mode">Dark</button>
+  </div>
 </header>
+<nav class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <a href="../../index.html">Home</a> <span class="sep">/</span>
+    <span class="current">Point-of-Care Tests</span>
+  </div>
+</nav>
+
 <main class="content">
-<h1>Point-of-Care Tests (non-iSTAT)</h1>
-<p class="scope-block">Placeholder framework — content to be added.</p>
-<ul class="page-list">
-  <li><a href="pregnancy-test.html">Pregnancy Test</a></li>
-  <li><a href="rapid-strep.html">Rapid Strep</a></li>
-  <li><a href="rapid-troponin.html">Rapid Troponin</a></li>
-  <li><a href="monospot.html">Monospot</a></li>
-</ul>
+<h1>Point-of-Care Tests (Non-iSTAT)</h1>
+<p class="page-subtitle">Rapid diagnostic tests performed at the bedside or sickbay</p>
+
+<div class="scope-block">
+  These are the non-iSTAT point-of-care tests (POCT) carried aboard. Each test has its own dedicated page covering procedure, interpretation, QC, and storage requirements.
+  <span class="status-badge placeholder">Content pending</span>
+</div>
+
+<div class="info-block info">
+  <strong>What is POCT?</strong>
+  Point-of-Care Testing refers to medical diagnostic tests performed near the patient rather than in a centralized laboratory. POCT enables rapid clinical decisions by providing results within minutes. These tests use self-contained kits that require minimal training and equipment, making them ideal for shipboard use where laboratory access is not available.
+</div>
+
+<div class="info-block note">
+  <strong>Quality Control Reminder</strong>
+  All POCT kits require regular QC checks, proper storage, and expiry monitoring. Refer to each test's individual page for specific requirements. Document all QC results and patient test results per standing orders.
+</div>
+
+<h2>Available Tests</h2>
+<div class="card-grid">
+  <a href="pregnancy-test.html" class="cat-clinical">
+    <span class="card-icon">&#x1F9EA;</span>
+    Pregnancy Test (urine hCG)
+    <span class="card-desc">Qualitative detection of human chorionic gonadotropin in urine</span>
+  </a>
+  <a href="rapid-strep.html" class="cat-clinical">
+    <span class="card-icon">&#x1F9EB;</span>
+    Rapid Strep Test
+    <span class="card-desc">Group A Streptococcus rapid antigen detection</span>
+  </a>
+  <a href="rapid-troponin.html" class="cat-clinical">
+    <span class="card-icon">&#x2764;</span>
+    Rapid Troponin Test
+    <span class="card-desc">Cardiac troponin I/T rapid qualitative or semi-quantitative detection</span>
+  </a>
+  <a href="monospot.html" class="cat-clinical">
+    <span class="card-icon">&#x1F9EC;</span>
+    Monospot Test
+    <span class="card-desc">Heterophile antibody detection for infectious mononucleosis</span>
+  </a>
+</div>
+
+<h2>General POCT Guidelines</h2>
+<div class="placeholder-content">
+  <h3>Storage &amp; Handling</h3>
+  <p><span class="status-badge placeholder">Placeholder</span> General storage temperature requirements, handling precautions, and expiry management guidelines to be added.</p>
+
+  <h3>Quality Control Program</h3>
+  <p><span class="status-badge placeholder">Placeholder</span> Overview of QC frequency, documentation requirements, and corrective actions to be added.</p>
+
+  <h3>Documentation Requirements</h3>
+  <p><span class="status-badge placeholder">Placeholder</span> Required documentation for each test performed, including patient ID, lot numbers, results, and reporting chain to be added.</p>
+
+  <h3>Infection Control</h3>
+  <p><span class="status-badge placeholder">Placeholder</span> PPE requirements, specimen handling, and biohazard waste disposal procedures to be added.</p>
+</div>
+
 </main>
-<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v0 framework</footer>
+<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v2 framework</footer>
 </body>
 </html>

@@ -3,34 +3,376 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PT/INR — Paramedic Aid Memoir</title>
+<title>PT/INR Cartridge — Paramedic Aid Memoir</title>
 <link rel="stylesheet" href="../../../styles/style.css">
 <script src="../../../scripts/app.js" defer></script>
 </head>
 <body>
 <header class="site-header">
-  <span class="site-title">Paramedic Aid Memoir</span>
-  <a href="../../../index.html">Home</a>
-  <a href="../cartridges.html">&larr; Cartridges</a>
+  <div class="header-inner">
+    <span class="site-title">Paramedic Aid Memoir</span>
+    <a href="../../../index.html">Home</a>
+    <button class="btn-dark-mode" aria-label="Toggle dark mode">Dark</button>
+  </div>
 </header>
+<nav class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <a href="../../../index.html">Home</a> <span class="sep">/</span>
+    <a href="../index.html">i-STAT</a> <span class="sep">/</span>
+    <a href="../cartridges.html">Cartridges</a> <span class="sep">/</span>
+    <span class="current">PT/INR</span>
+  </div>
+</nav>
+
 <main class="content">
-<h1>PT/INR</h1>
-<p class="scope-block">Placeholder framework — content to be added.</p>
-<h2>Purpose</h2>
-<p>Placeholder.</p>
-<h2>Supplies</h2>
-<p>Placeholder.</p>
-<h2>Storage &amp; Handling</h2>
-<p>Placeholder.</p>
-<h2>QC Workflow</h2>
-<p>Placeholder.</p>
-<h2>Patient Sample Workflow</h2>
-<p>Placeholder.</p>
-<h2>Common Errors &amp; Fixes</h2>
-<p>Placeholder.</p>
-<h2>Notes for Shipboard Use</h2>
-<p>Placeholder.</p>
+<h1>PT/INR Cartridge</h1>
+
+<p class="scope-block">
+  <span class="status-badge placeholder">PLACEHOLDER</span>
+  Comprehensive reference for the i-STAT PT/INR cartridge — coagulation testing for Prothrombin Time
+  and International Normalised Ratio. All sections below are framework headings awaiting detailed content.
+</p>
+
+<div class="tag-list">
+  <span class="tag">coagulation</span>
+  <span class="tag">anticoagulation</span>
+  <span class="tag">warfarin</span>
+</div>
+
+<!-- ── Quick Reference ── -->
+<h2>Quick Reference</h2>
+<table class="quick-ref-table">
+  <thead>
+    <tr><th>Field</th><th>Detail</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Cartridge Name</td><td>PT/INR</td></tr>
+    <tr><td>Analytes (Measured)</td><td>PT (Prothrombin Time), INR (International Normalised Ratio)</td></tr>
+    <tr><td>Analytes (Calculated)</td><td>—</td></tr>
+    <tr><td>Sample Type</td><td>Whole blood (fresh, non-anticoagulated or citrated per manufacturer)</td></tr>
+    <tr><td>Sample Volume</td><td><span class="status-badge placeholder">PLACEHOLDER</span> &micro;L</td></tr>
+    <tr><td>Time to Result</td><td>~2 minutes</td></tr>
+    <tr><td>Storage Temperature</td><td>2–8 &deg;C (refrigerated); or room temp per manufacturer spec</td></tr>
+    <tr><td>Room Temp Equilibration</td><td>Minimum 5 minutes before use</td></tr>
+  </tbody>
+</table>
+
+<!-- ── Table of Contents ── -->
+<nav class="page-toc">
+  <p class="toc-title">On This Page</p>
+  <ul>
+    <li><a href="#purpose">Purpose &amp; Clinical Indications</a></li>
+    <li><a href="#supplies">Supplies Required</a></li>
+    <li><a href="#storage">Storage &amp; Handling</a></li>
+    <li><a href="#qc-workflow">QC Workflow</a></li>
+    <li><a href="#patient-workflow">Patient Sample Workflow</a></li>
+    <li><a href="#reading-results">Reading Results</a></li>
+    <li><a href="#errors">Common Errors &amp; Fixes</a></li>
+    <li><a href="#critical-values">Critical Value Reporting</a></li>
+    <li><a href="#shipboard">Notes for Shipboard Use</a></li>
+  </ul>
+</nav>
+
+<div style="margin-bottom:1rem;">
+  <button class="btn-expand-all">Expand All</button>
+  <button class="btn-collapse-all">Collapse All</button>
+</div>
+
+<!-- ── Purpose & Clinical Indications ── -->
+<section id="purpose" class="collapsible">
+  <h2 class="collapsible-toggle">Purpose &amp; Clinical Indications</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>What This Cartridge Tests</h3>
+      <p>The PT/INR cartridge measures the Prothrombin Time (PT) in seconds and calculates the
+         International Normalised Ratio (INR). PT/INR assesses the extrinsic and common coagulation
+         pathways.</p>
+
+      <h3>Clinical Indications</h3>
+      <ul>
+        <li>Monitoring warfarin (Coumadin) anticoagulation therapy</li>
+        <li>Pre-operative coagulation screening</li>
+        <li>Assessment of coagulopathy in trauma / massive transfusion</li>
+        <li>Liver function assessment (coagulation factor synthesis)</li>
+        <li>Disseminated intravascular coagulation (DIC) assessment</li>
+        <li>Monitoring vitamin K deficiency</li>
+      </ul>
+
+      <h3>Limitations &amp; Interferences</h3>
+      <p>Heparin at therapeutic levels may affect PT results. The i-STAT PT/INR is calibrated for
+         warfarin monitoring — results in patients on direct oral anticoagulants (DOACs) such as
+         rivaroxaban or apixaban may not be reliable. Severely lipaemic or haemolysed samples may
+         interfere.</p>
+
+      <div class="warning-box caution">
+        <strong>Caution — DOAC Patients:</strong> The i-STAT PT/INR cartridge is not validated for monitoring
+        direct oral anticoagulants (DOACs). PT/INR results in DOAC patients should be interpreted with caution.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Supplies Required ── -->
+<section id="supplies" class="collapsible">
+  <h2 class="collapsible-toggle">Supplies Required</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+      <ul class="checklist">
+        <li><label><input type="checkbox"> i-STAT 1 Analyser (EQC passed today)</label></li>
+        <li><label><input type="checkbox"> PT/INR cartridge (in-date, room temp equilibrated)</label></li>
+        <li><label><input type="checkbox"> Venepuncture supplies (needle, syringe or vacutainer, tourniquet)</label></li>
+        <li><label><input type="checkbox"> Gloves, alcohol swab, gauze, tape</label></li>
+        <li><label><input type="checkbox"> Sharps container</label></li>
+        <li><label><input type="checkbox"> Patient identification (two identifiers)</label></li>
+        <li><label><input type="checkbox"> Printer or result recording form</label></li>
+      </ul>
+
+      <div class="info-block info">
+        <strong>Note:</strong> Check manufacturer instructions for whether a native (non-anticoagulated)
+        or citrated sample is required for the specific PT/INR cartridge lot.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Storage & Handling ── -->
+<section id="storage" class="collapsible">
+  <h2 class="collapsible-toggle">Storage &amp; Handling</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Storage Temperature</h3>
+      <p>Refrigerated: 2–8 &deg;C. Room temperature storage range and duration per manufacturer.</p>
+
+      <h3>Shelf Life &amp; Expiry</h3>
+      <p>Check expiry date on each cartridge pouch. Once the foil pouch is opened, use promptly.</p>
+
+      <h3>Lot Tracking</h3>
+      <p>Record lot number upon receipt. New lots require liquid QC at all 3 levels before patient use.</p>
+
+      <h3>Equilibration Before Use</h3>
+      <div class="warning-box caution">
+        <strong>Caution:</strong> Allow cartridge to equilibrate to room temperature (18–30 &deg;C)
+        for at least 5 minutes before use.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── QC Workflow ── -->
+<section id="qc-workflow" class="collapsible">
+  <h2 class="collapsible-toggle">QC Workflow</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+      <ol class="procedure">
+        <li>Verify EQC has passed today.</li>
+        <li>Check the QC logbook — is liquid QC due for PT/INR this week?</li>
+        <li>If due: run Level 1, Level 2, and Level 3 liquid QC per <a href="../qc.html">QC procedures</a>.</li>
+        <li>Compare PT and INR results against lot-specific acceptable ranges.</li>
+        <li>Record all results (PASS/FAIL) in the QC logbook.</li>
+        <li>If any level fails, do NOT run patient samples on PT/INR until resolved.</li>
+        <li>See <a href="../qc.html#qc-failure">QC Failure Troubleshooting</a> for corrective actions.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ── Patient Sample Workflow ── -->
+<section id="patient-workflow" class="collapsible">
+  <h2 class="collapsible-toggle">Patient Sample Workflow</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Pre-Analysis</h3>
+      <ol class="procedure">
+        <li>Confirm patient identity using two identifiers.</li>
+        <li>Verify EQC passed and QC is current for PT/INR.</li>
+        <li>Gather all supplies.</li>
+        <li>Remove a PT/INR cartridge from its foil pouch; confirm room temperature and in-date.</li>
+      </ol>
+
+      <h3>Sample Collection</h3>
+      <ol class="procedure">
+        <li>Perform venepuncture using standard technique.</li>
+        <li>Collect sample into the appropriate container (native or citrated per cartridge instructions).</li>
+        <li>If using a syringe, mix gently if anticoagulant is present.</li>
+        <li>Avoid prolonged tourniquet time (may activate coagulation).</li>
+      </ol>
+
+      <div class="warning-box caution">
+        <strong>Caution:</strong> For PT/INR testing, sample timing is critical. Analyse as soon as possible
+        after collection — coagulation factors begin to degrade within minutes.
+      </div>
+
+      <h3>Running the Test</h3>
+      <ol class="procedure">
+        <li>Apply the blood sample to the PT/INR cartridge sample well — fill to the line.</li>
+        <li>Close the cartridge cover firmly.</li>
+        <li>Insert the cartridge into the i-STAT analyser.</li>
+        <li>Enter patient ID and operator ID when prompted.</li>
+        <li>Wait for the analysis to complete (~2 minutes).</li>
+      </ol>
+
+      <h3>Post-Analysis</h3>
+      <ol class="procedure">
+        <li>Read the PT (seconds) and INR (ratio) results on the display.</li>
+        <li>Print the result ticket (if available).</li>
+        <li>Dispose of the used cartridge in the sharps/biohazard container.</li>
+        <li>Document results in the patient record — include the INR target range if the patient is on warfarin.</li>
+        <li>Check for critical values and report immediately if present.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ── Reading Results ── -->
+<section id="reading-results" class="collapsible">
+  <h2 class="collapsible-toggle">Reading Results</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Analyte</th><th>Units</th><th>Normal Range</th><th>Critical Low</th><th>Critical High</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>PT (Prothrombin Time)</td><td>seconds</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td>—</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>INR (International Normalised Ratio)</td><td>ratio</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td>—</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+        </tbody>
+      </table>
+
+      <h3>Therapeutic INR Ranges (Warfarin)</h3>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Indication</th><th>Target INR</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Atrial fibrillation</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>DVT / PE treatment</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>Mechanical heart valve</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+        </tbody>
+      </table>
+
+      <div class="info-block warning">
+        <strong>Important:</strong> Always confirm target INR range with the prescribing clinician.
+        Ranges above are general guidelines only.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Common Errors & Fixes ── -->
+<section id="errors" class="collapsible">
+  <h2 class="collapsible-toggle">Common Errors &amp; Fixes</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Error</th><th>Probable Cause</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>No result / timeout</td>
+            <td>Clotted sample (paradoxically, if already clotted before cartridge)</td>
+            <td>Redraw fresh sample; analyse immediately; ensure no tissue thromboplastin contamination.</td>
+          </tr>
+          <tr>
+            <td>PT unexpectedly prolonged</td>
+            <td>Heparin contamination from IV line draw</td>
+            <td>Collect from a site away from IV lines; discard initial 5 mL if drawing through a line.</td>
+          </tr>
+          <tr>
+            <td>Sample not detected</td>
+            <td>Insufficient fill volume</td>
+            <td>Ensure adequate sample; fill to line; use new cartridge.</td>
+          </tr>
+          <tr>
+            <td>Calibration failure</td>
+            <td>Cartridge not equilibrated / expired</td>
+            <td>Check temp and expiry; try new cartridge.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>For the full error code reference, see <a href="../troubleshooting.html">i-STAT Troubleshooting</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Critical Value Reporting ── -->
+<section id="critical-values" class="collapsible">
+  <h2 class="collapsible-toggle">Critical Value Reporting</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <div class="warning-box danger">
+        <strong>Critical values must be reported immediately to the responsible medical officer.</strong>
+        An INR significantly above the therapeutic range carries a high risk of bleeding.
+      </div>
+
+      <h3>PT/INR Critical Values</h3>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Analyte</th><th>Critical High</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>INR</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>PT</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+        </tbody>
+      </table>
+
+      <h3>Reporting Procedure</h3>
+      <ol class="procedure">
+        <li>Identify the critical value on the result display.</li>
+        <li>Immediately contact the responsible medical officer.</li>
+        <li>Report: patient identity, INR value, PT value, current warfarin dose (if known), any signs of bleeding.</li>
+        <li>Obtain read-back confirmation.</li>
+        <li>Document notification in the patient record.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ── Notes for Shipboard Use ── -->
+<section id="shipboard" class="collapsible">
+  <h2 class="collapsible-toggle">Notes for Shipboard Use</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Motion &amp; Vibration</h3>
+      <p>PT/INR testing is less sensitive to motion than blood gas analysis, but the sample must still
+         be handled carefully. Excessive agitation may activate coagulation factors prematurely.</p>
+
+      <h3>Temperature Considerations</h3>
+      <p>Standard cartridge storage and equilibration requirements apply. Ensure the medical centre
+         refrigerator is functioning correctly, especially in tropical environments.</p>
+
+      <h3>Documentation at Sea</h3>
+      <p>For warfarin-monitored patients, document: INR result, warfarin dose, time since last dose,
+         any concurrent medications that may interact with warfarin, and the dose adjustment decision.
+         This documentation supports continuity of care and telemedicine consultation.</p>
+
+      <div class="warning-box tip">
+        <strong>Tip:</strong> If a crew member requires ongoing warfarin monitoring at sea, establish a regular
+        testing schedule and maintain a trend log of INR results and dose adjustments.
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v0 framework</footer>
+
+<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v2 framework</footer>
 </body>
 </html>

@@ -3,20 +3,282 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Daily Checks — Paramedic Aid Memoir</title>
+<title>i-STAT Daily Checks — Paramedic Aid Memoir</title>
 <link rel="stylesheet" href="../../styles/style.css">
 <script src="../../scripts/app.js" defer></script>
 </head>
 <body>
 <header class="site-header">
-  <span class="site-title">Paramedic Aid Memoir</span>
-  <a href="../../index.html">Home</a>
-  <a href="index.html">&larr; i-STAT</a>
+  <div class="header-inner">
+    <span class="site-title">Paramedic Aid Memoir</span>
+    <a href="../../index.html">Home</a>
+    <button class="btn-dark-mode" aria-label="Toggle dark mode">Dark</button>
+  </div>
 </header>
+<nav class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <a href="../../index.html">Home</a> <span class="sep">/</span>
+    <a href="index.html">i-STAT</a> <span class="sep">/</span>
+    <span class="current">Daily Checks</span>
+  </div>
+</nav>
+
 <main class="content">
-<h1>Daily Checks</h1>
-<p class="scope-block">Placeholder framework — content to be added.</p>
+<h1>i-STAT Daily Checks</h1>
+
+<p class="scope-block">
+  <span class="status-badge placeholder">PLACEHOLDER</span>
+  Complete daily check procedure for the i-STAT 1 analyser. Perform at the start of each working day
+  or before the first patient test. All sections below are framework headings awaiting detailed content.
+</p>
+
+<!-- ── Table of Contents ── -->
+<nav class="page-toc">
+  <p class="toc-title">On This Page</p>
+  <ul>
+    <li><a href="#pre-shift">Pre-Shift Inspection</a></li>
+    <li><a href="#eqc-check">Electronic Simulator Check</a></li>
+    <li><a href="#review-results">Reviewing Previous Results</a></li>
+    <li><a href="#inventory">Cartridge Inventory Check</a></li>
+    <li><a href="#documentation">Documentation</a></li>
+    <li><a href="#common-issues">Common Issues at Daily Check</a></li>
+  </ul>
+</nav>
+
+<div style="margin-bottom:1rem;">
+  <button class="btn-expand-all">Expand All</button>
+  <button class="btn-collapse-all">Collapse All</button>
+</div>
+
+<!-- ── Daily Check Summary Checklist ── -->
+<h2>Daily Check Summary</h2>
+<ul class="checklist">
+  <li><label><input type="checkbox"> Visual inspection of analyser (screen, port, casing)</label></li>
+  <li><label><input type="checkbox"> Battery check / replace if low</label></li>
+  <li><label><input type="checkbox"> Electronic Simulator (EQC) — run and verify PASS</label></li>
+  <li><label><input type="checkbox"> Review previous day's stored results for any flags</label></li>
+  <li><label><input type="checkbox"> Check cartridge inventory — quantities and expiry dates</label></li>
+  <li><label><input type="checkbox"> Verify cartridges at room temperature (if applicable)</label></li>
+  <li><label><input type="checkbox"> Record daily check in QC logbook</label></li>
+</ul>
+
+<!-- ── 1. Pre-Shift Inspection ── -->
+<section id="pre-shift" class="collapsible">
+  <h2 class="collapsible-toggle">Pre-Shift Inspection</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Visual Inspection</h3>
+      <ol class="procedure">
+        <li>Inspect the analyser casing for cracks, moisture ingress, or visible damage.</li>
+        <li>Check the cartridge port — ensure it is clean, free of dried blood or debris.</li>
+        <li>Verify the display powers on and shows the main menu without error icons.</li>
+        <li>Check the IR window is clean (for printer/downloader communication).</li>
+      </ol>
+
+      <h3>Battery Status</h3>
+      <ol class="procedure">
+        <li>Power on the analyser and note the battery indicator.</li>
+        <li>If the battery icon shows low, replace the 9 V lithium battery.</li>
+        <li>After replacement, confirm the analyser powers on and retains date/time settings.</li>
+      </ol>
+
+      <div class="info-block info">
+        <strong>Tip:</strong> Keep at least two spare 9 V lithium batteries in the medical centre.
+        Alkaline batteries are not recommended — they have shorter life and may leak.
+      </div>
+
+      <h3>Environmental Check</h3>
+      <ol class="procedure">
+        <li>Verify the medical centre ambient temperature is within 18–30 &deg;C.</li>
+        <li>Note the current temperature and humidity (if a monitor is available).</li>
+        <li>If outside range, take corrective action before running tests.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ── 2. Electronic Simulator Check ── -->
+<section id="eqc-check" class="collapsible">
+  <h2 class="collapsible-toggle">Electronic Simulator Check (EQC)</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Purpose of the EQC</h3>
+      <p>The Electronic Quality Control simulator verifies the analyser's electronic measuring circuits,
+         signal processing, and detection systems without requiring liquid reagents.</p>
+
+      <h3>Procedure</h3>
+      <ol class="procedure">
+        <li>From the main menu, select the EQC / Simulator option (or insert the EQC cartridge as prompted).</li>
+        <li>Insert the Electronic Simulator into the cartridge port until it clicks.</li>
+        <li>Wait for the analyser to complete the electronic test cycle (~60 seconds).</li>
+        <li>Read the result — the display should show <strong>PASS</strong>.</li>
+        <li>Remove the simulator and return it to its protective case.</li>
+      </ol>
+
+      <h3>Interpreting Results</h3>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Result</th><th>Meaning</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>PASS</td><td>Analyser electronics functioning within specification</td><td>Record in logbook, proceed with testing.</td></tr>
+          <tr><td>FAIL</td><td>One or more electronic channels out of specification</td><td>Do NOT run patient tests. Repeat EQC. If still FAIL, see Troubleshooting.</td></tr>
+        </tbody>
+      </table>
+
+      <div class="warning-box caution">
+        <strong>Caution:</strong> Do not run patient samples if the EQC fails. The analyser must pass EQC before any
+        clinical testing is performed.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 3. Reviewing Previous Results ── -->
+<section id="review-results" class="collapsible">
+  <h2 class="collapsible-toggle">Reviewing Previous Results</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Accessing Stored Results</h3>
+      <ol class="procedure">
+        <li>From the main menu, navigate to the stored results / data review screen.</li>
+        <li>Scroll through results from the previous 24 hours.</li>
+        <li>Note any results flagged with error codes or out-of-range indicators.</li>
+      </ol>
+
+      <h3>What to Look For</h3>
+      <ul>
+        <li>Repeated error codes on the same cartridge type — may indicate a lot issue.</li>
+        <li>Results that were not printed or transmitted — ensure they are captured.</li>
+        <li>Any results with critical values that may not have been reported.</li>
+      </ul>
+
+      <h3>Data Download (If Applicable)</h3>
+      <p>Procedure for downloading stored results to the printer or data management system.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── 4. Cartridge Inventory Check ── -->
+<section id="inventory" class="collapsible">
+  <h2 class="collapsible-toggle">Cartridge Inventory Check</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Inventory Verification</h3>
+      <ol class="procedure">
+        <li>Check refrigerator stock of each cartridge type — count and record quantities.</li>
+        <li>Check room-temperature working stock (if cartridges have been removed to equilibrate).</li>
+        <li>Verify expiry dates — remove any expired cartridges and dispose appropriately.</li>
+        <li>Confirm lot numbers match the QC logbook records.</li>
+      </ol>
+
+      <h3>Minimum Stock Levels</h3>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Cartridge</th><th>Min Qty On Hand</th><th>Reorder Point</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>CHEM8+</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td></td></tr>
+          <tr><td>CG4+</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td></td></tr>
+          <tr><td>PT/INR</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td></td></tr>
+          <tr><td>Troponin I</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td></td></tr>
+        </tbody>
+      </table>
+
+      <h3>Cartridge Equilibration</h3>
+      <div class="info-block warning">
+        <strong>Important:</strong> Refrigerated cartridges must be removed and allowed to reach room temperature
+        (18–30 &deg;C) for at least 5 minutes before use. Do not warm cartridges artificially.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 5. Documentation ── -->
+<section id="documentation" class="collapsible">
+  <h2 class="collapsible-toggle">Documentation</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>QC Logbook Entry</h3>
+      <p>Record the following for each daily check:</p>
+      <ul>
+        <li>Date and time of check</li>
+        <li>Operator name / ID</li>
+        <li>EQC result (PASS / FAIL)</li>
+        <li>EQC simulator lot number</li>
+        <li>Cartridge inventory counts and expiry dates noted</li>
+        <li>Any corrective actions taken</li>
+        <li>Ambient temperature reading (if recorded)</li>
+      </ul>
+
+      <h3>Logbook Template</h3>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Date</th><th>Time</th><th>Operator</th><th>EQC Result</th><th>EQC Lot</th><th>Notes / Actions</th></tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="6"><em>Example row — to be filled daily</em></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── 6. Common Issues at Daily Check ── -->
+<section id="common-issues" class="collapsible">
+  <h2 class="collapsible-toggle">Common Issues at Daily Check</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Issue</th><th>Probable Cause</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Analyser does not power on</td>
+            <td>Dead battery</td>
+            <td>Replace 9 V lithium battery; check contacts for corrosion.</td>
+          </tr>
+          <tr>
+            <td>EQC result shows FAIL</td>
+            <td>Contaminated port, faulty simulator, analyser fault</td>
+            <td>Clean port, retry. If persistent, see <a href="troubleshooting.html">Troubleshooting</a>.</td>
+          </tr>
+          <tr>
+            <td>Date/time reset after battery change</td>
+            <td>No internal clock battery backup</td>
+            <td>Re-enter correct date and time via settings menu.</td>
+          </tr>
+          <tr>
+            <td>Cartridges expired</td>
+            <td>Inadequate stock rotation</td>
+            <td>Dispose of expired cartridges; order replacements; implement FIFO.</td>
+          </tr>
+          <tr>
+            <td>Ambient temperature out of range</td>
+            <td>HVAC issue in medical centre</td>
+            <td>Adjust climate control; do not test until temperature is within 18–30 &deg;C.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v0 framework</footer>
+
+<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v2 framework</footer>
 </body>
 </html>

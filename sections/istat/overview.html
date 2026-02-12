@@ -3,20 +3,208 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Overview — Paramedic Aid Memoir</title>
+<title>i-STAT Overview — Paramedic Aid Memoir</title>
 <link rel="stylesheet" href="../../styles/style.css">
 <script src="../../scripts/app.js" defer></script>
 </head>
 <body>
 <header class="site-header">
-  <span class="site-title">Paramedic Aid Memoir</span>
-  <a href="../../index.html">Home</a>
-  <a href="index.html">&larr; i-STAT</a>
+  <div class="header-inner">
+    <span class="site-title">Paramedic Aid Memoir</span>
+    <a href="../../index.html">Home</a>
+    <button class="btn-dark-mode" aria-label="Toggle dark mode">Dark</button>
+  </div>
 </header>
+<nav class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <a href="../../index.html">Home</a> <span class="sep">/</span>
+    <a href="index.html">i-STAT</a> <span class="sep">/</span>
+    <span class="current">Overview</span>
+  </div>
+</nav>
+
 <main class="content">
-<h1>Overview</h1>
-<p class="scope-block">Placeholder framework — content to be added.</p>
+<h1>i-STAT System Overview</h1>
+
+<p class="scope-block">
+  <span class="status-badge placeholder">PLACEHOLDER</span>
+  This page provides a comprehensive overview of the Abbott i-STAT 1 point-of-care analyser
+  including its components, capabilities, and special considerations for shipboard operation.
+  All sections below are framework headings awaiting detailed content.
+</p>
+
+<!-- ── Table of Contents ── -->
+<nav class="page-toc">
+  <p class="toc-title">On This Page</p>
+  <ul>
+    <li><a href="#what-is-istat">What is the i-STAT System</a></li>
+    <li><a href="#components">Components</a></li>
+    <li><a href="#capabilities">Capabilities &amp; Test Menu</a></li>
+    <li><a href="#shipboard">Shipboard Considerations</a></li>
+    <li><a href="#training">Training Requirements</a></li>
+    <li><a href="#documentation">Documentation &amp; Record Keeping</a></li>
+  </ul>
+</nav>
+
+<div style="margin-bottom:1rem;">
+  <button class="btn-expand-all">Expand All</button>
+  <button class="btn-collapse-all">Collapse All</button>
+</div>
+
+<!-- ── 1. What is the i-STAT System ── -->
+<section id="what-is-istat" class="collapsible">
+  <h2 class="collapsible-toggle">What is the i-STAT System</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+      <h3>Device Identity &amp; Manufacturer</h3>
+      <p>Abbott i-STAT 1 Analyser — manufacturer details, model number, regulatory classification.</p>
+
+      <h3>Intended Use &amp; Scope of Practice</h3>
+      <p>Point-of-care blood testing for critical-care analytes; intended operators; limitations of use.</p>
+
+      <h3>How It Works — Sensor Technology</h3>
+      <p>Thin-film electrochemical sensor technology, cartridge-based single-use consumables, calibration process.</p>
+
+      <h3>Regulatory &amp; Accreditation Context</h3>
+      <p>POCT accreditation standards (ISO 22870), CLIA-waived vs. moderate-complexity designations, military/maritime applicability.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── 2. Components ── -->
+<section id="components" class="collapsible">
+  <h2 class="collapsible-toggle">Components</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>i-STAT 1 Analyser (Handheld)</h3>
+      <p>Physical description, display, keypad, cartridge port, IR port, battery compartment, serial number location.</p>
+
+      <h3>Cartridges</h3>
+      <p>Overview of single-use cartridge types carried on board; cartridge architecture (sample well, sensor array, calibrant pouch).</p>
+
+      <h3>Downloader / Printer</h3>
+      <p>Model, connectivity (IR, serial), paper roll replacement, configuration settings.</p>
+
+      <h3>Electronic QC Simulator (EQC)</h3>
+      <p>Description, purpose, lot number tracking, expected pass behaviour, storage.</p>
+
+      <h3>Accessories &amp; Consumables</h3>
+      <p>Batteries (9 V lithium), syringes, capillary tubes, mixing tips, lancets, alcohol swabs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── 3. Capabilities & Test Menu ── -->
+<section id="capabilities" class="collapsible">
+  <h2 class="collapsible-toggle">Capabilities &amp; Test Menu</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Full Test Menu (All Cartridge Types)</h3>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Cartridge</th><th>Measured Analytes</th><th>Calculated Values</th><th>Turnaround</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>CHEM8+</td><td>Na, K, Cl, TCO2, BUN, Glu, Crea, iCa, Hct</td><td>Hgb, AnGap</td><td>~2 min</td></tr>
+          <tr><td>CG4+</td><td>pH, PCO2, PO2, Lactate</td><td>BE, HCO3, TCO2, sO2</td><td>~2 min</td></tr>
+          <tr><td>PT/INR</td><td>PT, INR</td><td>—</td><td>~2 min</td></tr>
+          <tr><td>Troponin I</td><td>cTnI</td><td>—</td><td>~10 min</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Sample Types Accepted</h3>
+      <p>Arterial whole blood, venous whole blood, capillary whole blood — cartridge-specific requirements.</p>
+
+      <h3>Limitations &amp; Interferences</h3>
+      <p>Known interferences (e.g., heparin concentration, haemolysis, lipaemia, icterus); cartridge-specific notes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── 4. Shipboard Considerations ── -->
+<section id="shipboard" class="collapsible">
+  <h2 class="collapsible-toggle">Shipboard Considerations</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Temperature Requirements</h3>
+      <p>Analyser operating range, cartridge storage temperature (refrigerated vs. room temp), warm-up time for refrigerated cartridges.</p>
+
+      <div class="warning-box caution">
+        <strong>Caution:</strong> Cartridges must equilibrate to room temperature (18-30 &deg;C) before use.
+        Failure to do so will produce erroneous results or cartridge errors.
+      </div>
+
+      <h3>Humidity</h3>
+      <p>Acceptable humidity range for analyser operation; effect of high humidity on cartridge foil pouches.</p>
+
+      <h3>Motion &amp; Vibration</h3>
+      <p>Impact of ship motion on cartridge fill and sensor calibration; best practices for stabilising the analyser during testing at sea.</p>
+
+      <h3>Storage &amp; Stowage</h3>
+      <p>Recommended stowage location (medical centre refrigerator for cartridges, dry locker for analyser); securing for sea state.</p>
+
+      <h3>Power &amp; Battery Management</h3>
+      <p>Battery life, spare battery requirements, charging (N/A — disposable 9 V), low-battery indicators.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── 5. Training Requirements ── -->
+<section id="training" class="collapsible">
+  <h2 class="collapsible-toggle">Training Requirements</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Initial Competency Training</h3>
+      <p>Who must be trained, minimum training content, practical assessment, sign-off authority.</p>
+
+      <h3>Annual Re-Certification</h3>
+      <p>Frequency, content review, practical demonstration, documentation of re-certification.</p>
+
+      <h3>Operator ID Management</h3>
+      <p>Assigning operator IDs on the analyser, linking IDs to training records, lockout for untrained operators.</p>
+
+      <h3>Training Records &amp; Documentation</h3>
+      <p>Where records are maintained, required fields, audit expectations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── 6. Documentation & Record Keeping ── -->
+<section id="documentation" class="collapsible">
+  <h2 class="collapsible-toggle">Documentation &amp; Record Keeping</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Patient Result Records</h3>
+      <p>Where results are recorded (printed ticket, electronic log, patient chart), required fields, retention period.</p>
+
+      <h3>QC Logbook</h3>
+      <p>Format, required entries (date, time, operator, cartridge lot, EQC lot, result, pass/fail), corrective action entries.</p>
+
+      <h3>Maintenance Log</h3>
+      <p>Cleaning, battery changes, firmware updates, repairs — all logged with date, operator, detail.</p>
+
+      <h3>Inventory &amp; Expiry Tracking</h3>
+      <p>Cartridge lot numbers, expiry dates, quantity on hand, reorder triggers.</p>
+
+      <h3>POCT Coordinator Reporting</h3>
+      <p>Monthly/quarterly reports to the POCT coordinator or pathology oversight; content requirements.</p>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v0 framework</footer>
+
+<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v2 framework</footer>
 </body>
 </html>

@@ -9,19 +9,54 @@
 </head>
 <body>
 <header class="site-header">
-  <span class="site-title">Paramedic Aid Memoir</span>
-  <a href="../../../index.html">Home</a>
-  <a href="../index.html">&larr; Casualty Clearing</a>
+  <div class="header-inner">
+    <span class="site-title">Paramedic Aid Memoir</span>
+    <a href="../../../index.html">Home</a>
+    <button class="btn-dark-mode" aria-label="Toggle dark mode">Dark</button>
+  </div>
 </header>
+<nav class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <a href="../../../index.html">Home</a> <span class="sep">/</span>
+    <a href="../index.html">Casualty Clearing</a> <span class="sep">/</span>
+    <span class="current">Evolutions</span>
+  </div>
+</nav>
+
 <main class="content">
-<h1>Evolutions</h1>
-<p class="scope-block">Placeholder framework — content to be added.</p>
-<ul class="page-list">
-  <li><a href="fire.html">Fire</a></li>
-  <li><a href="flood.html">Flood</a></li>
-  <li><a href="isolated-casualty.html">Isolated Casualty</a></li>
-</ul>
+<h1>Emergency Evolutions</h1>
+<p class="page-subtitle">Paramedic response procedures for shipboard emergency evolutions</p>
+
+<div class="scope-block">
+  This section covers the paramedic's role and actions during specific emergency evolutions. Each evolution page provides a comprehensive framework including alarm response, actions, equipment, and post-evolution procedures.
+  <span class="status-badge placeholder">Content pending</span>
+</div>
+
+<div class="info-block info">
+  <strong>About Evolutions</strong>
+  Shipboard emergency evolutions are practiced regularly to ensure crew readiness. The paramedic must know their exact role, staging location, equipment requirements, and communication protocols for each type of emergency. These pages serve as quick-reference guides during exercises and real emergencies.
+</div>
+
+<h2>Evolution Types</h2>
+<div class="card-grid">
+  <a href="fire.html" class="cat-emergency">
+    <span class="card-icon">&#x1F525;</span>
+    Fire
+    <span class="card-desc">Paramedic response to shipboard fire emergency</span>
+  </a>
+  <a href="flood.html" class="cat-emergency">
+    <span class="card-icon">&#x1F4A7;</span>
+    Flood
+    <span class="card-desc">Paramedic response to flooding emergency</span>
+  </a>
+  <a href="isolated-casualty.html" class="cat-emergency">
+    <span class="card-icon">&#x1F6A8;</span>
+    Isolated Casualty
+    <span class="card-desc">Response to single casualty in any location aboard</span>
+  </a>
+</div>
+
 </main>
-<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v0 framework</footer>
+<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v2 framework</footer>
 </body>
 </html>

@@ -3,34 +3,251 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cartridge Template — Paramedic Aid Memoir</title>
+<title>[Cartridge Name] — Paramedic Aid Memoir</title>
 <link rel="stylesheet" href="../../../styles/style.css">
 <script src="../../../scripts/app.js" defer></script>
 </head>
 <body>
 <header class="site-header">
-  <span class="site-title">Paramedic Aid Memoir</span>
-  <a href="../../../index.html">Home</a>
-  <a href="../cartridges.html">&larr; Cartridges</a>
+  <div class="header-inner">
+    <span class="site-title">Paramedic Aid Memoir</span>
+    <a href="../../../index.html">Home</a>
+    <button class="btn-dark-mode" aria-label="Toggle dark mode">Dark</button>
+  </div>
 </header>
+<nav class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <a href="../../../index.html">Home</a> <span class="sep">/</span>
+    <a href="../index.html">i-STAT</a> <span class="sep">/</span>
+    <a href="../cartridges.html">Cartridges</a> <span class="sep">/</span>
+    <span class="current">[Cartridge Name]</span>
+  </div>
+</nav>
+
 <main class="content">
 <h1>[Cartridge Name]</h1>
-<p class="scope-block">Template — copy this file for each new cartridge page.</p>
-<h2>Purpose</h2>
-<p>Placeholder.</p>
-<h2>Supplies</h2>
-<p>Placeholder.</p>
-<h2>Storage &amp; Handling</h2>
-<p>Placeholder.</p>
-<h2>QC Workflow</h2>
-<p>Placeholder.</p>
-<h2>Patient Sample Workflow</h2>
-<p>Placeholder.</p>
-<h2>Common Errors &amp; Fixes</h2>
-<p>Placeholder.</p>
-<h2>Notes for Shipboard Use</h2>
-<p>Placeholder.</p>
+
+<!-- ╔══════════════════════════════════════════════════════════╗
+     ║  TEMPLATE — Copy this file for each new cartridge type. ║
+     ║  Replace all [Cartridge Name] and [ANALYTE] markers.    ║
+     ╚══════════════════════════════════════════════════════════╝ -->
+
+<p class="scope-block">
+  <span class="status-badge placeholder">PLACEHOLDER</span>
+  Template cartridge page — copy this file and rename for each new cartridge type added to the
+  i-STAT system. Replace all bracketed placeholders with cartridge-specific information.
+</p>
+
+<div class="tag-list">
+  <span class="tag">[category]</span>
+</div>
+
+<!-- ── Quick Reference ── -->
+<h2>Quick Reference</h2>
+<table class="quick-ref-table">
+  <thead>
+    <tr><th>Field</th><th>Detail</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Cartridge Name</td><td>[Cartridge Name]</td></tr>
+    <tr><td>Analytes (Measured)</td><td>[List measured analytes]</td></tr>
+    <tr><td>Analytes (Calculated)</td><td>[List calculated analytes]</td></tr>
+    <tr><td>Sample Type</td><td>[Whole blood — arterial / venous / capillary]</td></tr>
+    <tr><td>Sample Volume</td><td>[Volume in &micro;L]</td></tr>
+    <tr><td>Time to Result</td><td>[~X minutes]</td></tr>
+    <tr><td>Storage Temperature</td><td>[2–8 &deg;C refrigerated / room temp range]</td></tr>
+    <tr><td>Room Temp Equilibration</td><td>[Minimum X minutes before use]</td></tr>
+  </tbody>
+</table>
+
+<!-- ── Table of Contents ── -->
+<nav class="page-toc">
+  <p class="toc-title">On This Page</p>
+  <ul>
+    <li><a href="#purpose">Purpose &amp; Clinical Indications</a></li>
+    <li><a href="#supplies">Supplies Required</a></li>
+    <li><a href="#storage">Storage &amp; Handling</a></li>
+    <li><a href="#qc-workflow">QC Workflow</a></li>
+    <li><a href="#patient-workflow">Patient Sample Workflow</a></li>
+    <li><a href="#reading-results">Reading Results</a></li>
+    <li><a href="#errors">Common Errors &amp; Fixes</a></li>
+    <li><a href="#critical-values">Critical Value Reporting</a></li>
+    <li><a href="#shipboard">Notes for Shipboard Use</a></li>
+  </ul>
+</nav>
+
+<div style="margin-bottom:1rem;">
+  <button class="btn-expand-all">Expand All</button>
+  <button class="btn-collapse-all">Collapse All</button>
+</div>
+
+<!-- ── Purpose & Clinical Indications ── -->
+<section id="purpose" class="collapsible">
+  <h2 class="collapsible-toggle">Purpose &amp; Clinical Indications</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+      <h3>What This Cartridge Tests</h3>
+      <p>[Description of analytes and what they measure]</p>
+      <h3>Clinical Indications</h3>
+      <p>[When to use this cartridge — clinical scenarios]</p>
+      <h3>Limitations &amp; Interferences</h3>
+      <p>[Known interferences specific to this cartridge]</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Supplies Required ── -->
+<section id="supplies" class="collapsible">
+  <h2 class="collapsible-toggle">Supplies Required</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+      <ul class="checklist">
+        <li><label><input type="checkbox"> i-STAT 1 Analyser (EQC passed)</label></li>
+        <li><label><input type="checkbox"> [Cartridge Name] cartridge (in-date, equilibrated)</label></li>
+        <li><label><input type="checkbox"> [Sample collection supplies]</label></li>
+        <li><label><input type="checkbox"> Gloves, alcohol swabs</label></li>
+        <li><label><input type="checkbox"> Sharps container</label></li>
+        <li><label><input type="checkbox"> Patient identification label / ID</label></li>
+        <li><label><input type="checkbox"> Printer or result recording form</label></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── Storage & Handling ── -->
+<section id="storage" class="collapsible">
+  <h2 class="collapsible-toggle">Storage &amp; Handling</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+      <h3>Storage Temperature</h3>
+      <p>[Refrigerated range and/or room temperature range]</p>
+      <h3>Shelf Life &amp; Expiry</h3>
+      <p>[Expiry tracking, shelf life from manufacture, opened pouch life]</p>
+      <h3>Lot Tracking</h3>
+      <p>[Lot number recording, new lot QC requirements]</p>
+      <h3>Equilibration Before Use</h3>
+      <div class="warning-box caution">
+        <strong>Caution:</strong> Allow cartridge to equilibrate to room temperature (18–30 &deg;C)
+        for at least [X] minutes before use.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── QC Workflow ── -->
+<section id="qc-workflow" class="collapsible">
+  <h2 class="collapsible-toggle">QC Workflow</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+      <ol class="procedure">
+        <li>Verify EQC has passed today.</li>
+        <li>Check if liquid QC is due for this cartridge type.</li>
+        <li>If due: run Level 1, Level 2, and Level 3 QC per <a href="../qc.html">QC procedures</a>.</li>
+        <li>Record all results in the QC logbook.</li>
+        <li>If QC fails, do NOT run patient samples. See <a href="../qc.html#qc-failure">QC Failure Troubleshooting</a>.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ── Patient Sample Workflow ── -->
+<section id="patient-workflow" class="collapsible">
+  <h2 class="collapsible-toggle">Patient Sample Workflow</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+      <ol class="procedure">
+        <li>Confirm patient identity (two identifiers).</li>
+        <li>Collect the sample: [sample type and collection method].</li>
+        <li>Open the cartridge foil pouch; remove cartridge.</li>
+        <li>Apply sample to the cartridge sample well — fill to the indicated line.</li>
+        <li>Close the cartridge cover.</li>
+        <li>Insert the cartridge into the analyser.</li>
+        <li>Enter patient ID and operator ID when prompted.</li>
+        <li>Wait for the analysis to complete (~[X] minutes).</li>
+        <li>Read and record the results.</li>
+        <li>Print the result ticket (if applicable).</li>
+        <li>Dispose of the used cartridge in the sharps/biohazard container.</li>
+        <li>Document results in the patient record.</li>
+        <li>Report critical values immediately per protocol.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ── Reading Results ── -->
+<section id="reading-results" class="collapsible">
+  <h2 class="collapsible-toggle">Reading Results</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Analyte</th><th>Units</th><th>Normal Range</th><th>Critical Low</th><th>Critical High</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>[Analyte]</td><td>[Units]</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── Common Errors & Fixes ── -->
+<section id="errors" class="collapsible">
+  <h2 class="collapsible-toggle">Common Errors &amp; Fixes</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Error</th><th>Probable Cause</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>[Error description]</td><td>[Cause]</td><td>[Fix]</td></tr>
+        </tbody>
+      </table>
+      <p>For full error code reference, see <a href="../troubleshooting.html">Troubleshooting</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Critical Value Reporting ── -->
+<section id="critical-values" class="collapsible">
+  <h2 class="collapsible-toggle">Critical Value Reporting</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+      <div class="warning-box danger">
+        <strong>Critical values must be reported immediately to the responsible medical officer.</strong>
+      </div>
+      <p>[Reporting procedure, who to notify, documentation requirements, read-back verification]</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Notes for Shipboard Use ── -->
+<section id="shipboard" class="collapsible">
+  <h2 class="collapsible-toggle">Notes for Shipboard Use</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+      <h3>Motion &amp; Vibration</h3>
+      <p>[Impact of ship motion on this cartridge; stabilisation advice]</p>
+      <h3>Temperature Considerations</h3>
+      <p>[Shipboard temperature challenges specific to this cartridge]</p>
+      <h3>Documentation at Sea</h3>
+      <p>[Special documentation considerations when operating at sea]</p>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v0 framework</footer>
+
+<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v2 framework</footer>
 </body>
 </html>

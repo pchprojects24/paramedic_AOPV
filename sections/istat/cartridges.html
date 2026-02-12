@@ -3,26 +3,124 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cartridges — Paramedic Aid Memoir</title>
+<title>i-STAT Cartridges — Paramedic Aid Memoir</title>
 <link rel="stylesheet" href="../../styles/style.css">
 <script src="../../scripts/app.js" defer></script>
 </head>
 <body>
 <header class="site-header">
-  <span class="site-title">Paramedic Aid Memoir</span>
-  <a href="../../index.html">Home</a>
-  <a href="index.html">&larr; i-STAT</a>
+  <div class="header-inner">
+    <span class="site-title">Paramedic Aid Memoir</span>
+    <a href="../../index.html">Home</a>
+    <button class="btn-dark-mode" aria-label="Toggle dark mode">Dark</button>
+  </div>
 </header>
+<nav class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <a href="../../index.html">Home</a> <span class="sep">/</span>
+    <a href="index.html">i-STAT</a> <span class="sep">/</span>
+    <span class="current">Cartridges</span>
+  </div>
+</nav>
+
 <main class="content">
 <h1>i-STAT Cartridges</h1>
-<p class="scope-block">Placeholder framework — content to be added.</p>
+
+<p class="scope-block">
+  <span class="status-badge placeholder">PLACEHOLDER</span>
+  Individual reference pages for each i-STAT cartridge type carried on board. Each page covers
+  analytes, clinical indications, supplies, storage, QC workflow, patient sample workflow,
+  result interpretation, and shipboard notes.
+</p>
+
+<div class="tag-list">
+  <span class="tag">chemistry</span>
+  <span class="tag">blood-gas</span>
+  <span class="tag">coagulation</span>
+  <span class="tag">cardiac</span>
+</div>
+
+<!-- ── Cartridge Card Grid ── -->
+<h2>Available Cartridges</h2>
+
 <ul class="page-list">
-  <li><a href="cartridges/chem8plus.html">CHEM8+</a></li>
-  <li><a href="cartridges/cg4plus.html">CG4+</a></li>
-  <li><a href="cartridges/ptinr.html">PT/INR</a></li>
-  <li><a href="cartridges/troponin.html">Troponin I</a></li>
+  <li>
+    <a href="cartridges/chem8plus.html">CHEM8+</a>
+    <span class="link-desc">Basic metabolic panel — Na, K, Cl, TCO2, BUN, Glucose, Creatinine, iCa, Hct, Hgb (calc), AnGap (calc).</span>
+  </li>
+  <li>
+    <a href="cartridges/cg4plus.html">CG4+</a>
+    <span class="link-desc">Blood gas and lactate — pH, PCO2, PO2, Lactate, BE (calc), HCO3 (calc), TCO2 (calc), sO2 (calc).</span>
+  </li>
+  <li>
+    <a href="cartridges/ptinr.html">PT/INR</a>
+    <span class="link-desc">Coagulation — Prothrombin Time (PT), International Normalised Ratio (INR).</span>
+  </li>
+  <li>
+    <a href="cartridges/troponin.html">Troponin I</a>
+    <span class="link-desc">Cardiac marker — cardiac Troponin I (cTnI) for assessment of myocardial injury.</span>
+  </li>
 </ul>
+
+<!-- ── Quick Comparison Table ── -->
+<h2>Cartridge Comparison</h2>
+
+<table class="quick-ref-table">
+  <thead>
+    <tr>
+      <th>Cartridge</th>
+      <th>Category</th>
+      <th>Measured Analytes</th>
+      <th>Calculated Values</th>
+      <th>Sample Type</th>
+      <th>Time to Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="cartridges/chem8plus.html">CHEM8+</a></td>
+      <td>Chemistry</td>
+      <td>Na, K, Cl, TCO2, BUN, Glu, Crea, iCa, Hct</td>
+      <td>Hgb, AnGap</td>
+      <td>Whole blood</td>
+      <td>~2 min</td>
+    </tr>
+    <tr>
+      <td><a href="cartridges/cg4plus.html">CG4+</a></td>
+      <td>Blood Gas</td>
+      <td>pH, PCO2, PO2, Lactate</td>
+      <td>BE, HCO3, TCO2, sO2</td>
+      <td>Arterial / venous whole blood</td>
+      <td>~2 min</td>
+    </tr>
+    <tr>
+      <td><a href="cartridges/ptinr.html">PT/INR</a></td>
+      <td>Coagulation</td>
+      <td>PT, INR</td>
+      <td>—</td>
+      <td>Whole blood</td>
+      <td>~2 min</td>
+    </tr>
+    <tr>
+      <td><a href="cartridges/troponin.html">Troponin I</a></td>
+      <td>Cardiac</td>
+      <td>cTnI</td>
+      <td>—</td>
+      <td>Whole blood</td>
+      <td>~10 min</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ── Template Link ── -->
+<h2>Cartridge Page Template</h2>
+<p>
+  <a href="cartridges/template.html">Cartridge Template Page</a> —
+  Copy this file when adding a new cartridge type to the reference system.
+</p>
+
 </main>
-<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v0 framework</footer>
+
+<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v2 framework</footer>
 </body>
 </html>

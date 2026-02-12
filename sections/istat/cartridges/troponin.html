@@ -3,34 +3,421 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Troponin I — Paramedic Aid Memoir</title>
+<title>Troponin I Cartridge — Paramedic Aid Memoir</title>
 <link rel="stylesheet" href="../../../styles/style.css">
 <script src="../../../scripts/app.js" defer></script>
 </head>
 <body>
 <header class="site-header">
-  <span class="site-title">Paramedic Aid Memoir</span>
-  <a href="../../../index.html">Home</a>
-  <a href="../cartridges.html">&larr; Cartridges</a>
+  <div class="header-inner">
+    <span class="site-title">Paramedic Aid Memoir</span>
+    <a href="../../../index.html">Home</a>
+    <button class="btn-dark-mode" aria-label="Toggle dark mode">Dark</button>
+  </div>
 </header>
+<nav class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <a href="../../../index.html">Home</a> <span class="sep">/</span>
+    <a href="../index.html">i-STAT</a> <span class="sep">/</span>
+    <a href="../cartridges.html">Cartridges</a> <span class="sep">/</span>
+    <span class="current">Troponin I</span>
+  </div>
+</nav>
+
 <main class="content">
-<h1>Troponin I</h1>
-<p class="scope-block">Placeholder framework — content to be added.</p>
-<h2>Purpose</h2>
-<p>Placeholder.</p>
-<h2>Supplies</h2>
-<p>Placeholder.</p>
-<h2>Storage &amp; Handling</h2>
-<p>Placeholder.</p>
-<h2>QC Workflow</h2>
-<p>Placeholder.</p>
-<h2>Patient Sample Workflow</h2>
-<p>Placeholder.</p>
-<h2>Common Errors &amp; Fixes</h2>
-<p>Placeholder.</p>
-<h2>Notes for Shipboard Use</h2>
-<p>Placeholder.</p>
+<h1>Troponin I Cartridge</h1>
+
+<p class="scope-block">
+  <span class="status-badge placeholder">PLACEHOLDER</span>
+  Comprehensive reference for the i-STAT Troponin I cartridge — cardiac marker for the assessment
+  of myocardial injury. All sections below are framework headings awaiting detailed content.
+</p>
+
+<div class="tag-list">
+  <span class="tag">cardiac</span>
+  <span class="tag">troponin</span>
+  <span class="tag">ACS</span>
+  <span class="tag">myocardial-injury</span>
+</div>
+
+<!-- ── Quick Reference ── -->
+<h2>Quick Reference</h2>
+<table class="quick-ref-table">
+  <thead>
+    <tr><th>Field</th><th>Detail</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Cartridge Name</td><td>Troponin I (cTnI)</td></tr>
+    <tr><td>Analytes (Measured)</td><td>cTnI (cardiac Troponin I)</td></tr>
+    <tr><td>Analytes (Calculated)</td><td>—</td></tr>
+    <tr><td>Sample Type</td><td>Whole blood (venous, heparinised)</td></tr>
+    <tr><td>Sample Volume</td><td><span class="status-badge placeholder">PLACEHOLDER</span> &micro;L</td></tr>
+    <tr><td>Time to Result</td><td>~10 minutes</td></tr>
+    <tr><td>Storage Temperature</td><td>2–8 &deg;C (refrigerated); or room temp per manufacturer spec</td></tr>
+    <tr><td>Room Temp Equilibration</td><td>Minimum 5 minutes before use</td></tr>
+  </tbody>
+</table>
+
+<!-- ── Table of Contents ── -->
+<nav class="page-toc">
+  <p class="toc-title">On This Page</p>
+  <ul>
+    <li><a href="#purpose">Purpose &amp; Clinical Indications</a></li>
+    <li><a href="#supplies">Supplies Required</a></li>
+    <li><a href="#storage">Storage &amp; Handling</a></li>
+    <li><a href="#qc-workflow">QC Workflow</a></li>
+    <li><a href="#patient-workflow">Patient Sample Workflow</a></li>
+    <li><a href="#reading-results">Reading Results</a></li>
+    <li><a href="#errors">Common Errors &amp; Fixes</a></li>
+    <li><a href="#critical-values">Critical Value Reporting</a></li>
+    <li><a href="#shipboard">Notes for Shipboard Use</a></li>
+  </ul>
+</nav>
+
+<div style="margin-bottom:1rem;">
+  <button class="btn-expand-all">Expand All</button>
+  <button class="btn-collapse-all">Collapse All</button>
+</div>
+
+<!-- ── Purpose & Clinical Indications ── -->
+<section id="purpose" class="collapsible">
+  <h2 class="collapsible-toggle">Purpose &amp; Clinical Indications</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>What This Cartridge Tests</h3>
+      <p>The Troponin I cartridge measures cardiac Troponin I (cTnI), a highly specific biomarker for
+         myocardial cell injury. Elevated cTnI indicates damage to cardiac muscle tissue.</p>
+
+      <h3>Clinical Indications</h3>
+      <ul>
+        <li>Assessment of acute coronary syndrome (ACS) — STEMI, NSTEMI</li>
+        <li>Evaluation of chest pain / suspected myocardial infarction (MI)</li>
+        <li>Monitoring myocardial injury in trauma</li>
+        <li>Assessment of myocarditis</li>
+        <li>Post-resuscitation myocardial assessment</li>
+        <li>Risk stratification in acute chest pain presentations</li>
+        <li>Serial testing to detect rising/falling troponin trends</li>
+      </ul>
+
+      <h3>Limitations &amp; Interferences</h3>
+      <ul>
+        <li>A single negative troponin does NOT rule out MI — serial testing at 3–6 hour intervals is required.</li>
+        <li>Troponin may be elevated in non-cardiac conditions: renal failure, sepsis, PE, myocarditis, strenuous exercise.</li>
+        <li>The i-STAT cTnI is a conventional (not high-sensitivity) troponin assay — detection sensitivity differs from laboratory hs-cTnI/hs-cTnT assays.</li>
+        <li>Haemolysis, lipaemia, and HAMA (human anti-mouse antibodies) may interfere.</li>
+      </ul>
+
+      <div class="warning-box danger">
+        <strong>Critical Limitation:</strong> A negative i-STAT troponin result in the first few hours after
+        symptom onset does NOT exclude myocardial infarction. Troponin levels may not rise above the
+        detection threshold for 3–6 hours after myocardial injury. Always correlate with clinical
+        presentation, ECG findings, and repeat testing.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Supplies Required ── -->
+<section id="supplies" class="collapsible">
+  <h2 class="collapsible-toggle">Supplies Required</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+      <ul class="checklist">
+        <li><label><input type="checkbox"> i-STAT 1 Analyser (EQC passed today)</label></li>
+        <li><label><input type="checkbox"> Troponin I cartridge (in-date, room temp equilibrated)</label></li>
+        <li><label><input type="checkbox"> Venepuncture supplies (needle, lithium heparin syringe or tube)</label></li>
+        <li><label><input type="checkbox"> Gloves, alcohol swab, gauze, tape, tourniquet</label></li>
+        <li><label><input type="checkbox"> Sharps container</label></li>
+        <li><label><input type="checkbox"> Patient identification (two identifiers)</label></li>
+        <li><label><input type="checkbox"> Printer or result recording form</label></li>
+        <li><label><input type="checkbox"> Timer (for the ~10-minute analysis period)</label></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── Storage & Handling ── -->
+<section id="storage" class="collapsible">
+  <h2 class="collapsible-toggle">Storage &amp; Handling</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Storage Temperature</h3>
+      <p>Refrigerated: 2–8 &deg;C. Room temperature storage range and duration per manufacturer instructions.</p>
+
+      <h3>Shelf Life &amp; Expiry</h3>
+      <p>Check expiry date on each cartridge pouch. Once the foil pouch is opened, use promptly.
+         The Troponin I cartridge may have a shorter shelf life than chemistry cartridges — verify.</p>
+
+      <h3>Lot Tracking</h3>
+      <p>Record lot number upon receipt. New lots require liquid QC at all 3 levels before patient use.
+         Given the clinical significance of troponin results, meticulous lot tracking is essential.</p>
+
+      <h3>Equilibration Before Use</h3>
+      <div class="warning-box caution">
+        <strong>Caution:</strong> Allow cartridge to equilibrate to room temperature (18–30 &deg;C)
+        for at least 5 minutes before use. Do not artificially warm.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── QC Workflow ── -->
+<section id="qc-workflow" class="collapsible">
+  <h2 class="collapsible-toggle">QC Workflow</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+      <ol class="procedure">
+        <li>Verify EQC has passed today.</li>
+        <li>Check the QC logbook — is liquid QC due for Troponin I this week?</li>
+        <li>If due: run Level 1, Level 2, and Level 3 liquid QC per <a href="../qc.html">QC procedures</a>.</li>
+        <li>Compare cTnI results against lot-specific acceptable ranges.</li>
+        <li>Record all results (PASS/FAIL) in the QC logbook.</li>
+        <li>If any level fails, do NOT run patient samples on Troponin I until resolved.</li>
+        <li>See <a href="../qc.html#qc-failure">QC Failure Troubleshooting</a> for corrective actions.</li>
+      </ol>
+
+      <div class="info-block info">
+        <strong>Note:</strong> The Troponin I cartridge has a longer analysis time (~10 minutes vs ~2 minutes
+        for other cartridges). This also applies during QC testing — plan accordingly.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Patient Sample Workflow ── -->
+<section id="patient-workflow" class="collapsible">
+  <h2 class="collapsible-toggle">Patient Sample Workflow</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Pre-Analysis</h3>
+      <ol class="procedure">
+        <li>Confirm patient identity using two identifiers.</li>
+        <li>Verify that EQC has passed and QC is current for Troponin I.</li>
+        <li>Gather all supplies (see checklist above).</li>
+        <li>Remove a Troponin I cartridge from its foil pouch; confirm room temperature and in-date.</li>
+        <li>Note the time of symptom onset and time of blood draw — both are clinically important.</li>
+      </ol>
+
+      <h3>Sample Collection</h3>
+      <ol class="procedure">
+        <li>Perform venepuncture using standard technique.</li>
+        <li>Collect venous whole blood into a lithium heparin syringe or tube.</li>
+        <li>Mix gently by inversion.</li>
+        <li>Analyse as soon as possible after collection.</li>
+      </ol>
+
+      <h3>Running the Test</h3>
+      <ol class="procedure">
+        <li>Apply the blood sample to the Troponin I cartridge sample well — fill to the line.</li>
+        <li>Close the cartridge cover firmly.</li>
+        <li>Insert the cartridge into the i-STAT analyser.</li>
+        <li>Enter patient ID and operator ID when prompted.</li>
+        <li>Wait for the analysis to complete — approximately <strong>10 minutes</strong>.</li>
+        <li>Do NOT remove the cartridge during the analysis cycle.</li>
+      </ol>
+
+      <div class="info-block warning">
+        <strong>Important:</strong> The Troponin I cartridge takes approximately 10 minutes to produce a result.
+        Do not disturb the analyser during this time. Plan clinical workflow accordingly.
+      </div>
+
+      <h3>Post-Analysis</h3>
+      <ol class="procedure">
+        <li>Read the cTnI result on the display.</li>
+        <li>Print the result ticket (if available).</li>
+        <li>Dispose of the used cartridge in the sharps/biohazard container.</li>
+        <li>Document: cTnI result, time of symptom onset, time of blood draw, time of result.</li>
+        <li>Interpret in context — a single result is insufficient for diagnosis.</li>
+        <li>Plan serial testing at 3–6 hour intervals if initial result is negative but clinical suspicion persists.</li>
+        <li>Report any elevated result immediately.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ── Reading Results ── -->
+<section id="reading-results" class="collapsible">
+  <h2 class="collapsible-toggle">Reading Results</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Analyte</th><th>Units</th><th>Normal (99th Percentile)</th><th>Elevated / Positive</th><th>Reportable Range</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>cTnI (cardiac Troponin I)</td>
+            <td>ng/mL</td>
+            <td><span class="status-badge placeholder">PLACEHOLDER</span></td>
+            <td><span class="status-badge placeholder">PLACEHOLDER</span></td>
+            <td><span class="status-badge placeholder">PLACEHOLDER</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Interpretation Guide</h3>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Result</th><th>Interpretation</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Below 99th percentile URL</td>
+            <td>Normal — no evidence of myocardial injury at this time point</td>
+            <td>If clinical suspicion remains, repeat at 3–6 hours.</td>
+          </tr>
+          <tr>
+            <td>Above 99th percentile URL</td>
+            <td>Elevated — consistent with myocardial injury</td>
+            <td>Report immediately to medical officer. Correlate with ECG and clinical presentation.</td>
+          </tr>
+          <tr>
+            <td>Rising pattern on serial testing</td>
+            <td>Acute myocardial injury (likely MI if &gt;20% change)</td>
+            <td>Urgent clinical decision required — consider ACS pathway.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="warning-box caution">
+        <strong>Caution:</strong> Elevated troponin is not specific to myocardial infarction. Other causes include
+        myocarditis, PE, renal failure, sepsis, and cardiac contusion. Always interpret in the clinical context.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Common Errors & Fixes ── -->
+<section id="errors" class="collapsible">
+  <h2 class="collapsible-toggle">Common Errors &amp; Fixes</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Error</th><th>Probable Cause</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Analysis timeout / no result after 10+ minutes</td>
+            <td>Cartridge defect, insufficient sample</td>
+            <td>Use a new cartridge and fresh sample. Check cartridge expiry and lot.</td>
+          </tr>
+          <tr>
+            <td>Result below detection limit</td>
+            <td>Normal — no detectable cTnI at this time point</td>
+            <td>Report as below detection limit. Plan serial testing if clinically indicated.</td>
+          </tr>
+          <tr>
+            <td>Sample not detected</td>
+            <td>Insufficient fill volume</td>
+            <td>Ensure adequate sample; fill to line; use new cartridge.</td>
+          </tr>
+          <tr>
+            <td>Calibration failure</td>
+            <td>Cartridge not equilibrated / expired</td>
+            <td>Check temp and expiry; try new cartridge.</td>
+          </tr>
+          <tr>
+            <td>Unexpectedly elevated in asymptomatic patient</td>
+            <td>Sample error, non-cardiac elevation, or subclinical injury</td>
+            <td>Repeat test; correlate with clinical picture and ECG; consider non-cardiac causes.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>For the full error code reference, see <a href="../troubleshooting.html">i-STAT Troubleshooting</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Critical Value Reporting ── -->
+<section id="critical-values" class="collapsible">
+  <h2 class="collapsible-toggle">Critical Value Reporting</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <div class="warning-box danger">
+        <strong>Any elevated troponin result must be reported immediately to the responsible medical officer.</strong>
+        An elevated cTnI in the context of chest pain may indicate an acute myocardial infarction
+        requiring urgent intervention.
+      </div>
+
+      <h3>Troponin I Critical Threshold</h3>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Analyte</th><th>Critical Threshold</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>cTnI</td><td>Any value above the 99th percentile URL: <span class="status-badge placeholder">PLACEHOLDER</span> ng/mL</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Reporting Procedure</h3>
+      <ol class="procedure">
+        <li>Identify the elevated cTnI result on the display.</li>
+        <li>Immediately contact the responsible medical officer.</li>
+        <li>Report: patient identity, cTnI result, time of symptom onset, time of blood draw, ECG findings (if available).</li>
+        <li>Obtain read-back confirmation.</li>
+        <li>Document: who was notified, time of notification, read-back confirmed, in the patient record.</li>
+        <li>Prepare for serial testing at 3–6 hours to assess trend (rising, falling, stable).</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ── Notes for Shipboard Use ── -->
+<section id="shipboard" class="collapsible">
+  <h2 class="collapsible-toggle">Notes for Shipboard Use</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Motion &amp; Vibration</h3>
+      <p>The 10-minute analysis time means the analyser must remain stable for a longer period than
+         other cartridge types. Secure the analyser on a stable, non-vibrating surface. In heavy weather,
+         consider timing the test for a period of relative calm if possible.</p>
+
+      <h3>Temperature Considerations</h3>
+      <p>Standard cartridge storage and equilibration requirements apply. The Troponin I cartridge may
+         be more sensitive to temperature extremes — verify manufacturer specifications.</p>
+
+      <h3>Documentation at Sea</h3>
+      <p>Cardiac events at sea require detailed documentation for medical evacuation planning and
+         telemedicine consultation. Record: all troponin results with timestamps, ECG findings, vital signs
+         trend, symptom timeline, and any treatments administered. This information is critical for the
+         receiving facility.</p>
+
+      <div class="warning-box tip">
+        <strong>Tip:</strong> If a suspected cardiac event occurs at sea and the initial troponin is negative,
+        do not be reassured. Plan serial testing at 3 and 6 hours. Begin telemedicine consultation early
+        and prepare for potential medical evacuation based on the full clinical picture, not just the
+        troponin result alone.
+      </div>
+
+      <div class="info-block info">
+        <strong>Stock Consideration:</strong> Troponin I cartridges are used less frequently than CHEM8+ or CG4+
+        but are critically important when needed. Maintain adequate stock and monitor expiry dates carefully —
+        expiry before use is a common issue with infrequently used cartridges.
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v0 framework</footer>
+
+<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v2 framework</footer>
 </body>
 </html>

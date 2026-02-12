@@ -9,18 +9,105 @@
 </head>
 <body>
 <header class="site-header">
-  <span class="site-title">Paramedic Aid Memoir</span>
-  <a href="../../index.html">Home</a>
-  <a href="index.html">&larr; Inventory</a>
+  <div class="header-inner">
+    <span class="site-title">Paramedic Aid Memoir</span>
+    <a href="../../index.html">Home</a>
+    <button class="btn-dark-mode" aria-label="Toggle dark mode">Dark</button>
+  </div>
 </header>
+<nav class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <a href="../../index.html">Home</a> <span class="sep">/</span>
+    <a href="index.html">Inventory &amp; Ordering</a> <span class="sep">/</span>
+    <span class="current">Inventory List</span>
+  </div>
+</nav>
+
 <main class="content">
-<h1>Inventory List</h1>
-<p class="scope-block">Placeholder framework — content to be added.</p>
-<div class="search-container">
-  <input type="search" placeholder="Search…" aria-label="Search">
+<h1>Sickbay Inventory List</h1>
+<p class="page-subtitle">Searchable inventory of medical consumables, equipment, and supplies</p>
+
+<div class="scope-block">
+  This page will be a searchable inventory database for all sickbay items. Data to be populated from ship-specific inventory lists.
+  <span class="status-badge placeholder">Content pending</span>
 </div>
-<div class="search-results">No data loaded yet.</div>
+
+<div class="info-block info">
+  <strong>How to Use This Page</strong>
+  Once populated, use the search box below to quickly find any item in the sickbay inventory. Results will show item name, location, quantity, NSN, and expiry information. This is intended as a quick-lookup tool during routine operations and for inventory management.
+</div>
+
+<!-- Search Interface -->
+<div class="search-container">
+  <input type="search" id="inventory-search" placeholder="Search inventory by item name, NSN, or location..." aria-label="Search inventory">
+</div>
+<div id="search-results" class="search-results">
+  <p class="placeholder-content">No inventory data loaded. This searchable database will be populated with ship-specific inventory data.</p>
+</div>
+
+<h2>Inventory Categories</h2>
+
+<section class="collapsible">
+  <button class="collapsible-toggle" aria-expanded="false">Medical Consumables</button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">Placeholder</span> Bandages, dressings, gauze, tape, gloves, syringes, needles, IV supplies, suture kits, specimen containers, PPE, and other single-use medical items.</p>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Item</th><th>NSN</th><th>Location</th><th>Par Level</th><th>Current Qty</th><th>Expiry</th></tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="6"><span class="status-badge placeholder">Placeholder</span> Data to be populated</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="collapsible">
+  <button class="collapsible-toggle" aria-expanded="false">Medications</button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">Placeholder</span> See <a href="medication-inventory.html">Medication Inventory</a> for the dedicated medication search page.</p>
+    </div>
+  </div>
+</section>
+
+<section class="collapsible">
+  <button class="collapsible-toggle" aria-expanded="false">Equipment Parts &amp; Accessories</button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">Placeholder</span> Replacement parts, batteries, cables, sensors, electrodes, printer paper, and accessories for sickbay medical equipment.</p>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Item</th><th>NSN</th><th>Compatible Equipment</th><th>Location</th><th>Par Level</th><th>Current Qty</th></tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="6"><span class="status-badge placeholder">Placeholder</span> Data to be populated</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="collapsible">
+  <button class="collapsible-toggle" aria-expanded="false">Administrative Supplies</button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">Placeholder</span> Medical forms, labels, printer supplies, binders, logbooks, reference materials, and other administrative items.</p>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Item</th><th>NSN</th><th>Location</th><th>Par Level</th><th>Current Qty</th></tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="5"><span class="status-badge placeholder">Placeholder</span> Data to be populated</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v0 framework</footer>
+<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v2 framework</footer>
 </body>
 </html>

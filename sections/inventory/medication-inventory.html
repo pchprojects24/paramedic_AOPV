@@ -9,18 +9,120 @@
 </head>
 <body>
 <header class="site-header">
-  <span class="site-title">Paramedic Aid Memoir</span>
-  <a href="../../index.html">Home</a>
-  <a href="index.html">&larr; Inventory</a>
+  <div class="header-inner">
+    <span class="site-title">Paramedic Aid Memoir</span>
+    <a href="../../index.html">Home</a>
+    <button class="btn-dark-mode" aria-label="Toggle dark mode">Dark</button>
+  </div>
 </header>
+<nav class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <a href="../../index.html">Home</a> <span class="sep">/</span>
+    <a href="index.html">Inventory &amp; Ordering</a> <span class="sep">/</span>
+    <span class="current">Medication Inventory</span>
+  </div>
+</nav>
+
 <main class="content">
 <h1>Medication Inventory</h1>
-<p class="scope-block">Placeholder framework — content to be added.</p>
-<div class="search-container">
-  <input type="search" placeholder="Search…" aria-label="Search">
+<p class="page-subtitle">Searchable medication inventory with controlled and non-controlled tracking</p>
+
+<div class="scope-block">
+  This page will be a searchable medication inventory for all medications carried aboard. Data to be populated from the ship's authorized medication stock list.
+  <span class="status-badge placeholder">Content pending</span>
 </div>
-<div class="search-results">No data loaded yet.</div>
+
+<div class="info-block warning">
+  <strong>Controlled Substances</strong>
+  Controlled substances (Schedule drugs) require additional documentation, dual-count verification, and secure storage. See the Controlled Substances section below for specific requirements. All discrepancies must be reported immediately to the MO and Coxswain.
+</div>
+
+<div class="info-block info">
+  <strong>About This Page</strong>
+  Once populated, use the search box below to quickly find any medication in the sickbay inventory. Results will show medication name, DIN, strength, quantity, expiry, storage location, and schedule classification. This page is separate from the Medications Quick Reference (which covers dosing/indications).
+</div>
+
+<!-- Search Interface -->
+<div class="search-container">
+  <input type="search" id="medication-search" placeholder="Search medications by name, DIN, or category..." aria-label="Search medications">
+</div>
+<div id="search-results" class="search-results">
+  <p class="placeholder-content">No medication data loaded. This searchable database will be populated with ship-specific medication inventory data.</p>
+</div>
+
+<h2>Medication Categories</h2>
+
+<section class="collapsible">
+  <button class="collapsible-toggle" aria-expanded="false">Schedule Drugs (Controlled Substances)</button>
+  <div class="collapsible-body">
+    <div class="warning-box danger">
+      <strong>Controlled Substances:</strong> All controlled substances must be double-locked, counted at each watch/shift change, and documented in the controlled substance register. Any discrepancy requires immediate reporting.
+    </div>
+    <div class="placeholder-content">
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Medication</th><th>DIN</th><th>Strength</th><th>Form</th><th>Qty on Hand</th><th>Expiry</th><th>Schedule</th></tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="7"><span class="status-badge placeholder">Placeholder</span> Controlled substance data to be populated</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="collapsible">
+  <button class="collapsible-toggle" aria-expanded="false">Non-Scheduled Medications</button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">Placeholder</span> Prescription and non-controlled medications carried aboard.</p>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Medication</th><th>DIN</th><th>Strength</th><th>Form</th><th>Qty on Hand</th><th>Expiry</th><th>Location</th></tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="7"><span class="status-badge placeholder">Placeholder</span> Data to be populated</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="collapsible">
+  <button class="collapsible-toggle" aria-expanded="false">IV Fluids</button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">Placeholder</span> Intravenous fluids and administration sets carried aboard.</p>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Fluid</th><th>Volume</th><th>Qty on Hand</th><th>Expiry</th><th>Location</th></tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="5"><span class="status-badge placeholder">Placeholder</span> Data to be populated</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="collapsible">
+  <button class="collapsible-toggle" aria-expanded="false">Topical &amp; OTC Medications</button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">Placeholder</span> Over-the-counter medications, topical preparations, creams, ointments, and non-prescription items.</p>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Medication</th><th>DIN</th><th>Strength/Size</th><th>Qty on Hand</th><th>Expiry</th><th>Location</th></tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="6"><span class="status-badge placeholder">Placeholder</span> Data to be populated</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v0 framework</footer>
+<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v2 framework</footer>
 </body>
 </html>

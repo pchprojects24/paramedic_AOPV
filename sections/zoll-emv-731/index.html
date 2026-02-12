@@ -3,20 +3,746 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ventilator (ZOLL EMV+ 731) — Paramedic Aid Memoir</title>
+<title>ZOLL EMV+ 731 Ventilator — Paramedic Aid Memoir</title>
 <link rel="stylesheet" href="../../styles/style.css">
 <script src="../../scripts/app.js" defer></script>
 </head>
 <body>
 <header class="site-header">
-  <span class="site-title">Paramedic Aid Memoir</span>
-  <a href="../../index.html">Home</a>
-
+  <div class="header-inner">
+    <span class="site-title">Paramedic Aid Memoir</span>
+    <a href="../../index.html">Home</a>
+    <button class="btn-dark-mode" aria-label="Toggle dark mode">Dark</button>
+  </div>
 </header>
+<nav class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <a href="../../index.html">Home</a> <span class="sep">/</span>
+    <a href="../equipment/index.html">Equipment</a> <span class="sep">/</span>
+    <span class="current">ZOLL EMV+ 731 Ventilator</span>
+  </div>
+</nav>
+
 <main class="content">
-<h1>Ventilator (ZOLL EMV+ 731)</h1>
-<p class="scope-block">Placeholder framework — content to be added.</p>
+<h1>ZOLL EMV+ 731 Ventilator</h1>
+
+<p class="scope-block">
+  <span class="status-badge placeholder">Framework</span>
+  Comprehensive operational guide for the ZOLL EMV+ 731 portable transport ventilator.
+  Covers all ventilation modes, patient circuit setup, alarm management, and transport considerations.
+</p>
+
+<div class="tag-list">
+  <span class="tag">Ventilation</span>
+  <span class="tag">Critical Care</span>
+  <span class="tag">Transport</span>
+  <span class="tag">Respiratory</span>
+</div>
+
+<!-- ===== Table of Contents ===== -->
+<nav class="page-toc">
+  <p class="toc-title">On This Page</p>
+  <ul>
+    <li><a href="#quick-ref">Quick Reference Card</a></li>
+    <li><a href="#overview">Equipment Overview</a></li>
+    <li><a href="#components">Components &amp; Accessories</a></li>
+    <li><a href="#quick-start">Quick Start Guide</a></li>
+    <li><a href="#mode-ac">Ventilation Mode — Assist Control (AC)</a></li>
+    <li><a href="#mode-simv">Ventilation Mode — SIMV</a></li>
+    <li><a href="#mode-cpap">Ventilation Mode — CPAP</a></li>
+    <li><a href="#mode-bilevel">Ventilation Mode — BiLevel</a></li>
+    <li><a href="#mode-niv">Ventilation Mode — Non-Invasive (NIV)</a></li>
+    <li><a href="#parameters">Setting Parameters</a></li>
+    <li><a href="#circuit">Patient Circuit Setup</a></li>
+    <li><a href="#alarms">Alarm Management</a></li>
+    <li><a href="#oxygen">Oxygen Supply Management</a></li>
+    <li><a href="#daily-checks">Daily Checks</a></li>
+    <li><a href="#cleaning">Cleaning &amp; Decontamination</a></li>
+    <li><a href="#battery">Battery Management</a></li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+    <li><a href="#transport">Transport Considerations</a></li>
+    <li><a href="#shipboard">Shipboard-Specific Notes</a></li>
+  </ul>
+</nav>
+
+<!-- Expand / Collapse All -->
+<div style="margin-bottom:1rem;">
+  <button class="btn-expand-all">Expand All</button>
+  <button class="btn-collapse-all">Collapse All</button>
+</div>
+
+<!-- ===== Quick Reference Card ===== -->
+<section id="quick-ref">
+  <h2>Quick Reference Card</h2>
+  <table class="quick-ref-table">
+    <tbody>
+      <tr><th>Manufacturer</th><td><span class="status-badge placeholder">ZOLL Medical</span></td></tr>
+      <tr><th>Model</th><td><span class="status-badge placeholder">EMV+ 731</span></td></tr>
+      <tr><th>Purpose</th><td><span class="status-badge placeholder">Portable transport ventilator</span></td></tr>
+      <tr><th>Power Source</th><td><span class="status-badge placeholder">Internal rechargeable battery / AC mains / DC (vehicle)</span></td></tr>
+      <tr><th>Battery Life</th><td class="placeholder-content">To be confirmed — approximately X hours</td></tr>
+      <tr><th>Weight</th><td class="placeholder-content">To be confirmed</td></tr>
+      <tr><th>Dimensions</th><td class="placeholder-content">To be confirmed</td></tr>
+      <tr><th>Gas Supply</th><td><span class="status-badge placeholder">High-pressure O2 (cylinder or wall outlet)</span></td></tr>
+      <tr><th>Operating Pressure</th><td class="placeholder-content">To be confirmed — PSI range</td></tr>
+      <tr><th>Ventilation Modes</th><td><span class="status-badge placeholder">AC, SIMV, CPAP, BiLevel, NIV</span></td></tr>
+      <tr><th>Tidal Volume Range</th><td class="placeholder-content">To be confirmed</td></tr>
+      <tr><th>Respiratory Rate Range</th><td class="placeholder-content">To be confirmed</td></tr>
+      <tr><th>FiO2 Range</th><td class="placeholder-content">To be confirmed — 21%–100%</td></tr>
+      <tr><th>PEEP Range</th><td class="placeholder-content">To be confirmed</td></tr>
+      <tr><th>IP Rating</th><td class="placeholder-content">To be confirmed</td></tr>
+      <tr><th>Serial Number (ship unit)</th><td class="placeholder-content">To be confirmed</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== Equipment Overview ===== -->
+<section id="overview" class="collapsible">
+  <button class="collapsible-toggle"><h2>Equipment Overview</h2></button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <h3>Description</h3>
+      <p>Placeholder — General description of the ZOLL EMV+ 731, its role as a portable transport ventilator, clinical applications onboard.</p>
+
+      <h3>Intended Use</h3>
+      <p>Placeholder — Patient populations (adult, paediatric), clinical scenarios (respiratory failure, post-intubation, sedated patient transport, prolonged ventilation at sea).</p>
+
+      <h3>Key Features</h3>
+      <ul>
+        <li>Placeholder — Multiple ventilation modes (invasive and non-invasive)</li>
+        <li>Placeholder — Integrated monitoring (airway pressure, tidal volume, respiratory rate, FiO2)</li>
+        <li>Placeholder — Turbine-driven with supplemental oxygen blending</li>
+        <li>Placeholder — Compact, lightweight, ruggedised design</li>
+        <li>Placeholder — Long battery life for extended transport</li>
+        <li>Placeholder — Configurable alarms</li>
+      </ul>
+
+      <h3>Regulatory / Certification</h3>
+      <p>Placeholder — CE marking, IEC 60601, ISO 80601-2-12, maritime medical regulations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Components & Accessories ===== -->
+<section id="components" class="collapsible">
+  <button class="collapsible-toggle"><h2>Components &amp; Accessories</h2></button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <h3>Included Components</h3>
+      <ul class="checklist">
+        <li>Placeholder — EMV+ 731 main unit</li>
+        <li>Placeholder — Rechargeable battery pack</li>
+        <li>Placeholder — AC power adapter</li>
+        <li>Placeholder — DC vehicle power cable</li>
+        <li>Placeholder — Patient circuit — adult (reusable / disposable)</li>
+        <li>Placeholder — Patient circuit — paediatric (if carried)</li>
+        <li>Placeholder — Oxygen supply hose (DISS / BS connection)</li>
+        <li>Placeholder — O2 cylinder regulator / yoke</li>
+        <li>Placeholder — Exhalation valve assembly</li>
+        <li>Placeholder — Bacterial / viral filter (HME-F)</li>
+        <li>Placeholder — Test lung</li>
+        <li>Placeholder — Carry bag / mount bracket</li>
+        <li>Placeholder — User manual / quick reference card</li>
+      </ul>
+
+      <h3>Optional Accessories</h3>
+      <ul class="checklist">
+        <li>Placeholder — Non-invasive ventilation mask (various sizes)</li>
+        <li>Placeholder — Paediatric circuit and accessories</li>
+        <li>Placeholder — Remote alarm cable</li>
+        <li>Placeholder — Mounting pole clamp</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Quick Start Guide ===== -->
+<section id="quick-start" class="collapsible">
+  <button class="collapsible-toggle"><h2>Quick Start Guide</h2></button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <ol class="procedure">
+        <li>Placeholder — Retrieve ventilator from storage location</li>
+        <li>Placeholder — Verify battery charge level</li>
+        <li>Placeholder — Connect oxygen supply (cylinder or wall outlet)</li>
+        <li>Placeholder — Assemble patient circuit (inspiratory limb, expiratory limb, exhalation valve, filter)</li>
+        <li>Placeholder — Perform pre-use test with test lung</li>
+        <li>Placeholder — Power on the ventilator</li>
+        <li>Placeholder — Select ventilation mode</li>
+        <li>Placeholder — Set parameters (TV, RR, FiO2, PEEP, I:E)</li>
+        <li>Placeholder — Connect to patient (ETT, tracheostomy, or NIV mask)</li>
+        <li>Placeholder — Verify chest rise, waveforms, and delivered volumes</li>
+        <li>Placeholder — Set alarm limits</li>
+        <li>Placeholder — Begin ongoing monitoring</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Ventilation Mode — Assist Control ===== -->
+<section id="mode-ac" class="collapsible">
+  <button class="collapsible-toggle"><h2>Ventilation Mode — Assist Control (AC)</h2></button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <h3>Description</h3>
+      <p>Placeholder — How AC mode works: every breath is fully supported, patient-triggered or time-triggered, volume or pressure targeted.</p>
+
+      <h3>Indications</h3>
+      <ul>
+        <li>Placeholder — Patients with no respiratory drive (sedated, paralysed)</li>
+        <li>Placeholder — Severe respiratory failure requiring full ventilatory support</li>
+        <li>Placeholder — Post-cardiac arrest</li>
+      </ul>
+
+      <h3>Key Parameters to Set</h3>
+      <table class="quick-ref-table">
+        <thead><tr><th>Parameter</th><th>Typical Adult Range</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Tidal Volume</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Respiratory Rate</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>FiO2</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>PEEP</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>I:E Ratio</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Clinical Considerations</h3>
+      <ul>
+        <li>Placeholder — Risk of hyperventilation if trigger sensitivity too high</li>
+        <li>Placeholder — Auto-PEEP / breath stacking awareness</li>
+        <li>Placeholder — Monitoring peak and plateau pressures</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Ventilation Mode — SIMV ===== -->
+<section id="mode-simv" class="collapsible">
+  <button class="collapsible-toggle"><h2>Ventilation Mode — SIMV</h2></button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <h3>Description</h3>
+      <p>Placeholder — How SIMV works: set number of mandatory breaths, patient can breathe spontaneously between them.</p>
+
+      <h3>Indications</h3>
+      <ul>
+        <li>Placeholder — Patients with some respiratory drive</li>
+        <li>Placeholder — Weaning from mechanical ventilation</li>
+        <li>Placeholder — Transition from full support to spontaneous breathing</li>
+      </ul>
+
+      <h3>Key Parameters to Set</h3>
+      <table class="quick-ref-table">
+        <thead><tr><th>Parameter</th><th>Typical Adult Range</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Mandatory Rate</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Tidal Volume (mandatory breaths)</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Pressure Support (spontaneous breaths)</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>FiO2</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>PEEP</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Clinical Considerations</h3>
+      <p>Placeholder — Monitoring spontaneous tidal volumes, respiratory rate, work of breathing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Ventilation Mode — CPAP ===== -->
+<section id="mode-cpap" class="collapsible">
+  <button class="collapsible-toggle"><h2>Ventilation Mode — CPAP</h2></button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <h3>Description</h3>
+      <p>Placeholder — Continuous Positive Airway Pressure: patient breathes spontaneously with continuous positive pressure.</p>
+
+      <h3>Indications</h3>
+      <ul>
+        <li>Placeholder — Spontaneously breathing patient with oxygenation deficit</li>
+        <li>Placeholder — Pulmonary oedema (acute)</li>
+        <li>Placeholder — Post-extubation support</li>
+        <li>Placeholder — Obstructive sleep apnoea (acute setting)</li>
+      </ul>
+
+      <h3>Key Parameters to Set</h3>
+      <table class="quick-ref-table">
+        <thead><tr><th>Parameter</th><th>Typical Adult Range</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>CPAP Level</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>FiO2</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Pressure Support (if available)</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Clinical Considerations</h3>
+      <p>Placeholder — Patient must have adequate respiratory drive, monitoring for fatigue, contraindications.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Ventilation Mode — BiLevel ===== -->
+<section id="mode-bilevel" class="collapsible">
+  <button class="collapsible-toggle"><h2>Ventilation Mode — BiLevel</h2></button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <h3>Description</h3>
+      <p>Placeholder — BiLevel ventilation: two levels of pressure (IPAP and EPAP), patient can breathe at both levels.</p>
+
+      <h3>Indications</h3>
+      <ul>
+        <li>Placeholder — COPD exacerbation</li>
+        <li>Placeholder — Acute respiratory failure with preserved drive</li>
+        <li>Placeholder — Weaning strategy</li>
+      </ul>
+
+      <h3>Key Parameters to Set</h3>
+      <table class="quick-ref-table">
+        <thead><tr><th>Parameter</th><th>Typical Adult Range</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>IPAP / P-High</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>EPAP / P-Low</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>T-High / T-Low</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>FiO2</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Clinical Considerations</h3>
+      <p>Placeholder — Monitoring pressure delivery, leak compensation, synchrony.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Ventilation Mode — Non-Invasive (NIV) ===== -->
+<section id="mode-niv" class="collapsible">
+  <button class="collapsible-toggle"><h2>Ventilation Mode — Non-Invasive (NIV)</h2></button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <h3>Description</h3>
+      <p>Placeholder — Non-invasive ventilation via face mask or nasal mask, without endotracheal intubation.</p>
+
+      <h3>Indications</h3>
+      <ul>
+        <li>Placeholder — COPD with type 2 respiratory failure</li>
+        <li>Placeholder — Acute cardiogenic pulmonary oedema</li>
+        <li>Placeholder — Immunocompromised patients with respiratory failure</li>
+        <li>Placeholder — Weaning / extubation support</li>
+      </ul>
+
+      <h3>Mask Selection &amp; Fitting</h3>
+      <ol class="procedure">
+        <li>Placeholder — Select appropriate mask size (small, medium, large)</li>
+        <li>Placeholder — Choose mask type (full face, oronasal)</li>
+        <li>Placeholder — Apply mask gently, adjust headgear straps</li>
+        <li>Placeholder — Check for excessive leak around mask</li>
+        <li>Placeholder — Verify patient comfort and tolerance</li>
+      </ol>
+
+      <h3>Key Parameters to Set</h3>
+      <table class="quick-ref-table">
+        <thead><tr><th>Parameter</th><th>Typical Starting Values</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>IPAP</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>EPAP</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>FiO2</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Rise Time</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Contraindications</h3>
+      <div class="warning-box danger">
+        <p>Placeholder — List absolute and relative contraindications for NIV (facial trauma, vomiting, reduced consciousness, undrained pneumothorax, etc.).</p>
+      </div>
+
+      <h3>Monitoring During NIV</h3>
+      <ul>
+        <li>Placeholder — Respiratory rate, tidal volume, SpO2, EtCO2</li>
+        <li>Placeholder — Patient comfort and synchrony</li>
+        <li>Placeholder — Leak percentage</li>
+        <li>Placeholder — Signs of NIV failure (escalation criteria)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Setting Parameters ===== -->
+<section id="parameters" class="collapsible">
+  <button class="collapsible-toggle"><h2>Setting Parameters</h2></button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <h3>Parameter Reference Table</h3>
+      <table class="quick-ref-table">
+        <thead><tr><th>Parameter</th><th>Abbreviation</th><th>Unit</th><th>Range</th><th>Typical Adult Setting</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Tidal Volume</td><td>TV / VT</td><td>mL</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">6–8 mL/kg IBW</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Respiratory Rate</td><td>RR / f</td><td>bpm</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">12–20</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>FiO2</td><td>FiO2</td><td>%</td><td class="placeholder-content">21–100</td><td class="placeholder-content">Titrate to SpO2</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>PEEP</td><td>PEEP</td><td>cmH2O</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">5</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>I:E Ratio</td><td>I:E</td><td>ratio</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">1:2</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Inspiratory Pressure</td><td>P-insp</td><td>cmH2O</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Pressure Support</td><td>PS</td><td>cmH2O</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Trigger Sensitivity</td><td>Trigger</td><td>cmH2O or L/min</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Rise Time</td><td>T-rise</td><td>ms or %</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Peak Pressure Limit</td><td>P-max</td><td>cmH2O</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Ideal Body Weight Calculator Reference</h3>
+      <p>Placeholder — Formula for IBW (male and female), quick reference chart for common heights.</p>
+
+      <h3>How to Adjust Parameters</h3>
+      <ol class="procedure">
+        <li>Placeholder — Navigate to settings screen</li>
+        <li>Placeholder — Select parameter to adjust</li>
+        <li>Placeholder — Use dial / buttons to change value</li>
+        <li>Placeholder — Confirm new setting</li>
+        <li>Placeholder — Verify delivered values match set values</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Patient Circuit Setup ===== -->
+<section id="circuit" class="collapsible">
+  <button class="collapsible-toggle"><h2>Patient Circuit Setup</h2></button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <h3>Circuit Components</h3>
+      <ul>
+        <li>Placeholder — Inspiratory limb</li>
+        <li>Placeholder — Expiratory limb</li>
+        <li>Placeholder — Exhalation valve assembly</li>
+        <li>Placeholder — Bacterial / viral filter (HME-F)</li>
+        <li>Placeholder — Wye connector / patient connector</li>
+        <li>Placeholder — Water trap (if applicable)</li>
+      </ul>
+
+      <h3>Assembly Procedure</h3>
+      <ol class="procedure">
+        <li>Placeholder — Unpack circuit components</li>
+        <li>Placeholder — Connect inspiratory limb to ventilator outlet</li>
+        <li>Placeholder — Attach HME-F / filter at patient end</li>
+        <li>Placeholder — Connect expiratory limb to exhalation valve</li>
+        <li>Placeholder — Attach exhalation valve to ventilator</li>
+        <li>Placeholder — Connect wye connector to patient interface (ETT adapter, trach, mask)</li>
+        <li>Placeholder — Perform leak test with circuit occluded</li>
+        <li>Placeholder — Perform compliance test with test lung</li>
+      </ol>
+
+      <h3>Circuit Changes</h3>
+      <ul>
+        <li>Placeholder — Frequency of circuit changes</li>
+        <li>Placeholder — Indications for immediate circuit change</li>
+        <li>Placeholder — Reusable vs disposable circuit management</li>
+      </ul>
+
+      <div class="warning-box caution">
+        <p>Placeholder — Always perform pre-use circuit test before connecting to patient. Ensure all connections are secure to prevent disconnection during transport.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Alarm Management ===== -->
+<section id="alarms" class="collapsible">
+  <button class="collapsible-toggle"><h2>Alarm Management</h2></button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <h3>Alarm Priority Levels</h3>
+      <p>Placeholder — High priority (red), medium priority (yellow), low priority / advisory (blue) — visual and auditory indicators.</p>
+
+      <h3>Alarm Reference Table</h3>
+      <table class="quick-ref-table">
+        <thead><tr><th>Alarm</th><th>Priority</th><th>Cause</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>High Pressure</td><td class="placeholder-content">High</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Low Pressure</td><td class="placeholder-content">High</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Disconnect / Apnoea</td><td class="placeholder-content">High</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Low Minute Volume</td><td class="placeholder-content">Medium</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>High Minute Volume</td><td class="placeholder-content">Medium</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>High Respiratory Rate</td><td class="placeholder-content">Medium</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Low O2 Supply</td><td class="placeholder-content">High</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Low Battery</td><td class="placeholder-content">Medium</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Critical Battery</td><td class="placeholder-content">High</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Internal Fault</td><td class="placeholder-content">High</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Setting Alarm Limits</h3>
+      <ol class="procedure">
+        <li>Placeholder — Access alarm settings menu</li>
+        <li>Placeholder — Select parameter alarm to adjust</li>
+        <li>Placeholder — Set upper and lower limits</li>
+        <li>Placeholder — Confirm settings</li>
+      </ol>
+
+      <h3>Alarm Silence / Reset</h3>
+      <p>Placeholder — How to silence alarms, duration of silence, automatic re-activation.</p>
+
+      <div class="warning-box danger">
+        <p>Placeholder — Never disable high-priority alarms. Always investigate the cause of any alarm before silencing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Oxygen Supply Management ===== -->
+<section id="oxygen" class="collapsible">
+  <button class="collapsible-toggle"><h2>Oxygen Supply Management</h2></button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <h3>Oxygen Sources</h3>
+      <ul>
+        <li>Placeholder — Ship's medical oxygen outlet (wall supply)</li>
+        <li>Placeholder — Portable oxygen cylinders (sizes carried onboard)</li>
+        <li>Placeholder — Connection types (DISS, BS, pin-index)</li>
+      </ul>
+
+      <h3>Oxygen Consumption Estimation</h3>
+      <table class="quick-ref-table">
+        <thead><tr><th>FiO2 Setting</th><th>Approx. O2 Flow (LPM)</th><th>D-Cylinder Duration</th><th>E-Cylinder Duration</th></tr></thead>
+        <tbody>
+          <tr><td>40%</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>60%</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>80%</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>100%</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Cylinder Change Procedure</h3>
+      <ol class="procedure">
+        <li>Placeholder — Monitor cylinder pressure gauge</li>
+        <li>Placeholder — Prepare replacement cylinder</li>
+        <li>Placeholder — Swap cylinders (minimise interruption)</li>
+        <li>Placeholder — Verify pressure and ventilator function after swap</li>
+      </ol>
+
+      <h3>Running Without Supplemental O2</h3>
+      <p>Placeholder — Turbine-driven operation at FiO2 21% (room air), when this may be acceptable, limitations.</p>
+
+      <div class="warning-box caution">
+        <p>Placeholder — Always ensure adequate oxygen supply before transport. Calculate duration and carry reserve.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Daily Checks ===== -->
+<section id="daily-checks" class="collapsible">
+  <button class="collapsible-toggle"><h2>Daily Checks</h2></button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <h3>Pre-Shift Checklist</h3>
+      <ul class="checklist">
+        <li>Placeholder — Visual inspection of unit for damage</li>
+        <li>Placeholder — Battery charge level &ge; X%</li>
+        <li>Placeholder — Power on and self-test passes</li>
+        <li>Placeholder — Screen display clear, no error messages</li>
+        <li>Placeholder — Patient circuit available (adult + paediatric)</li>
+        <li>Placeholder — Exhalation valve assembly present and clean</li>
+        <li>Placeholder — HME-F / bacterial filters available</li>
+        <li>Placeholder — Test lung available</li>
+        <li>Placeholder — Oxygen supply hose present and intact</li>
+        <li>Placeholder — Oxygen cylinder(s) full or adequate</li>
+        <li>Placeholder — Perform ventilator self-test / system check</li>
+        <li>Placeholder — Perform circuit leak test</li>
+        <li>Placeholder — Verify alarm functions</li>
+        <li>Placeholder — Carry bag / mount secure</li>
+        <li>Placeholder — NIV masks available (if carried)</li>
+        <li>Placeholder — Unit cleaned and decontaminated</li>
+      </ul>
+
+      <h3>Post-Use Checklist</h3>
+      <ul class="checklist">
+        <li>Placeholder — Disconnect and dispose of single-use circuit components</li>
+        <li>Placeholder — Clean and decontaminate reusable components</li>
+        <li>Placeholder — Clean and decontaminate main unit</li>
+        <li>Placeholder — Replace consumables</li>
+        <li>Placeholder — Connect to charger</li>
+        <li>Placeholder — Document any faults</li>
+        <li>Placeholder — Return to storage location</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Cleaning & Decontamination ===== -->
+<section id="cleaning" class="collapsible">
+  <button class="collapsible-toggle"><h2>Cleaning &amp; Decontamination</h2></button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <h3>Main Unit Cleaning</h3>
+      <ul>
+        <li>Placeholder — Approved cleaning agents and dilutions</li>
+        <li>Placeholder — Cleaning procedure for exterior, screen, buttons</li>
+        <li>Placeholder — Drying requirements</li>
+      </ul>
+
+      <h3>Reusable Circuit Decontamination</h3>
+      <ul>
+        <li>Placeholder — Disassembly steps</li>
+        <li>Placeholder — Washing and disinfection procedure</li>
+        <li>Placeholder — Rinsing and drying</li>
+        <li>Placeholder — Reassembly and inspection</li>
+      </ul>
+
+      <h3>Exhalation Valve Cleaning</h3>
+      <ol class="procedure">
+        <li>Placeholder — Remove exhalation valve from unit</li>
+        <li>Placeholder — Disassemble components</li>
+        <li>Placeholder — Clean and disinfect per manufacturer instructions</li>
+        <li>Placeholder — Inspect diaphragm for damage</li>
+        <li>Placeholder — Reassemble and test</li>
+      </ol>
+
+      <div class="warning-box caution">
+        <p>Placeholder — Do not autoclave electronic components. Do not immerse main unit. Follow manufacturer's approved cleaning agents only.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Battery Management ===== -->
+<section id="battery" class="collapsible">
+  <button class="collapsible-toggle"><h2>Battery Management</h2></button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <h3>Battery Specifications</h3>
+      <table class="quick-ref-table">
+        <tbody>
+          <tr><th>Type</th><td class="placeholder-content">To be confirmed — lithium-ion</td></tr>
+          <tr><th>Capacity</th><td class="placeholder-content">To be confirmed</td></tr>
+          <tr><th>Run Time</th><td class="placeholder-content">To be confirmed — approximately X hours</td></tr>
+          <tr><th>Charge Time (0–100%)</th><td class="placeholder-content">To be confirmed</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Charging Procedure</h3>
+      <ol class="procedure">
+        <li>Placeholder — Connect AC or DC power source</li>
+        <li>Placeholder — Verify charging indicator on unit</li>
+        <li>Placeholder — Charge to 100% before storage</li>
+        <li>Placeholder — Note: unit can ventilate while charging</li>
+      </ol>
+
+      <h3>Battery Care</h3>
+      <ul>
+        <li>Placeholder — Storage temperature range</li>
+        <li>Placeholder — Conditioning / calibration recommendations</li>
+        <li>Placeholder — Replacement schedule</li>
+        <li>Placeholder — Disposal regulations</li>
+      </ul>
+
+      <div class="warning-box caution">
+        <p>Placeholder — Always have backup power plan during patient ventilation. Never rely solely on battery for prolonged transport without AC/DC backup.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Troubleshooting ===== -->
+<section id="troubleshooting" class="collapsible">
+  <button class="collapsible-toggle"><h2>Troubleshooting</h2></button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <table class="quick-ref-table">
+        <thead><tr><th>Problem</th><th>Possible Cause</th><th>Solution</th></tr></thead>
+        <tbody>
+          <tr><td>Unit does not power on</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Self-test failure</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>No gas delivery / low tidal volume</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>High airway pressure alarm</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Circuit disconnect alarm (false)</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>FiO2 not reaching set level</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Patient fighting ventilator (dyssynchrony)</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Excessive circuit condensation</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Exhalation valve malfunction</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+          <tr><td>Unexpected shutdown</td><td class="placeholder-content">Placeholder</td><td class="placeholder-content">Placeholder</td></tr>
+        </tbody>
+      </table>
+
+      <div class="warning-box danger">
+        <p>Placeholder — If ventilator fails during patient use: immediately disconnect patient and ventilate with bag-valve-mask (BVM). Troubleshoot or replace ventilator. Never leave a ventilator-dependent patient without manual ventilation backup.</p>
+      </div>
+
+      <div class="info-block warning">
+        <p>Placeholder — If persistent faults occur, remove from service and tag for biomedical engineering review. Document fault details.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Transport Considerations ===== -->
+<section id="transport" class="collapsible">
+  <button class="collapsible-toggle"><h2>Transport Considerations</h2></button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <h3>Pre-Transport Planning</h3>
+      <ul>
+        <li>Placeholder — Calculate oxygen requirements for transport duration + reserve</li>
+        <li>Placeholder — Verify battery charge for transport duration + reserve</li>
+        <li>Placeholder — Prepare backup ventilation (BVM)</li>
+        <li>Placeholder — Secure ventilator to stretcher / transport platform</li>
+      </ul>
+
+      <h3>During Transport</h3>
+      <ul>
+        <li>Placeholder — Monitor airway pressures, tidal volumes, SpO2 continuously</li>
+        <li>Placeholder — Secure all circuit connections</li>
+        <li>Placeholder — Protect from weather / salt spray</li>
+        <li>Placeholder — Maintain oxygen supply awareness</li>
+      </ul>
+
+      <h3>Helicopter / Boat Transfer</h3>
+      <ul>
+        <li>Placeholder — Vibration and noise considerations</li>
+        <li>Placeholder — Altitude effects on ventilation (helicopter)</li>
+        <li>Placeholder — Securing equipment during transfer</li>
+        <li>Placeholder — Communication with receiving facility</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Shipboard-Specific Notes ===== -->
+<section id="shipboard" class="collapsible">
+  <button class="collapsible-toggle"><h2>Shipboard-Specific Notes</h2></button>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <h3>Maritime Environment Considerations</h3>
+      <ul>
+        <li>Placeholder — Salt air / humidity effects on ventilator and circuits</li>
+        <li>Placeholder — Ship motion effects on ventilation delivery</li>
+        <li>Placeholder — Electromagnetic interference considerations</li>
+        <li>Placeholder — Power supply (ship's mains voltage, frequency, UPS availability)</li>
+      </ul>
+
+      <h3>Oxygen Supply Onboard</h3>
+      <ul>
+        <li>Placeholder — Ship's medical oxygen system description</li>
+        <li>Placeholder — Cylinder storage and management</li>
+        <li>Placeholder — Resupply considerations at sea</li>
+      </ul>
+
+      <h3>Stowage Location</h3>
+      <p>Placeholder — Primary and secondary stowage locations, grab-and-go readiness.</p>
+
+      <h3>Prolonged Ventilation at Sea</h3>
+      <ul>
+        <li>Placeholder — Extended ventilation planning when evacuation delayed</li>
+        <li>Placeholder — Telemedicine support for ventilator management</li>
+        <li>Placeholder — Consumable management for extended use</li>
+      </ul>
+
+      <div class="info-block info">
+        <p>Placeholder — Always have BVM backup immediately accessible when ventilating a patient at sea. Ensure crew are trained in manual ventilation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v0 framework</footer>
+
+<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v2 framework</footer>
 </body>
 </html>

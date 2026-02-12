@@ -3,20 +3,323 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Weekly Checks — Paramedic Aid Memoir</title>
+<title>i-STAT Weekly Checks — Paramedic Aid Memoir</title>
 <link rel="stylesheet" href="../../styles/style.css">
 <script src="../../scripts/app.js" defer></script>
 </head>
 <body>
 <header class="site-header">
-  <span class="site-title">Paramedic Aid Memoir</span>
-  <a href="../../index.html">Home</a>
-  <a href="index.html">&larr; i-STAT</a>
+  <div class="header-inner">
+    <span class="site-title">Paramedic Aid Memoir</span>
+    <a href="../../index.html">Home</a>
+    <button class="btn-dark-mode" aria-label="Toggle dark mode">Dark</button>
+  </div>
 </header>
+<nav class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <a href="../../index.html">Home</a> <span class="sep">/</span>
+    <a href="index.html">i-STAT</a> <span class="sep">/</span>
+    <span class="current">Weekly Checks</span>
+  </div>
+</nav>
+
 <main class="content">
-<h1>Weekly Checks</h1>
-<p class="scope-block">Placeholder framework — content to be added.</p>
+<h1>i-STAT Weekly Checks</h1>
+
+<p class="scope-block">
+  <span class="status-badge placeholder">PLACEHOLDER</span>
+  Weekly maintenance and quality control procedures for the i-STAT 1 analyser. These tasks supplement
+  the daily checks and ensure ongoing accuracy and reliability. All sections below are framework headings
+  awaiting detailed content.
+</p>
+
+<!-- ── Table of Contents ── -->
+<nav class="page-toc">
+  <p class="toc-title">On This Page</p>
+  <ul>
+    <li><a href="#weekly-tasks">Weekly Maintenance Tasks</a></li>
+    <li><a href="#deep-clean">Deep Cleaning Procedure</a></li>
+    <li><a href="#eqc-verify">Electronic QC Verification</a></li>
+    <li><a href="#liquid-qc">Liquid QC (Level 1, 2, 3)</a></li>
+    <li><a href="#lot-verify">Cartridge Lot Verification</a></li>
+    <li><a href="#printer">Printer Maintenance</a></li>
+    <li><a href="#documentation">Documentation &amp; Logbook Entries</a></li>
+  </ul>
+</nav>
+
+<div style="margin-bottom:1rem;">
+  <button class="btn-expand-all">Expand All</button>
+  <button class="btn-collapse-all">Collapse All</button>
+</div>
+
+<!-- ── Weekly Check Summary Checklist ── -->
+<h2>Weekly Check Summary</h2>
+<ul class="checklist">
+  <li><label><input type="checkbox"> Complete all daily checks first</label></li>
+  <li><label><input type="checkbox"> Deep clean analyser exterior and cartridge port</label></li>
+  <li><label><input type="checkbox"> Run Electronic QC (EQC) — verify PASS</label></li>
+  <li><label><input type="checkbox"> Run Liquid QC Level 1 on each cartridge type in use</label></li>
+  <li><label><input type="checkbox"> Run Liquid QC Level 2 on each cartridge type in use</label></li>
+  <li><label><input type="checkbox"> Run Liquid QC Level 3 on each cartridge type in use</label></li>
+  <li><label><input type="checkbox"> Verify all cartridge lot numbers against QC records</label></li>
+  <li><label><input type="checkbox"> Check printer — paper, print head, IR alignment</label></li>
+  <li><label><input type="checkbox"> Record all results and actions in QC logbook</label></li>
+</ul>
+
+<!-- ── 1. Weekly Maintenance Tasks ── -->
+<section id="weekly-tasks" class="collapsible">
+  <h2 class="collapsible-toggle">Weekly Maintenance Tasks</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Overview</h3>
+      <p>Summary of all weekly tasks, estimated time, supplies required, and responsible person.</p>
+
+      <h3>Recommended Schedule</h3>
+      <p>Best day/time to perform weekly checks (e.g., Monday morning before clinical activity).
+         Consideration for operational tempo and at-sea schedules.</p>
+
+      <h3>Supplies Needed for Weekly Maintenance</h3>
+      <ul class="checklist">
+        <li><label><input type="checkbox"> Lint-free wipes</label></li>
+        <li><label><input type="checkbox"> Isopropyl alcohol (70%) or manufacturer-approved cleaner</label></li>
+        <li><label><input type="checkbox"> Electronic Simulator (EQC)</label></li>
+        <li><label><input type="checkbox"> Liquid QC materials — Level 1, Level 2, Level 3</label></li>
+        <li><label><input type="checkbox"> One cartridge of each type for QC runs</label></li>
+        <li><label><input type="checkbox"> QC logbook</label></li>
+        <li><label><input type="checkbox"> Printer paper (spare roll)</label></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── 2. Deep Cleaning Procedure ── -->
+<section id="deep-clean" class="collapsible">
+  <h2 class="collapsible-toggle">Deep Cleaning Procedure</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Exterior Cleaning</h3>
+      <ol class="procedure">
+        <li>Power off the analyser.</li>
+        <li>Dampen a lint-free wipe with 70% isopropyl alcohol.</li>
+        <li>Wipe the entire exterior casing, paying attention to the keypad and display.</li>
+        <li>Do NOT allow liquid to pool around the cartridge port or IR window.</li>
+        <li>Allow to air dry completely before powering on.</li>
+      </ol>
+
+      <h3>Cartridge Port Cleaning</h3>
+      <ol class="procedure">
+        <li>Inspect the cartridge port for dried blood, debris, or residue.</li>
+        <li>Use a dry lint-free swab to gently clean the port contacts.</li>
+        <li>If contamination is heavy, dampen the swab lightly with isopropyl alcohol.</li>
+        <li>Ensure the port is fully dry before inserting any cartridge or EQC.</li>
+      </ol>
+
+      <h3>IR Window Cleaning</h3>
+      <ol class="procedure">
+        <li>Locate the IR communication window on the analyser.</li>
+        <li>Clean with a dry lint-free wipe — do not use solvents on the IR window unless specified by manufacturer.</li>
+      </ol>
+
+      <div class="warning-box caution">
+        <strong>Caution:</strong> Never immerse the analyser in liquid or use abrasive cleaners.
+        Do not autoclave or use ultrasonic cleaning.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 3. Electronic QC Verification ── -->
+<section id="eqc-verify" class="collapsible">
+  <h2 class="collapsible-toggle">Electronic QC Verification</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Procedure</h3>
+      <ol class="procedure">
+        <li>Perform EQC as per the <a href="daily-checks.html#eqc-check">daily EQC procedure</a>.</li>
+        <li>Confirm PASS result.</li>
+        <li>If FAIL — clean port, retry. If persistent, refer to <a href="troubleshooting.html">Troubleshooting</a>.</li>
+        <li>Record EQC lot number and result in the weekly section of the QC logbook.</li>
+      </ol>
+
+      <div class="info-block info">
+        <strong>Note:</strong> The weekly EQC is identical to the daily EQC but must be recorded separately in the
+        weekly maintenance section of the logbook.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 4. Liquid QC (Level 1, 2, 3) ── -->
+<section id="liquid-qc" class="collapsible">
+  <h2 class="collapsible-toggle">Liquid QC (Level 1, Level 2, Level 3)</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Overview</h3>
+      <p>Liquid QC uses commercially prepared control solutions at known analyte concentrations
+         to verify that the entire analytical process (cartridge + analyser) is performing correctly.
+         Three levels are used to verify performance across the clinical range.</p>
+
+      <div class="info-block warning">
+        <strong>Important:</strong> Liquid QC must be run on every cartridge type currently in use.
+        If you carry CHEM8+, CG4+, PT/INR, and Troponin I, you need to run liquid QC on all four types.
+      </div>
+
+      <h3>Level 1 — Low / Normal</h3>
+      <ol class="procedure">
+        <li>Retrieve Level 1 QC material from refrigerator; allow to equilibrate to room temperature.</li>
+        <li>Mix the control material per manufacturer instructions.</li>
+        <li>Select the appropriate cartridge type (e.g., CHEM8+).</li>
+        <li>Apply the control material to the cartridge sample well.</li>
+        <li>Insert cartridge into the analyser.</li>
+        <li>Wait for results; compare to the acceptable range printed on the QC insert.</li>
+        <li>Record result — PASS if within range, FAIL if outside range.</li>
+      </ol>
+
+      <h3>Level 2 — Mid / Normal</h3>
+      <ol class="procedure">
+        <li>Repeat the above procedure using Level 2 QC material.</li>
+        <li>Compare results to Level 2 acceptable ranges.</li>
+        <li>Record in logbook.</li>
+      </ol>
+
+      <h3>Level 3 — High / Abnormal</h3>
+      <ol class="procedure">
+        <li>Repeat the above procedure using Level 3 QC material.</li>
+        <li>Compare results to Level 3 acceptable ranges.</li>
+        <li>Record in logbook.</li>
+      </ol>
+
+      <h3>QC Failure Actions</h3>
+      <div class="warning-box danger">
+        <strong>STOP:</strong> If liquid QC fails at any level, do NOT run patient samples on that cartridge type
+        until the issue is resolved. See <a href="qc.html#qc-failure">QC Failure Troubleshooting</a>.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 5. Cartridge Lot Verification ── -->
+<section id="lot-verify" class="collapsible">
+  <h2 class="collapsible-toggle">Cartridge Lot Verification</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Purpose</h3>
+      <p>Ensure all cartridge lots currently in inventory have been verified with liquid QC and
+         that the correct lot-specific QC ranges are being used.</p>
+
+      <h3>Procedure</h3>
+      <ol class="procedure">
+        <li>List all cartridge lot numbers currently in stock (refrigerator + room temp).</li>
+        <li>Cross-reference each lot number against the QC logbook.</li>
+        <li>Confirm that liquid QC has been run on each lot at all three levels.</li>
+        <li>If a new lot is found that has not been QC'd, run liquid QC before using for patient testing.</li>
+        <li>Update the cartridge lot tracking sheet.</li>
+      </ol>
+
+      <h3>Lot Tracking Table</h3>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Cartridge Type</th><th>Lot Number</th><th>Expiry Date</th><th>QC Completed?</th><th>Date QC'd</th></tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="5"><em><span class="status-badge placeholder">PLACEHOLDER</span> — Rows to be populated per current inventory</em></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── 6. Printer Maintenance ── -->
+<section id="printer" class="collapsible">
+  <h2 class="collapsible-toggle">Printer Maintenance</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Paper Check &amp; Replacement</h3>
+      <ol class="procedure">
+        <li>Open the printer paper compartment.</li>
+        <li>Check remaining paper — replace if less than 25% remains.</li>
+        <li>Install new roll per manufacturer instructions; ensure paper feeds correctly.</li>
+        <li>Print a test page to confirm.</li>
+      </ol>
+
+      <h3>Print Head Cleaning</h3>
+      <ol class="procedure">
+        <li>Open the printer compartment.</li>
+        <li>Use a manufacturer-supplied cleaning card or isopropyl alcohol wipe on the print head.</li>
+        <li>Allow to dry before closing.</li>
+      </ol>
+
+      <h3>IR Communication Test</h3>
+      <ol class="procedure">
+        <li>Align the analyser IR window with the printer IR window.</li>
+        <li>Initiate a test print from the analyser.</li>
+        <li>Confirm the printer receives and prints the data.</li>
+        <li>If communication fails, clean both IR windows and retry. Check alignment distance.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ── 7. Documentation & Logbook Entries ── -->
+<section id="documentation" class="collapsible">
+  <h2 class="collapsible-toggle">Documentation &amp; Logbook Entries</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Weekly Logbook Entry Requirements</h3>
+      <p>Record the following for each weekly check session:</p>
+      <ul>
+        <li>Date and time</li>
+        <li>Operator name / ID</li>
+        <li>EQC result and simulator lot number</li>
+        <li>Liquid QC results for each cartridge type at each level (1, 2, 3)</li>
+        <li>QC material lot numbers and expiry dates</li>
+        <li>Cartridge lot numbers verified</li>
+        <li>Cleaning performed (yes/no, details)</li>
+        <li>Printer status</li>
+        <li>Any corrective actions taken</li>
+        <li>Signature</li>
+      </ul>
+
+      <h3>Weekly Logbook Template</h3>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Field</th><th>Entry</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Date / Time</td><td></td></tr>
+          <tr><td>Operator</td><td></td></tr>
+          <tr><td>EQC Result</td><td>PASS / FAIL</td></tr>
+          <tr><td>EQC Lot #</td><td></td></tr>
+          <tr><td>Liquid QC — CHEM8+</td><td>L1: ___ L2: ___ L3: ___</td></tr>
+          <tr><td>Liquid QC — CG4+</td><td>L1: ___ L2: ___ L3: ___</td></tr>
+          <tr><td>Liquid QC — PT/INR</td><td>L1: ___ L2: ___ L3: ___</td></tr>
+          <tr><td>Liquid QC — Troponin I</td><td>L1: ___ L2: ___ L3: ___</td></tr>
+          <tr><td>Cleaning Done</td><td>Yes / No</td></tr>
+          <tr><td>Printer Status</td><td>OK / Issue: ___</td></tr>
+          <tr><td>Corrective Actions</td><td></td></tr>
+          <tr><td>Signature</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v0 framework</footer>
+
+<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v2 framework</footer>
 </body>
 </html>

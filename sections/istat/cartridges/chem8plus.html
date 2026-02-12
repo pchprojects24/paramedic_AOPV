@@ -3,34 +3,375 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CHEM8+ — Paramedic Aid Memoir</title>
+<title>CHEM8+ Cartridge — Paramedic Aid Memoir</title>
 <link rel="stylesheet" href="../../../styles/style.css">
 <script src="../../../scripts/app.js" defer></script>
 </head>
 <body>
 <header class="site-header">
-  <span class="site-title">Paramedic Aid Memoir</span>
-  <a href="../../../index.html">Home</a>
-  <a href="../cartridges.html">&larr; Cartridges</a>
+  <div class="header-inner">
+    <span class="site-title">Paramedic Aid Memoir</span>
+    <a href="../../../index.html">Home</a>
+    <button class="btn-dark-mode" aria-label="Toggle dark mode">Dark</button>
+  </div>
 </header>
+<nav class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <a href="../../../index.html">Home</a> <span class="sep">/</span>
+    <a href="../index.html">i-STAT</a> <span class="sep">/</span>
+    <a href="../cartridges.html">Cartridges</a> <span class="sep">/</span>
+    <span class="current">CHEM8+</span>
+  </div>
+</nav>
+
 <main class="content">
-<h1>CHEM8+</h1>
-<p class="scope-block">Placeholder framework — content to be added.</p>
-<h2>Purpose</h2>
-<p>Placeholder.</p>
-<h2>Supplies</h2>
-<p>Placeholder.</p>
-<h2>Storage &amp; Handling</h2>
-<p>Placeholder.</p>
-<h2>QC Workflow</h2>
-<p>Placeholder.</p>
-<h2>Patient Sample Workflow</h2>
-<p>Placeholder.</p>
-<h2>Common Errors &amp; Fixes</h2>
-<p>Placeholder.</p>
-<h2>Notes for Shipboard Use</h2>
-<p>Placeholder.</p>
+<h1>CHEM8+ Cartridge</h1>
+
+<p class="scope-block">
+  <span class="status-badge placeholder">PLACEHOLDER</span>
+  Comprehensive reference for the i-STAT CHEM8+ cartridge — basic metabolic panel including
+  electrolytes, renal function, glucose, and haematocrit. All sections below are framework headings
+  awaiting detailed content.
+</p>
+
+<div class="tag-list">
+  <span class="tag">chemistry</span>
+  <span class="tag">electrolytes</span>
+  <span class="tag">renal</span>
+  <span class="tag">glucose</span>
+</div>
+
+<!-- ── Quick Reference ── -->
+<h2>Quick Reference</h2>
+<table class="quick-ref-table">
+  <thead>
+    <tr><th>Field</th><th>Detail</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Cartridge Name</td><td>CHEM8+</td></tr>
+    <tr><td>Analytes (Measured)</td><td>Na, K, Cl, TCO2, BUN, Glucose, Creatinine, iCa, Hct</td></tr>
+    <tr><td>Analytes (Calculated)</td><td>Hgb (calc), AnGap (calc)</td></tr>
+    <tr><td>Sample Type</td><td>Whole blood (arterial or venous)</td></tr>
+    <tr><td>Sample Volume</td><td><span class="status-badge placeholder">PLACEHOLDER</span> &micro;L</td></tr>
+    <tr><td>Time to Result</td><td>~2 minutes</td></tr>
+    <tr><td>Storage Temperature</td><td>2–8 &deg;C (refrigerated); or room temp per manufacturer spec</td></tr>
+    <tr><td>Room Temp Equilibration</td><td>Minimum 5 minutes before use</td></tr>
+  </tbody>
+</table>
+
+<!-- ── Table of Contents ── -->
+<nav class="page-toc">
+  <p class="toc-title">On This Page</p>
+  <ul>
+    <li><a href="#purpose">Purpose &amp; Clinical Indications</a></li>
+    <li><a href="#supplies">Supplies Required</a></li>
+    <li><a href="#storage">Storage &amp; Handling</a></li>
+    <li><a href="#qc-workflow">QC Workflow</a></li>
+    <li><a href="#patient-workflow">Patient Sample Workflow</a></li>
+    <li><a href="#reading-results">Reading Results</a></li>
+    <li><a href="#errors">Common Errors &amp; Fixes</a></li>
+    <li><a href="#critical-values">Critical Value Reporting</a></li>
+    <li><a href="#shipboard">Notes for Shipboard Use</a></li>
+  </ul>
+</nav>
+
+<div style="margin-bottom:1rem;">
+  <button class="btn-expand-all">Expand All</button>
+  <button class="btn-collapse-all">Collapse All</button>
+</div>
+
+<!-- ── Purpose & Clinical Indications ── -->
+<section id="purpose" class="collapsible">
+  <h2 class="collapsible-toggle">Purpose &amp; Clinical Indications</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>What This Cartridge Tests</h3>
+      <p>The CHEM8+ provides a basic metabolic panel measuring electrolytes (Na, K, Cl, TCO2, iCa),
+         renal function markers (BUN, Creatinine), metabolic status (Glucose), and haematocrit (Hct).
+         Haemoglobin (Hgb) and Anion Gap (AnGap) are calculated values.</p>
+
+      <h3>Clinical Indications</h3>
+      <ul>
+        <li>Assessment of fluid and electrolyte balance</li>
+        <li>Renal function screening (BUN, Creatinine)</li>
+        <li>Diabetic emergencies / glucose monitoring</li>
+        <li>Metabolic acidosis / alkalosis assessment (TCO2, AnGap)</li>
+        <li>Hypokalaemia / hyperkalaemia assessment</li>
+        <li>Dehydration assessment</li>
+        <li>Calcium disturbances (iCa)</li>
+        <li>Anaemia screening (Hct, Hgb)</li>
+        <li>Baseline metabolic assessment in trauma / acute illness</li>
+      </ul>
+
+      <h3>Limitations &amp; Interferences</h3>
+      <p>Known interferences for CHEM8+ cartridge: heparin concentration effects on iCa,
+         haemolysis effects on K, lipaemia effects, sample age considerations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Supplies Required ── -->
+<section id="supplies" class="collapsible">
+  <h2 class="collapsible-toggle">Supplies Required</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+      <ul class="checklist">
+        <li><label><input type="checkbox"> i-STAT 1 Analyser (EQC passed today)</label></li>
+        <li><label><input type="checkbox"> CHEM8+ cartridge (in-date, room temp equilibrated)</label></li>
+        <li><label><input type="checkbox"> Lithium heparin syringe or blood collection tube</label></li>
+        <li><label><input type="checkbox"> Tourniquet, needle/butterfly, alcohol swab, gauze</label></li>
+        <li><label><input type="checkbox"> Gloves (non-latex preferred)</label></li>
+        <li><label><input type="checkbox"> Sharps container</label></li>
+        <li><label><input type="checkbox"> Patient identification (two identifiers)</label></li>
+        <li><label><input type="checkbox"> Printer or result recording form</label></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── Storage & Handling ── -->
+<section id="storage" class="collapsible">
+  <h2 class="collapsible-toggle">Storage &amp; Handling</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Storage Temperature</h3>
+      <p>Refrigerated: 2–8 &deg;C. May also be stored at room temperature
+         (<span class="status-badge placeholder">PLACEHOLDER</span> &deg;C range) for up to
+         <span class="status-badge placeholder">PLACEHOLDER</span> days per manufacturer instructions.</p>
+
+      <h3>Shelf Life &amp; Expiry</h3>
+      <p>Check expiry date printed on each cartridge pouch. Do not use after expiry. Once the foil pouch is
+         opened, use within <span class="status-badge placeholder">PLACEHOLDER</span> minutes.</p>
+
+      <h3>Lot Tracking</h3>
+      <p>Record lot number upon receipt. New lots require liquid QC at all 3 levels before patient use.
+         Maintain a lot tracking log cross-referenced with the QC logbook.</p>
+
+      <h3>Equilibration Before Use</h3>
+      <div class="warning-box caution">
+        <strong>Caution:</strong> Allow cartridge to equilibrate to room temperature (18–30 &deg;C)
+        for at least 5 minutes before use. Do not artificially warm.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── QC Workflow ── -->
+<section id="qc-workflow" class="collapsible">
+  <h2 class="collapsible-toggle">QC Workflow</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+      <ol class="procedure">
+        <li>Verify EQC has passed today.</li>
+        <li>Check the QC logbook — is liquid QC due for CHEM8+ this week?</li>
+        <li>If due: run Level 1, Level 2, and Level 3 liquid QC per <a href="../qc.html">QC procedures</a>.</li>
+        <li>Compare all 9 measured analytes against the lot-specific acceptable ranges.</li>
+        <li>Record all results (PASS/FAIL per analyte) in the QC logbook.</li>
+        <li>If any analyte fails at any level, do NOT run patient samples on CHEM8+ until resolved.</li>
+        <li>See <a href="../qc.html#qc-failure">QC Failure Troubleshooting</a> for corrective actions.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ── Patient Sample Workflow ── -->
+<section id="patient-workflow" class="collapsible">
+  <h2 class="collapsible-toggle">Patient Sample Workflow</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Pre-Analysis</h3>
+      <ol class="procedure">
+        <li>Confirm patient identity using two identifiers.</li>
+        <li>Verify that EQC has passed and QC is current for CHEM8+.</li>
+        <li>Gather all supplies (see checklist above).</li>
+        <li>Remove a CHEM8+ cartridge from its foil pouch; confirm it is at room temperature and in-date.</li>
+      </ol>
+
+      <h3>Sample Collection</h3>
+      <ol class="procedure">
+        <li>Collect a venous or arterial whole blood sample using a lithium heparin syringe or tube.</li>
+        <li>Mix gently by inversion to ensure anticoagulation (if applicable).</li>
+        <li>Expel any air bubbles from the syringe.</li>
+      </ol>
+
+      <h3>Running the Test</h3>
+      <ol class="procedure">
+        <li>Apply the blood sample to the CHEM8+ cartridge sample well — fill to the line.</li>
+        <li>Close the cartridge cover firmly.</li>
+        <li>Insert the cartridge into the i-STAT analyser until it clicks.</li>
+        <li>Enter patient ID and operator ID when prompted on the display.</li>
+        <li>Wait for the analysis to complete (~2 minutes).</li>
+      </ol>
+
+      <h3>Post-Analysis</h3>
+      <ol class="procedure">
+        <li>Read all results on the display.</li>
+        <li>Print the result ticket via IR printer (if available).</li>
+        <li>Remove and dispose of the used cartridge in the sharps/biohazard container.</li>
+        <li>Document all results in the patient's medical record.</li>
+        <li>Check for any critical values — if present, report immediately (see below).</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ── Reading Results ── -->
+<section id="reading-results" class="collapsible">
+  <h2 class="collapsible-toggle">Reading Results</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Analyte</th><th>Units</th><th>Normal Range</th><th>Critical Low</th><th>Critical High</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Na (Sodium)</td><td>mmol/L</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>K (Potassium)</td><td>mmol/L</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>Cl (Chloride)</td><td>mmol/L</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>TCO2 (Total CO2)</td><td>mmol/L</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>BUN (Blood Urea Nitrogen)</td><td>mg/dL</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>Glucose</td><td>mg/dL</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>Creatinine</td><td>mg/dL</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>iCa (Ionised Calcium)</td><td>mmol/L</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>Hct (Haematocrit)</td><td>%PCV</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>Hgb (Haemoglobin) <em>calc</em></td><td>g/dL</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>AnGap (Anion Gap) <em>calc</em></td><td>mmol/L</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+        </tbody>
+      </table>
+
+      <div class="info-block warning">
+        <strong>Important:</strong> Normal ranges shown above are general adult reference ranges.
+        Always confirm against your organisation's approved reference ranges and critical value policy.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Common Errors & Fixes ── -->
+<section id="errors" class="collapsible">
+  <h2 class="collapsible-toggle">Common Errors &amp; Fixes</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Error</th><th>Probable Cause</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Elevated K (spurious)</td>
+            <td>Haemolysed sample</td>
+            <td>Redraw with careful venepuncture technique; avoid fist clenching.</td>
+          </tr>
+          <tr>
+            <td>iCa low (spurious)</td>
+            <td>Excess heparin in sample</td>
+            <td>Use correct syringe fill volume; avoid over-heparinisation.</td>
+          </tr>
+          <tr>
+            <td>Sample not detected</td>
+            <td>Insufficient fill volume</td>
+            <td>Ensure adequate sample; fill to line; use new cartridge.</td>
+          </tr>
+          <tr>
+            <td>Calibration failure</td>
+            <td>Cartridge not equilibrated / expired</td>
+            <td>Check temp and expiry; try new cartridge.</td>
+          </tr>
+          <tr>
+            <td>All results suppressed</td>
+            <td>Clotted sample or major analyser error</td>
+            <td>Redraw; if persistent, run EQC. See <a href="../troubleshooting.html">Troubleshooting</a>.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>For the full error code reference, see <a href="../troubleshooting.html">i-STAT Troubleshooting</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Critical Value Reporting ── -->
+<section id="critical-values" class="collapsible">
+  <h2 class="collapsible-toggle">Critical Value Reporting</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <div class="warning-box danger">
+        <strong>Critical values must be reported immediately to the responsible medical officer.</strong>
+        Do not delay. Use read-back verification to confirm the value was received correctly.
+      </div>
+
+      <h3>CHEM8+ Critical Values</h3>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Analyte</th><th>Critical Low</th><th>Critical High</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Na</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>K</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>Glucose</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>iCa</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>Creatinine</td><td>—</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>Hct</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+        </tbody>
+      </table>
+
+      <h3>Reporting Procedure</h3>
+      <ol class="procedure">
+        <li>Identify the critical value on the result display.</li>
+        <li>Immediately contact the responsible medical officer.</li>
+        <li>Report the patient identity, test, result, and time of collection.</li>
+        <li>Obtain read-back confirmation from the receiving clinician.</li>
+        <li>Document: who was notified, time of notification, and read-back confirmation in the patient record.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ── Notes for Shipboard Use ── -->
+<section id="shipboard" class="collapsible">
+  <h2 class="collapsible-toggle">Notes for Shipboard Use</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Motion &amp; Vibration</h3>
+      <p>The CHEM8+ cartridge is generally robust during moderate sea states. However, during heavy
+         weather, stabilise the analyser on a flat surface and brace to prevent movement during the
+         2-minute analysis cycle. Avoid testing during severe motion if possible.</p>
+
+      <h3>Temperature Considerations</h3>
+      <p>Ensure the medical centre refrigerator maintains 2–8 &deg;C for cartridge storage.
+         Monitor room temperature — tropical deployments may push ambient temperatures above 30 &deg;C
+         if air conditioning is inadequate.</p>
+
+      <h3>Documentation at Sea</h3>
+      <p>When connectivity is unavailable, ensure all results are recorded on paper (printed ticket
+         and/or handwritten in the patient record). Back up QC logbook entries in case of water damage.</p>
+
+      <div class="warning-box tip">
+        <strong>Tip:</strong> In a trauma scenario at sea, the CHEM8+ provides the broadest initial metabolic
+        picture. Consider running alongside a CG4+ for a comprehensive acute assessment.
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v0 framework</footer>
+
+<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v2 framework</footer>
 </body>
 </html>

@@ -3,20 +3,403 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Troubleshooting — Paramedic Aid Memoir</title>
+<title>i-STAT Troubleshooting — Paramedic Aid Memoir</title>
 <link rel="stylesheet" href="../../styles/style.css">
 <script src="../../scripts/app.js" defer></script>
 </head>
 <body>
 <header class="site-header">
-  <span class="site-title">Paramedic Aid Memoir</span>
-  <a href="../../index.html">Home</a>
-  <a href="index.html">&larr; i-STAT</a>
+  <div class="header-inner">
+    <span class="site-title">Paramedic Aid Memoir</span>
+    <a href="../../index.html">Home</a>
+    <button class="btn-dark-mode" aria-label="Toggle dark mode">Dark</button>
+  </div>
 </header>
+<nav class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <a href="../../index.html">Home</a> <span class="sep">/</span>
+    <a href="index.html">i-STAT</a> <span class="sep">/</span>
+    <span class="current">Troubleshooting</span>
+  </div>
+</nav>
+
 <main class="content">
-<h1>Troubleshooting</h1>
-<p class="scope-block">Placeholder framework — content to be added.</p>
+<h1>i-STAT Troubleshooting</h1>
+
+<p class="scope-block">
+  <span class="status-badge placeholder">PLACEHOLDER</span>
+  Error code reference and troubleshooting guide for the i-STAT 1 analyser. Covers cartridge, analyser,
+  sample, environmental, and communication errors. All sections below are framework headings awaiting
+  detailed content.
+</p>
+
+<!-- ── Table of Contents ── -->
+<nav class="page-toc">
+  <p class="toc-title">On This Page</p>
+  <ul>
+    <li><a href="#error-codes">Common Error Codes</a></li>
+    <li><a href="#cartridge-errors">Cartridge-Related Errors</a></li>
+    <li><a href="#analyser-errors">Analyser-Related Errors</a></li>
+    <li><a href="#sample-errors">Sample-Related Errors</a></li>
+    <li><a href="#environmental-errors">Environmental Errors</a></li>
+    <li><a href="#comms-errors">Communication / Printer Errors</a></li>
+    <li><a href="#escalation">When to Escalate</a></li>
+    <li><a href="#replacement">Replacement &amp; Repair Process</a></li>
+  </ul>
+</nav>
+
+<div style="margin-bottom:1rem;">
+  <button class="btn-expand-all">Expand All</button>
+  <button class="btn-collapse-all">Collapse All</button>
+</div>
+
+<!-- ── 1. Common Error Codes ── -->
+<section id="error-codes" class="collapsible">
+  <h2 class="collapsible-toggle">Common Error Codes</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <div class="info-block info">
+        <strong>Note:</strong> Error codes vary by firmware version. Always cross-reference with the
+        manufacturer's operator manual for your specific analyser firmware.
+      </div>
+
+      <table class="quick-ref-table">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Description</th>
+            <th>Probable Cause</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="status-badge placeholder">PLACEHOLDER</span></td>
+            <td>Cartridge not recognised</td>
+            <td>Damaged cartridge contacts, expired cartridge, wrong cartridge type</td>
+            <td>Remove cartridge, inspect contacts, try a new cartridge.</td>
+          </tr>
+          <tr>
+            <td><span class="status-badge placeholder">PLACEHOLDER</span></td>
+            <td>Sample not detected</td>
+            <td>Insufficient sample volume, air bubbles, clotted sample</td>
+            <td>Redraw sample; ensure adequate fill; avoid air bubbles.</td>
+          </tr>
+          <tr>
+            <td><span class="status-badge placeholder">PLACEHOLDER</span></td>
+            <td>Calibration failure</td>
+            <td>Cartridge defect, temperature out of range, expired cartridge</td>
+            <td>Check temperature; try new cartridge from same lot; if persistent, try different lot.</td>
+          </tr>
+          <tr>
+            <td><span class="status-badge placeholder">PLACEHOLDER</span></td>
+            <td>Sensor failure</td>
+            <td>Cartridge manufacturing defect, analyser port issue</td>
+            <td>Try new cartridge; clean port; if persistent, run EQC.</td>
+          </tr>
+          <tr>
+            <td><span class="status-badge placeholder">PLACEHOLDER</span></td>
+            <td>Temperature out of range</td>
+            <td>Ambient temperature below 18 &deg;C or above 30 &deg;C</td>
+            <td>Move to temperature-controlled environment; wait for equilibration.</td>
+          </tr>
+          <tr>
+            <td><span class="status-badge placeholder">PLACEHOLDER</span></td>
+            <td>Battery low</td>
+            <td>Battery depleted</td>
+            <td>Replace 9 V lithium battery immediately.</td>
+          </tr>
+          <tr>
+            <td><span class="status-badge placeholder">PLACEHOLDER</span></td>
+            <td>Mechanical error</td>
+            <td>Cartridge not fully inserted, port obstruction</td>
+            <td>Remove and reinsert cartridge firmly; inspect port for debris.</td>
+          </tr>
+          <tr>
+            <td colspan="4"><em>Additional error codes to be added from manufacturer documentation.</em></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── 2. Cartridge-Related Errors ── -->
+<section id="cartridge-errors" class="collapsible">
+  <h2 class="collapsible-toggle">Cartridge-Related Errors</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Cartridge Not Recognised</h3>
+      <ol class="procedure">
+        <li>Remove the cartridge and inspect the contacts for damage, moisture, or contamination.</li>
+        <li>Check the cartridge expiry date — do not use expired cartridges.</li>
+        <li>Verify the cartridge was stored correctly (temperature, sealed pouch).</li>
+        <li>Try a new cartridge from the same lot.</li>
+        <li>If the error persists with multiple cartridges, suspect a lot issue or analyser port problem.</li>
+      </ol>
+
+      <h3>Calibration Failure</h3>
+      <ol class="procedure">
+        <li>Verify ambient temperature is 18–30 &deg;C.</li>
+        <li>Confirm cartridge has been equilibrated to room temperature for at least 5 minutes.</li>
+        <li>Try a new cartridge.</li>
+        <li>If persistent, try a cartridge from a different lot.</li>
+        <li>Run EQC to verify analyser function.</li>
+      </ol>
+
+      <h3>Cartridge Fill Errors</h3>
+      <ol class="procedure">
+        <li>Ensure the sample was applied correctly — fill to the line, no air bubbles.</li>
+        <li>Close the cartridge cover promptly after sample application.</li>
+        <li>Verify the sample is not clotted.</li>
+        <li>Redraw and retry with a new cartridge.</li>
+      </ol>
+
+      <h3>Expired or Improperly Stored Cartridges</h3>
+      <div class="warning-box caution">
+        <strong>Caution:</strong> Cartridges exposed to temperatures outside their storage range, or used past
+        their expiry date, may produce inaccurate results or error codes. Always check before use.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 3. Analyser-Related Errors ── -->
+<section id="analyser-errors" class="collapsible">
+  <h2 class="collapsible-toggle">Analyser-Related Errors</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Analyser Does Not Power On</h3>
+      <ol class="procedure">
+        <li>Replace the 9 V lithium battery.</li>
+        <li>Check battery contacts for corrosion — clean with a dry cloth if needed.</li>
+        <li>If still unresponsive, the analyser may have a hardware fault — escalate.</li>
+      </ol>
+
+      <h3>Display Errors or Garbled Screen</h3>
+      <ol class="procedure">
+        <li>Remove and reinsert the battery (power cycle).</li>
+        <li>If the display remains abnormal after power cycle, the analyser may need repair.</li>
+      </ol>
+
+      <h3>EQC Failure (Electronic Simulator)</h3>
+      <ol class="procedure">
+        <li>Clean the cartridge port contacts with a dry lint-free swab.</li>
+        <li>Clean the EQC simulator contacts.</li>
+        <li>Re-run the EQC.</li>
+        <li>If still fails: try a different EQC simulator (if available).</li>
+        <li>If all EQC attempts fail, lock out the analyser. See <a href="qc.html#lockout">Lockout Procedures</a>.</li>
+      </ol>
+
+      <h3>Persistent Error Codes Across All Cartridge Types</h3>
+      <p>If the same error appears regardless of cartridge type or lot, the analyser itself is likely at fault.
+         Run EQC, clean the port, power cycle. If unresolved, escalate for repair.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── 4. Sample-Related Errors ── -->
+<section id="sample-errors" class="collapsible">
+  <h2 class="collapsible-toggle">Sample-Related Errors</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Insufficient Sample Volume</h3>
+      <ol class="procedure">
+        <li>Verify the minimum sample volume for the cartridge type.</li>
+        <li>Redraw an adequate sample.</li>
+        <li>Use a new cartridge — do not re-use a cartridge after a failed fill.</li>
+      </ol>
+
+      <h3>Clotted Sample</h3>
+      <ol class="procedure">
+        <li>Inspect the syringe for visible clots or fibrin strands.</li>
+        <li>If the sample is clotted, discard and redraw.</li>
+        <li>Ensure the sample is analysed within the recommended time (typically within 3–10 minutes of draw).</li>
+        <li>For venous samples, ensure proper mixing with anticoagulant (if applicable).</li>
+      </ol>
+
+      <h3>Air Bubbles in Sample</h3>
+      <ol class="procedure">
+        <li>Expel air bubbles from the syringe before applying sample to the cartridge.</li>
+        <li>Apply the sample smoothly and steadily to avoid introducing air.</li>
+        <li>For blood gas samples (CG4+), air exposure can alter PO2 and PCO2 values.</li>
+      </ol>
+
+      <div class="warning-box caution">
+        <strong>Caution — Blood Gas Samples:</strong> Arterial blood gas samples must be analysed as quickly as
+        possible. Prolonged exposure to air or delays in analysis will alter pH, PCO2, and PO2 results.
+      </div>
+
+      <h3>Haemolysed / Lipaemic / Icteric Samples</h3>
+      <p>These sample conditions may interfere with certain analytes. Refer to the cartridge-specific
+         interference information. If in doubt, note the sample condition on the result report.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── 5. Environmental Errors ── -->
+<section id="environmental-errors" class="collapsible">
+  <h2 class="collapsible-toggle">Environmental Errors (Temperature / Humidity)</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Temperature Out of Range</h3>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Condition</th><th>Effect</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ambient &lt; 18 &deg;C</td>
+            <td>Cartridge calibration may fail; results unreliable</td>
+            <td>Move analyser and cartridges to a warmer location (18–30 &deg;C). Allow equilibration before testing.</td>
+          </tr>
+          <tr>
+            <td>Ambient &gt; 30 &deg;C</td>
+            <td>Cartridge reagents may degrade; sensor drift</td>
+            <td>Move to a cooler, climate-controlled space. Do not test until temperature is in range.</td>
+          </tr>
+          <tr>
+            <td>Cartridge cold (from fridge)</td>
+            <td>Fill errors, calibration failure</td>
+            <td>Allow cartridge to reach room temperature (5+ minutes) before use.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Humidity Issues</h3>
+      <ul>
+        <li>High humidity may cause condensation on cartridge contacts — wipe dry before use.</li>
+        <li>Cartridge foil pouches damaged by moisture should not be used.</li>
+        <li>Store cartridge boxes in a dry location; keep pouches sealed until ready to use.</li>
+      </ul>
+
+      <h3>Shipboard-Specific Environmental Challenges</h3>
+      <p>Ship motion, engine room heat, saltwater exposure risk, and rapid temperature changes
+         between compartments — mitigation strategies for each.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── 6. Communication / Printer Errors ── -->
+<section id="comms-errors" class="collapsible">
+  <h2 class="collapsible-toggle">Communication / Printer Errors</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>IR Communication Failure</h3>
+      <ol class="procedure">
+        <li>Clean both IR windows (analyser and printer) with a dry lint-free wipe.</li>
+        <li>Ensure the two devices are aligned and within the specified distance.</li>
+        <li>Remove any obstructions between the IR windows.</li>
+        <li>Ensure there is no strong ambient light source interfering with IR communication.</li>
+        <li>Retry the data transfer.</li>
+      </ol>
+
+      <h3>Printer Not Printing</h3>
+      <ol class="procedure">
+        <li>Verify the printer has power and is turned on.</li>
+        <li>Check for a paper jam or empty paper roll.</li>
+        <li>Replace paper roll if needed.</li>
+        <li>Clean the print head.</li>
+        <li>Test with a self-test print from the printer menu.</li>
+      </ol>
+
+      <h3>Data Not Downloading to External System</h3>
+      <p>If using a data management system or downloader, verify cable connections, software settings,
+         and that the analyser is configured to transmit. Refer to the downloader user manual.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── 7. When to Escalate ── -->
+<section id="escalation" class="collapsible">
+  <h2 class="collapsible-toggle">When to Escalate</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Escalation Criteria</h3>
+      <ul>
+        <li>EQC fails repeatedly after cleaning and port inspection.</li>
+        <li>Liquid QC fails across multiple lots of the same cartridge type.</li>
+        <li>The same error code appears on every test regardless of cartridge type.</li>
+        <li>Physical damage to the analyser (cracked display, damaged port, water ingress).</li>
+        <li>Analyser will not power on after battery replacement.</li>
+        <li>Suspected firmware corruption or menu/display anomalies.</li>
+      </ul>
+
+      <h3>Escalation Contacts</h3>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Contact</th><th>Role</th><th>Phone / Email</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>POCT Coordinator</td><td>First point of contact for QC failures and operational issues</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>Abbott Technical Support</td><td>Manufacturer support for hardware/software faults</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>Biomedical Engineering</td><td>Equipment repair and replacement</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>Supply Chain / Logistics</td><td>Emergency cartridge or consumable resupply</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+        </tbody>
+      </table>
+
+      <div class="warning-box tip">
+        <strong>Tip:</strong> When escalating, have the following information ready: analyser serial number,
+        firmware version, error code(s), cartridge lot number(s), EQC result, and a brief description
+        of troubleshooting steps already taken.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 8. Replacement & Repair Process ── -->
+<section id="replacement" class="collapsible">
+  <h2 class="collapsible-toggle">Replacement &amp; Repair Process</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Requesting Repair</h3>
+      <ol class="procedure">
+        <li>Lock out the faulty analyser (label, logbook entry, notification).</li>
+        <li>Complete a repair request form with serial number, fault description, and troubleshooting summary.</li>
+        <li>Submit to biomedical engineering / equipment management.</li>
+        <li>Arrange return shipping if shore-based repair is required.</li>
+      </ol>
+
+      <h3>Requesting a Replacement Analyser</h3>
+      <ol class="procedure">
+        <li>Contact the POCT coordinator and supply chain.</li>
+        <li>Request a loan or replacement i-STAT 1 analyser.</li>
+        <li>Upon receipt, configure the replacement (date/time, operator IDs, customisation codes).</li>
+        <li>Run EQC + full liquid QC (all 3 levels, all cartridge types) before patient use.</li>
+        <li>Record the new analyser serial number in the equipment register and QC logbook.</li>
+      </ol>
+
+      <h3>Returning a Repaired Analyser to Service</h3>
+      <ol class="procedure">
+        <li>Verify the repair report — confirm fault was identified and corrected.</li>
+        <li>Check firmware version and configuration settings.</li>
+        <li>Run EQC — must PASS.</li>
+        <li>Run liquid QC at all 3 levels on all cartridge types — must PASS.</li>
+        <li>Record return-to-service in the QC logbook with date, operator, EQC and QC results.</li>
+        <li>Remove "OUT OF SERVICE" label.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v0 framework</footer>
+
+<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v2 framework</footer>
 </body>
 </html>

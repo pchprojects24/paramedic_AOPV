@@ -3,34 +3,389 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CG4+ — Paramedic Aid Memoir</title>
+<title>CG4+ Cartridge — Paramedic Aid Memoir</title>
 <link rel="stylesheet" href="../../../styles/style.css">
 <script src="../../../scripts/app.js" defer></script>
 </head>
 <body>
 <header class="site-header">
-  <span class="site-title">Paramedic Aid Memoir</span>
-  <a href="../../../index.html">Home</a>
-  <a href="../cartridges.html">&larr; Cartridges</a>
+  <div class="header-inner">
+    <span class="site-title">Paramedic Aid Memoir</span>
+    <a href="../../../index.html">Home</a>
+    <button class="btn-dark-mode" aria-label="Toggle dark mode">Dark</button>
+  </div>
 </header>
+<nav class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <a href="../../../index.html">Home</a> <span class="sep">/</span>
+    <a href="../index.html">i-STAT</a> <span class="sep">/</span>
+    <a href="../cartridges.html">Cartridges</a> <span class="sep">/</span>
+    <span class="current">CG4+</span>
+  </div>
+</nav>
+
 <main class="content">
-<h1>CG4+</h1>
-<p class="scope-block">Placeholder framework — content to be added.</p>
-<h2>Purpose</h2>
-<p>Placeholder.</p>
-<h2>Supplies</h2>
-<p>Placeholder.</p>
-<h2>Storage &amp; Handling</h2>
-<p>Placeholder.</p>
-<h2>QC Workflow</h2>
-<p>Placeholder.</p>
-<h2>Patient Sample Workflow</h2>
-<p>Placeholder.</p>
-<h2>Common Errors &amp; Fixes</h2>
-<p>Placeholder.</p>
-<h2>Notes for Shipboard Use</h2>
-<p>Placeholder.</p>
+<h1>CG4+ Cartridge</h1>
+
+<p class="scope-block">
+  <span class="status-badge placeholder">PLACEHOLDER</span>
+  Comprehensive reference for the i-STAT CG4+ cartridge — blood gas, acid-base, and lactate analysis.
+  All sections below are framework headings awaiting detailed content.
+</p>
+
+<div class="tag-list">
+  <span class="tag">blood-gas</span>
+  <span class="tag">acid-base</span>
+  <span class="tag">lactate</span>
+  <span class="tag">oxygenation</span>
+</div>
+
+<!-- ── Quick Reference ── -->
+<h2>Quick Reference</h2>
+<table class="quick-ref-table">
+  <thead>
+    <tr><th>Field</th><th>Detail</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Cartridge Name</td><td>CG4+</td></tr>
+    <tr><td>Analytes (Measured)</td><td>pH, PCO2, PO2, Lactate</td></tr>
+    <tr><td>Analytes (Calculated)</td><td>BE (Base Excess), HCO3 (Bicarbonate), TCO2 (Total CO2), sO2 (Oxygen Saturation)</td></tr>
+    <tr><td>Sample Type</td><td>Whole blood — arterial (preferred) or venous</td></tr>
+    <tr><td>Sample Volume</td><td><span class="status-badge placeholder">PLACEHOLDER</span> &micro;L</td></tr>
+    <tr><td>Time to Result</td><td>~2 minutes</td></tr>
+    <tr><td>Storage Temperature</td><td>2–8 &deg;C (refrigerated); or room temp per manufacturer spec</td></tr>
+    <tr><td>Room Temp Equilibration</td><td>Minimum 5 minutes before use</td></tr>
+  </tbody>
+</table>
+
+<!-- ── Table of Contents ── -->
+<nav class="page-toc">
+  <p class="toc-title">On This Page</p>
+  <ul>
+    <li><a href="#purpose">Purpose &amp; Clinical Indications</a></li>
+    <li><a href="#supplies">Supplies Required</a></li>
+    <li><a href="#storage">Storage &amp; Handling</a></li>
+    <li><a href="#qc-workflow">QC Workflow</a></li>
+    <li><a href="#patient-workflow">Patient Sample Workflow</a></li>
+    <li><a href="#reading-results">Reading Results</a></li>
+    <li><a href="#errors">Common Errors &amp; Fixes</a></li>
+    <li><a href="#critical-values">Critical Value Reporting</a></li>
+    <li><a href="#shipboard">Notes for Shipboard Use</a></li>
+  </ul>
+</nav>
+
+<div style="margin-bottom:1rem;">
+  <button class="btn-expand-all">Expand All</button>
+  <button class="btn-collapse-all">Collapse All</button>
+</div>
+
+<!-- ── Purpose & Clinical Indications ── -->
+<section id="purpose" class="collapsible">
+  <h2 class="collapsible-toggle">Purpose &amp; Clinical Indications</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>What This Cartridge Tests</h3>
+      <p>The CG4+ measures arterial or venous blood gas parameters (pH, PCO2, PO2) and Lactate.
+         Calculated values include Base Excess (BE), Bicarbonate (HCO3), Total CO2 (TCO2), and
+         Oxygen Saturation (sO2). Together these provide a comprehensive acid-base and oxygenation profile.</p>
+
+      <h3>Clinical Indications</h3>
+      <ul>
+        <li>Assessment of respiratory function (oxygenation, ventilation)</li>
+        <li>Acid-base disturbance evaluation (metabolic/respiratory acidosis or alkalosis)</li>
+        <li>Monitoring ventilated patients</li>
+        <li>Sepsis / shock assessment (lactate as perfusion marker)</li>
+        <li>Trauma assessment — tissue perfusion status</li>
+        <li>Diabetic ketoacidosis (DKA) monitoring</li>
+        <li>Carbon monoxide / toxic inhalation assessment (with limitations)</li>
+        <li>Drowning / near-drowning assessment</li>
+      </ul>
+
+      <h3>Limitations &amp; Interferences</h3>
+      <p>Air exposure rapidly alters PO2 and PCO2 — sample must be analysed immediately.
+         Heparin concentration may affect results. sO2 is calculated (not measured by co-oximetry) and
+         may be inaccurate in CO poisoning, methaemoglobinaemia, or abnormal haemoglobins.</p>
+
+      <div class="warning-box caution">
+        <strong>Caution — Calculated sO2:</strong> The CG4+ calculates sO2 from PO2 and pH using a standard
+        dissociation curve. It does NOT directly measure oxygen saturation. In cases of CO poisoning or
+        methaemoglobinaemia, sO2 will be falsely normal. Use a co-oximeter for these cases.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Supplies Required ── -->
+<section id="supplies" class="collapsible">
+  <h2 class="collapsible-toggle">Supplies Required</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+      <ul class="checklist">
+        <li><label><input type="checkbox"> i-STAT 1 Analyser (EQC passed today)</label></li>
+        <li><label><input type="checkbox"> CG4+ cartridge (in-date, room temp equilibrated)</label></li>
+        <li><label><input type="checkbox"> Pre-heparinised arterial blood gas syringe</label></li>
+        <li><label><input type="checkbox"> Syringe cap (to prevent air exposure)</label></li>
+        <li><label><input type="checkbox"> Gloves, alcohol swab, gauze, tape</label></li>
+        <li><label><input type="checkbox"> Sharps container</label></li>
+        <li><label><input type="checkbox"> Ice (if delay &gt; 10 minutes — though avoid if possible)</label></li>
+        <li><label><input type="checkbox"> Patient identification (two identifiers)</label></li>
+        <li><label><input type="checkbox"> Printer or result recording form</label></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── Storage & Handling ── -->
+<section id="storage" class="collapsible">
+  <h2 class="collapsible-toggle">Storage &amp; Handling</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Storage Temperature</h3>
+      <p>Refrigerated: 2–8 &deg;C. May also be stored at room temperature
+         (<span class="status-badge placeholder">PLACEHOLDER</span> &deg;C range) for up to
+         <span class="status-badge placeholder">PLACEHOLDER</span> days per manufacturer instructions.</p>
+
+      <h3>Shelf Life &amp; Expiry</h3>
+      <p>Check expiry date on each cartridge pouch. Once the foil pouch is opened, use within
+         <span class="status-badge placeholder">PLACEHOLDER</span> minutes.</p>
+
+      <h3>Lot Tracking</h3>
+      <p>Record lot number upon receipt. New lots require liquid QC at all 3 levels before patient use.</p>
+
+      <h3>Equilibration Before Use</h3>
+      <div class="warning-box caution">
+        <strong>Caution:</strong> Allow cartridge to equilibrate to room temperature (18–30 &deg;C)
+        for at least 5 minutes before use. Do not artificially warm.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── QC Workflow ── -->
+<section id="qc-workflow" class="collapsible">
+  <h2 class="collapsible-toggle">QC Workflow</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+      <ol class="procedure">
+        <li>Verify EQC has passed today.</li>
+        <li>Check the QC logbook — is liquid QC due for CG4+ this week?</li>
+        <li>If due: run Level 1, Level 2, and Level 3 liquid QC per <a href="../qc.html">QC procedures</a>.</li>
+        <li>Compare all 4 measured analytes (pH, PCO2, PO2, Lactate) against lot-specific acceptable ranges.</li>
+        <li>Record all results (PASS/FAIL per analyte) in the QC logbook.</li>
+        <li>If any analyte fails at any level, do NOT run patient samples on CG4+ until resolved.</li>
+        <li>See <a href="../qc.html#qc-failure">QC Failure Troubleshooting</a> for corrective actions.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ── Patient Sample Workflow ── -->
+<section id="patient-workflow" class="collapsible">
+  <h2 class="collapsible-toggle">Patient Sample Workflow</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Pre-Analysis</h3>
+      <ol class="procedure">
+        <li>Confirm patient identity using two identifiers.</li>
+        <li>Verify that EQC has passed and QC is current for CG4+.</li>
+        <li>Gather all supplies (see checklist above).</li>
+        <li>Remove a CG4+ cartridge from its foil pouch; confirm it is at room temperature and in-date.</li>
+      </ol>
+
+      <div class="warning-box danger">
+        <strong>Critical — Sample Handling:</strong> Blood gas samples are extremely time-sensitive.
+        Analyse within 3 minutes of collection for arterial samples. Minimise air exposure at all times.
+      </div>
+
+      <h3>Sample Collection (Arterial)</h3>
+      <ol class="procedure">
+        <li>Perform a modified Allen's test (if radial artery puncture).</li>
+        <li>Clean the puncture site with alcohol; allow to dry.</li>
+        <li>Perform arterial puncture using a pre-heparinised ABG syringe.</li>
+        <li>Collect the required volume — typically 1–3 mL.</li>
+        <li>Immediately remove any air bubbles from the syringe.</li>
+        <li>Cap the syringe to prevent further air exposure.</li>
+        <li>Mix gently by rolling between palms.</li>
+        <li>Apply pressure to the puncture site for at least 5 minutes.</li>
+      </ol>
+
+      <h3>Running the Test</h3>
+      <ol class="procedure">
+        <li>Apply the blood sample to the CG4+ cartridge sample well — fill to the line.</li>
+        <li>Close the cartridge cover firmly.</li>
+        <li>Insert the cartridge into the i-STAT analyser until it clicks.</li>
+        <li>Enter patient ID and operator ID when prompted.</li>
+        <li>Wait for the analysis to complete (~2 minutes).</li>
+      </ol>
+
+      <h3>Post-Analysis</h3>
+      <ol class="procedure">
+        <li>Read all results on the display — both measured and calculated values.</li>
+        <li>Print the result ticket via IR printer (if available).</li>
+        <li>Remove and dispose of the used cartridge in the sharps/biohazard container.</li>
+        <li>Document all results in the patient's medical record.</li>
+        <li>Note the sample type (arterial or venous) and any relevant clinical details (FiO2, ventilator settings).</li>
+        <li>Check for critical values — report immediately if present.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ── Reading Results ── -->
+<section id="reading-results" class="collapsible">
+  <h2 class="collapsible-toggle">Reading Results</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Analyte</th><th>Units</th><th>Normal Range (Arterial)</th><th>Critical Low</th><th>Critical High</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>pH</td><td>—</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>PCO2</td><td>mmHg</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>PO2</td><td>mmHg</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>Lactate</td><td>mmol/L</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td>—</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>BE (Base Excess) <em>calc</em></td><td>mmol/L</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>HCO3 (Bicarbonate) <em>calc</em></td><td>mmol/L</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>TCO2 (Total CO2) <em>calc</em></td><td>mmol/L</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>sO2 (O2 Saturation) <em>calc</em></td><td>%</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td>—</td></tr>
+        </tbody>
+      </table>
+
+      <div class="info-block warning">
+        <strong>Important:</strong> Venous blood gas ranges differ from arterial. If a venous sample is used,
+        interpret accordingly — venous pH is typically lower and PCO2 higher than arterial values.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Common Errors & Fixes ── -->
+<section id="errors" class="collapsible">
+  <h2 class="collapsible-toggle">Common Errors &amp; Fixes</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Error</th><th>Probable Cause</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>PO2 unexpectedly high</td>
+            <td>Air bubble contamination</td>
+            <td>Redraw sample with meticulous air-bubble removal; analyse immediately.</td>
+          </tr>
+          <tr>
+            <td>PCO2 unexpectedly low</td>
+            <td>Air exposure / delayed analysis</td>
+            <td>Analyse within 3 minutes of draw; cap syringe immediately after collection.</td>
+          </tr>
+          <tr>
+            <td>Sample not detected</td>
+            <td>Insufficient fill volume</td>
+            <td>Ensure adequate sample; fill to line; use new cartridge.</td>
+          </tr>
+          <tr>
+            <td>Calibration failure</td>
+            <td>Cartridge not equilibrated / expired</td>
+            <td>Check temp and expiry; try new cartridge.</td>
+          </tr>
+          <tr>
+            <td>Lactate unexpectedly elevated</td>
+            <td>Tourniquet time too long; delayed analysis; exercise</td>
+            <td>Review sample collection technique; analyse promptly; correlate clinically.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>For the full error code reference, see <a href="../troubleshooting.html">i-STAT Troubleshooting</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Critical Value Reporting ── -->
+<section id="critical-values" class="collapsible">
+  <h2 class="collapsible-toggle">Critical Value Reporting</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <div class="warning-box danger">
+        <strong>Critical values must be reported immediately to the responsible medical officer.</strong>
+        Do not delay. Use read-back verification to confirm the value was received correctly.
+      </div>
+
+      <h3>CG4+ Critical Values</h3>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Analyte</th><th>Critical Low</th><th>Critical High</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>pH</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>PCO2</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>PO2</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td>—</td></tr>
+          <tr><td>Lactate</td><td>—</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+        </tbody>
+      </table>
+
+      <h3>Reporting Procedure</h3>
+      <ol class="procedure">
+        <li>Identify the critical value on the result display.</li>
+        <li>Immediately contact the responsible medical officer.</li>
+        <li>Report: patient identity, test, result, sample type (arterial/venous), time of collection, FiO2.</li>
+        <li>Obtain read-back confirmation.</li>
+        <li>Document: who was notified, time, read-back confirmed, in the patient record.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ── Notes for Shipboard Use ── -->
+<section id="shipboard" class="collapsible">
+  <h2 class="collapsible-toggle">Notes for Shipboard Use</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Motion &amp; Vibration</h3>
+      <p>Blood gas analysis is particularly sensitive to sample handling. In rough seas, brace the
+         analyser securely and minimise sample exposure time. Air bubble introduction during ship motion
+         is a significant risk — take extra care when expelling bubbles from the syringe.</p>
+
+      <h3>Temperature Considerations</h3>
+      <p>CG4+ cartridges require the same storage and equilibration as other i-STAT cartridges.
+         Additionally, the blood sample itself is temperature-sensitive — do not expose to heat or
+         direct sunlight between collection and analysis.</p>
+
+      <h3>Documentation at Sea</h3>
+      <p>Always record the sample type (arterial vs. venous), FiO2, ventilator settings if applicable,
+         and the time between collection and analysis. These contextual details are essential for
+         meaningful interpretation of blood gas results, especially when remote medical consultation
+         is required via telemedicine.</p>
+
+      <div class="warning-box tip">
+        <strong>Tip:</strong> In a mass casualty or resuscitation scenario, the CG4+ provides the most
+        immediately actionable information about ventilation and perfusion status. Pair with CHEM8+
+        for a comprehensive metabolic and oxygenation picture.
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v0 framework</footer>
+
+<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v2 framework</footer>
 </body>
 </html>

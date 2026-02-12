@@ -3,20 +3,415 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Quality Control — Paramedic Aid Memoir</title>
+<title>i-STAT Quality Control — Paramedic Aid Memoir</title>
 <link rel="stylesheet" href="../../styles/style.css">
 <script src="../../scripts/app.js" defer></script>
 </head>
 <body>
 <header class="site-header">
-  <span class="site-title">Paramedic Aid Memoir</span>
-  <a href="../../index.html">Home</a>
-  <a href="index.html">&larr; i-STAT</a>
+  <div class="header-inner">
+    <span class="site-title">Paramedic Aid Memoir</span>
+    <a href="../../index.html">Home</a>
+    <button class="btn-dark-mode" aria-label="Toggle dark mode">Dark</button>
+  </div>
 </header>
+<nav class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <a href="../../index.html">Home</a> <span class="sep">/</span>
+    <a href="index.html">i-STAT</a> <span class="sep">/</span>
+    <span class="current">Quality Control</span>
+  </div>
+</nav>
+
 <main class="content">
-<h1>Quality Control</h1>
-<p class="scope-block">Placeholder framework — content to be added.</p>
+<h1>i-STAT Quality Control (QC)</h1>
+
+<p class="scope-block">
+  <span class="status-badge placeholder">PLACEHOLDER</span>
+  Comprehensive quality control framework for the i-STAT 1 analyser including electronic QC,
+  liquid QC at three levels, acceptable ranges, failure troubleshooting, and lockout procedures.
+  All sections below are framework headings awaiting detailed content.
+</p>
+
+<!-- ── Table of Contents ── -->
+<nav class="page-toc">
+  <p class="toc-title">On This Page</p>
+  <ul>
+    <li><a href="#qc-overview">QC Overview &amp; Requirements</a></li>
+    <li><a href="#eqc">Electronic QC (EQC)</a></li>
+    <li><a href="#liquid-qc">Liquid QC Controls</a></li>
+    <li><a href="#frequency">QC Frequency &amp; Schedule</a></li>
+    <li><a href="#ranges">Acceptable Ranges</a></li>
+    <li><a href="#qc-failure">QC Failure Troubleshooting</a></li>
+    <li><a href="#lockout">Lockout Procedures</a></li>
+    <li><a href="#documentation">Documentation &amp; POCT Coordinator Reporting</a></li>
+  </ul>
+</nav>
+
+<div style="margin-bottom:1rem;">
+  <button class="btn-expand-all">Expand All</button>
+  <button class="btn-collapse-all">Collapse All</button>
+</div>
+
+<!-- ── 1. QC Overview & Requirements ── -->
+<section id="qc-overview" class="collapsible">
+  <h2 class="collapsible-toggle">QC Overview &amp; Requirements</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Purpose of Quality Control</h3>
+      <p>QC ensures the i-STAT analyser and cartridges produce accurate, reliable results.
+         It detects systematic errors before they affect patient care.</p>
+
+      <h3>Regulatory Requirements</h3>
+      <p>Applicable standards: ISO 22870 (POCT quality and competence), CLIA requirements,
+         organisational POCT policy, manufacturer recommendations.</p>
+
+      <h3>Types of QC</h3>
+      <ul>
+        <li><strong>Electronic QC (EQC):</strong> Tests the analyser's electronic circuits using a reusable simulator.</li>
+        <li><strong>Liquid QC:</strong> Tests the full analytical process (cartridge + analyser) using control solutions with known analyte concentrations.</li>
+      </ul>
+
+      <h3>Responsibility</h3>
+      <p>Who is responsible for performing QC, reviewing QC results, and taking corrective action.
+         Role of the POCT coordinator.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── 2. Electronic QC (EQC) ── -->
+<section id="eqc" class="collapsible">
+  <h2 class="collapsible-toggle">Electronic QC (EQC)</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>What EQC Tests</h3>
+      <p>The Electronic Simulator verifies: signal acquisition circuits, amplification paths,
+         analog-to-digital conversion, microprocessor calculations, and detection thresholds.</p>
+
+      <h3>EQC Procedure</h3>
+      <ol class="procedure">
+        <li>Ensure the analyser is powered on and at the main menu.</li>
+        <li>Insert the Electronic Simulator into the cartridge port.</li>
+        <li>Wait for the test cycle to complete (~60 seconds).</li>
+        <li>Read the result: PASS or FAIL.</li>
+        <li>Remove the simulator; return to protective case.</li>
+        <li>Record the result, simulator lot number, date, time, and operator ID in the QC logbook.</li>
+      </ol>
+
+      <h3>EQC Frequency</h3>
+      <ul>
+        <li>Daily — before the first patient test of the day.</li>
+        <li>After any battery change.</li>
+        <li>After any suspected analyser fault.</li>
+        <li>After the analyser has been dropped or exposed to extreme conditions.</li>
+      </ul>
+
+      <h3>EQC Simulator Lot Management</h3>
+      <p>Lot number tracking, expiry, storage conditions, replacement process.</p>
+
+      <div class="warning-box caution">
+        <strong>Caution:</strong> An EQC PASS does not verify cartridge integrity.
+        Liquid QC is still required to confirm the full analytical process.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 3. Liquid QC Controls ── -->
+<section id="liquid-qc" class="collapsible">
+  <h2 class="collapsible-toggle">Liquid QC Controls</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Overview</h3>
+      <p>Liquid QC materials are aqueous solutions with known concentrations of the analytes measured
+         by each cartridge type. Three levels bracket the clinically relevant range.</p>
+
+      <h3>Level 1 — Low / Normal Range</h3>
+      <p>Verifies performance at the low end of the reportable range.
+         Control material identification, storage, handling, expiry management.</p>
+      <ol class="procedure">
+        <li>Remove Level 1 ampoule from refrigerator; equilibrate to room temp (5+ minutes).</li>
+        <li>Mix by gentle inversion (do not vortex).</li>
+        <li>Open ampoule per manufacturer instructions.</li>
+        <li>Apply control material to the cartridge sample well using the supplied applicator.</li>
+        <li>Insert cartridge; wait for results.</li>
+        <li>Compare each analyte result against the Level 1 acceptable range insert.</li>
+        <li>Record PASS or FAIL for each analyte.</li>
+      </ol>
+
+      <h3>Level 2 — Mid / Normal Range</h3>
+      <p>Verifies performance at the mid-range of the reportable range.</p>
+      <ol class="procedure">
+        <li>Repeat Level 1 procedure using Level 2 control material.</li>
+        <li>Compare to Level 2 ranges; record results.</li>
+      </ol>
+
+      <h3>Level 3 — High / Abnormal Range</h3>
+      <p>Verifies performance at the high end, including critical value ranges.</p>
+      <ol class="procedure">
+        <li>Repeat Level 1 procedure using Level 3 control material.</li>
+        <li>Compare to Level 3 ranges; record results.</li>
+      </ol>
+
+      <h3>Control Material Management</h3>
+      <ul>
+        <li>Storage temperature requirements</li>
+        <li>Expiry date tracking and disposal</li>
+        <li>Lot number documentation</li>
+        <li>Opened vs. unopened shelf life</li>
+        <li>Ordering and supply chain considerations</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── 4. QC Frequency & Schedule ── -->
+<section id="frequency" class="collapsible">
+  <h2 class="collapsible-toggle">QC Frequency &amp; Schedule</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>Standard QC Schedule</h3>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>QC Type</th><th>Frequency</th><th>Trigger Events</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Electronic QC (EQC)</td>
+            <td>Daily (minimum)</td>
+            <td>Battery change, suspected fault, drop/impact, extreme environmental exposure</td>
+          </tr>
+          <tr>
+            <td>Liquid QC — All 3 Levels</td>
+            <td>Weekly (minimum) per cartridge type</td>
+            <td>New cartridge lot, new QC lot, after analyser service/repair</td>
+          </tr>
+          <tr>
+            <td>Liquid QC — New Lot</td>
+            <td>Before first patient use of new cartridge lot</td>
+            <td>Receipt of new cartridge shipment</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Enhanced Schedule (High-Usage Periods)</h3>
+      <p>During mass casualty events, extended operations, or high test volume periods,
+         consider increasing QC frequency (e.g., liquid QC every 24 hours).</p>
+
+      <div class="info-block info">
+        <strong>Note:</strong> Local POCT policy may require more frequent QC than the minimums listed above.
+        Always follow the most stringent applicable requirement.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 5. Acceptable Ranges ── -->
+<section id="ranges" class="collapsible">
+  <h2 class="collapsible-toggle">Acceptable Ranges</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <div class="info-block warning">
+        <strong>Important:</strong> Acceptable QC ranges are lot-specific. Always refer to the package insert
+        supplied with each lot of QC control material. The table below is a template only.
+      </div>
+
+      <h3>CHEM8+ QC Ranges</h3>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Analyte</th><th>Units</th><th>Level 1 Range</th><th>Level 2 Range</th><th>Level 3 Range</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Na</td><td>mmol/L</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>K</td><td>mmol/L</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>Cl</td><td>mmol/L</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>TCO2</td><td>mmol/L</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>BUN</td><td>mg/dL</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>Glucose</td><td>mg/dL</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>Creatinine</td><td>mg/dL</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>iCa</td><td>mmol/L</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>Hct</td><td>%PCV</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+        </tbody>
+      </table>
+
+      <h3>CG4+ QC Ranges</h3>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Analyte</th><th>Units</th><th>Level 1 Range</th><th>Level 2 Range</th><th>Level 3 Range</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>pH</td><td>—</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>PCO2</td><td>mmHg</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>PO2</td><td>mmHg</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>Lactate</td><td>mmol/L</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+        </tbody>
+      </table>
+
+      <h3>PT/INR QC Ranges</h3>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Analyte</th><th>Units</th><th>Level 1 Range</th><th>Level 2 Range</th><th>Level 3 Range</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>PT</td><td>seconds</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+          <tr><td>INR</td><td>ratio</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+        </tbody>
+      </table>
+
+      <h3>Troponin I QC Ranges</h3>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Analyte</th><th>Units</th><th>Level 1 Range</th><th>Level 2 Range</th><th>Level 3 Range</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>cTnI</td><td>ng/mL</td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td><td><span class="status-badge placeholder">PLACEHOLDER</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── 6. QC Failure Troubleshooting ── -->
+<section id="qc-failure" class="collapsible">
+  <h2 class="collapsible-toggle">QC Failure Troubleshooting</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <div class="warning-box danger">
+        <strong>Critical:</strong> Do NOT release any patient results for a cartridge type that has failed QC
+        until the failure is resolved and QC passes.
+      </div>
+
+      <h3>Step-by-Step Failure Response</h3>
+      <ol class="procedure">
+        <li>Record the failure: cartridge type, level, analyte(s) out of range, date/time, operator.</li>
+        <li>Verify QC material: correct level, not expired, properly stored, properly mixed.</li>
+        <li>Check cartridge: correct type, not expired, properly equilibrated, lot number matches.</li>
+        <li>Re-run the failed level using a new cartridge from the same lot.</li>
+        <li>If PASS — record corrective action; resume patient testing.</li>
+        <li>If FAIL again — try a cartridge from a different lot (if available).</li>
+        <li>If still FAIL — run EQC to rule out analyser fault.</li>
+        <li>If EQC FAIL — analyser may need service. Do NOT use for patient testing.</li>
+        <li>If EQC PASS but liquid QC still FAIL — suspect QC material or cartridge lot issue.</li>
+        <li>Contact POCT coordinator for guidance.</li>
+      </ol>
+
+      <h3>Common Causes of QC Failure</h3>
+      <table class="quick-ref-table">
+        <thead>
+          <tr><th>Cause</th><th>Signs</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Expired QC material</td><td>All levels fail on all cartridge types</td><td>Check expiry; use fresh material.</td></tr>
+          <tr><td>Improper QC storage</td><td>Intermittent failures</td><td>Verify refrigeration; check for freeze damage.</td></tr>
+          <tr><td>Expired cartridge</td><td>Failure on one cartridge type only</td><td>Check expiry; use in-date cartridge.</td></tr>
+          <tr><td>Cartridge not equilibrated</td><td>One-off failure, passes on retry</td><td>Ensure 5+ min room temp equilibration.</td></tr>
+          <tr><td>Contaminated port</td><td>EQC and/or liquid QC fail</td><td>Clean port; retry.</td></tr>
+          <tr><td>Analyser fault</td><td>EQC fails</td><td>Service or replace analyser.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── 7. Lockout Procedures ── -->
+<section id="lockout" class="collapsible">
+  <h2 class="collapsible-toggle">Lockout Procedures</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>When to Lock Out the Analyser</h3>
+      <ul>
+        <li>EQC fails after cleaning and repeat testing.</li>
+        <li>Liquid QC fails on all cartridge types after full troubleshooting.</li>
+        <li>Analyser shows persistent error codes.</li>
+        <li>Physical damage to the analyser.</li>
+      </ul>
+
+      <h3>Lockout Process</h3>
+      <ol class="procedure">
+        <li>Physically label the analyser as "OUT OF SERVICE — DO NOT USE".</li>
+        <li>Record the lockout in the QC logbook with date, time, reason, and operator.</li>
+        <li>Notify the POCT coordinator and medical officer.</li>
+        <li>Arrange repair or replacement.</li>
+        <li>Before returning to service, pass EQC + liquid QC at all 3 levels on all cartridge types.</li>
+      </ol>
+
+      <h3>When to Lock Out a Cartridge Lot</h3>
+      <ul>
+        <li>Liquid QC repeatedly fails on a specific lot.</li>
+        <li>Known manufacturer recall or advisory for that lot.</li>
+        <li>Expired lot.</li>
+      </ul>
+
+      <h3>Cartridge Lot Lockout Process</h3>
+      <ol class="procedure">
+        <li>Segregate the affected lot from usable stock.</li>
+        <li>Label clearly as "DO NOT USE".</li>
+        <li>Record in QC logbook.</li>
+        <li>Contact supplier / manufacturer if lot defect is suspected.</li>
+        <li>Dispose per organisational policy.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ── 8. Documentation & POCT Coordinator Reporting ── -->
+<section id="documentation" class="collapsible">
+  <h2 class="collapsible-toggle">Documentation &amp; POCT Coordinator Reporting</h2>
+  <div class="collapsible-body">
+    <div class="placeholder-content">
+      <p><span class="status-badge placeholder">PLACEHOLDER</span></p>
+
+      <h3>QC Logbook Requirements</h3>
+      <p>Every QC event (EQC and liquid) must be recorded with:</p>
+      <ul>
+        <li>Date and time</li>
+        <li>Operator name / ID</li>
+        <li>QC type (EQC or Liquid, with level)</li>
+        <li>Cartridge type and lot number</li>
+        <li>QC material lot number and expiry</li>
+        <li>Result for each analyte (value + PASS/FAIL)</li>
+        <li>Corrective actions (if any)</li>
+      </ul>
+
+      <h3>Monthly / Quarterly Reporting</h3>
+      <p>Summary reports to the POCT coordinator should include:</p>
+      <ul>
+        <li>Number of QC events performed (EQC + liquid)</li>
+        <li>Pass/fail rates per cartridge type</li>
+        <li>Corrective actions taken</li>
+        <li>Lockout events</li>
+        <li>Cartridge inventory and expiry status</li>
+        <li>Training / competency updates</li>
+      </ul>
+
+      <h3>Audit Trail</h3>
+      <p>The QC logbook serves as the primary audit document. Ensure legibility, completeness,
+         no white-out corrections (use single-line strikethrough with initials and date for corrections).</p>
+
+      <div class="warning-box tip">
+        <strong>Tip:</strong> Keep a photocopy or digital backup of the QC logbook pages.
+        In the maritime environment, water damage to paper records is a real risk.
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v0 framework</footer>
+
+<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v2 framework</footer>
 </body>
 </html>

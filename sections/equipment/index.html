@@ -3,30 +3,141 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Other Equipment — Paramedic Aid Memoir</title>
+<title>Equipment — Paramedic Aid Memoir</title>
 <link rel="stylesheet" href="../../styles/style.css">
 <script src="../../scripts/app.js" defer></script>
 </head>
 <body>
 <header class="site-header">
-  <span class="site-title">Paramedic Aid Memoir</span>
-  <a href="../../index.html">Home</a>
-
+  <div class="header-inner">
+    <span class="site-title">Paramedic Aid Memoir</span>
+    <a href="../../index.html">Home</a>
+    <button class="btn-dark-mode" aria-label="Toggle dark mode">Dark</button>
+  </div>
 </header>
+<nav class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <a href="../../index.html">Home</a> <span class="sep">/</span>
+    <span class="current">Equipment</span>
+  </div>
+</nav>
+
 <main class="content">
-<h1>Other Equipment</h1>
-<p class="scope-block">Placeholder framework — content to be added.</p>
+<h1>Equipment</h1>
+
+<p class="scope-block">
+  <span class="status-badge placeholder">Framework</span>
+  This section covers all medical and technical equipment carried on board. Each page provides quick-reference cards,
+  operational guides, maintenance schedules, troubleshooting tables, and shipboard-specific notes.
+</p>
+
+<!-- ===== Tag Filter ===== -->
+<div class="tag-list">
+  <span class="tag">Monitoring</span>
+  <span class="tag">Ventilation</span>
+  <span class="tag">Infusion</span>
+  <span class="tag">Thermal</span>
+  <span class="tag">Suction</span>
+  <span class="tag">Diagnostics</span>
+  <span class="tag">Water Testing</span>
+  <span class="tag">Oxygen</span>
+</div>
+
+<!-- ===== Card Grid: All Equipment ===== -->
+<div class="card-grid">
+
+  <!-- Cocoon Warming Device -->
+  <a href="cocoon-warming.html" class="card">
+    <h3>Cocoon Warming Device</h3>
+    <p class="link-desc">Active patient warming system for hypothermia prevention and treatment. Covers setup, temperature targets, and monitoring.</p>
+    <div class="tag-list">
+      <span class="tag">Thermal</span>
+    </div>
+  </a>
+
+  <!-- Braun Infusomat Space -->
+  <a href="braun-infusomat.html" class="card">
+    <h3>Braun Infusomat Space</h3>
+    <p class="link-desc">IV infusion pump for precise fluid and medication delivery. Covers programming, drug libraries, alarms, and line management.</p>
+    <div class="tag-list">
+      <span class="tag">Infusion</span>
+    </div>
+  </a>
+
+  <!-- ECG Schiller AT-102 G2 -->
+  <a href="ecg-schiller-at102g2.html" class="card">
+    <h3>ECG Schiller AT-102 G2</h3>
+    <p class="link-desc">12-lead resting ECG device for cardiac diagnostics. Covers lead placement, acquisition, interpretation tips, and printing.</p>
+    <div class="tag-list">
+      <span class="tag">Diagnostics</span>
+      <span class="tag">Monitoring</span>
+    </div>
+  </a>
+
+  <!-- Invacare Platinum 10 -->
+  <a href="oxygen-invacare-platinum10.html" class="card">
+    <h3>Invacare Platinum 10</h3>
+    <p class="link-desc">Oxygen concentrator providing supplemental O2 up to 10 LPM. Covers flow settings, patient interfaces, and maintenance.</p>
+    <div class="tag-list">
+      <span class="tag">Oxygen</span>
+    </div>
+  </a>
+
+  <!-- Laerdal Suction Unit LSU -->
+  <a href="suction-laerdal-lsu.html" class="card">
+    <h3>Laerdal Suction Unit (LSU)</h3>
+    <p class="link-desc">Portable suction unit for airway clearance. Covers assembly, suction pressures, catheter selection, and decontamination.</p>
+    <div class="tag-list">
+      <span class="tag">Suction</span>
+    </div>
+  </a>
+
+  <!-- Millipore XX631 Incubator -->
+  <a href="incubator-millipore-xx631.html" class="card">
+    <h3>Millipore XX631 Incubator</h3>
+    <p class="link-desc">Bacteriology incubation unit for onboard water testing. Covers temperature calibration, sample placement, and result reading.</p>
+    <div class="tag-list">
+      <span class="tag">Water Testing</span>
+    </div>
+  </a>
+
+  <!-- Hach DR900 Colorimeter -->
+  <a href="water-colorimeter-hach-dr900.html" class="card">
+    <h3>Hach DR900 Colorimeter</h3>
+    <p class="link-desc">Portable colorimeter for water chemistry testing (chlorine, pH, etc.). Covers reagent use, calibration, and result interpretation.</p>
+    <div class="tag-list">
+      <span class="tag">Water Testing</span>
+      <span class="tag">Diagnostics</span>
+    </div>
+  </a>
+
+  <!-- Mindray N1 -->
+  <a href="patient-monitor-mindray-n1.html" class="card">
+    <h3>Mindray N1 Transport Monitor</h3>
+    <p class="link-desc">Compact transport patient monitor for SpO2, ECG, NIBP, EtCO2, and temperature. Covers parameter setup, alarms, and transport use.</p>
+    <div class="tag-list">
+      <span class="tag">Monitoring</span>
+    </div>
+  </a>
+
+</div><!-- /card-grid -->
+
+<!-- ===== Related Sections ===== -->
+<h2>Major Equipment (Dedicated Sections)</h2>
+<p>The following equipment has its own dedicated section due to complexity:</p>
 <ul class="page-list">
-  <li><a href="cocoon-warming.html">Cocoon Warming Device</a></li>
-  <li><a href="braun-infusomat.html">Braun Infusomat</a></li>
-  <li><a href="ecg-schiller-at102g2.html">ECG — Schiller AT-102 G2</a></li>
-  <li><a href="oxygen-invacare-platinum10.html">Oxygen — Invacare Platinum 10</a></li>
-  <li><a href="suction-laerdal-lsu.html">Suction — Laerdal LSU</a></li>
-  <li><a href="incubator-millipore-xx631.html">Incubator — Millipore XX631</a></li>
-  <li><a href="water-colorimeter-hach-dr900.html">Water Colorimeter — Hach DR900</a></li>
-  <li><a href="patient-monitor-mindray-n1.html">Patient Monitor — Mindray N1</a></li>
+  <li>
+    <a href="../zoll-propaq/index.html">ZOLL Propaq MD</a>
+    <span class="link-desc">— Multifunction monitor/defibrillator: ECG, SpO2, NIBP, EtCO2, defibrillation, pacing, 12-lead</span>
+  </li>
+  <li>
+    <a href="../zoll-emv-731/index.html">ZOLL EMV+ 731 Ventilator</a>
+    <span class="link-desc">— Portable transport ventilator: AC, SIMV, CPAP, BiLevel, NIV modes</span>
+  </li>
 </ul>
+
 </main>
-<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v0 framework</footer>
+
+<footer class="site-footer">Last updated: [placeholder] &bull; Offline-first &bull; v2 framework</footer>
 </body>
 </html>
