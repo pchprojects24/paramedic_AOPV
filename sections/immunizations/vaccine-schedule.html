@@ -3,9 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CAF Vaccine Schedule — Paramedic Aid Memoir</title>
+<title>NAS Immunization Schedule — Paramedic Aid Memoir</title>
 <link rel="stylesheet" href="../../styles/style.css">
 <script src="../../scripts/app.js" defer></script>
+<style>
+.imm-table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:0.9rem; }
+.imm-table th { background:#003366; color:#fff; text-align:left; padding:0.6rem 0.5rem; }
+.imm-table td { padding:0.6rem 0.5rem; border-bottom:1px solid #d0d7de; vertical-align:top; }
+.imm-table tr:nth-child(even) { background:#f9f9f9; }
+.imm-table .vaccine-name { font-weight:700; }
+.imm-table .vaccine-route { color:#555; font-size:0.88rem; }
+.imm-table .live-tag { display:inline-block; background:#fff3cd; border:1px solid #d4a017; border-radius:3px; padding:0.1rem 0.4rem; font-size:0.78rem; font-weight:600; color:#856404; margin-top:0.25rem; }
+.imm-table .note { color:#555; font-size:0.85rem; font-style:italic; }
+</style>
 </head>
 <body>
 <header class="site-header">
@@ -14,35 +24,167 @@
 <a href="index.html">&larr; Immunizations</a>
 </header>
 <main class="content">
-<h1>CAF Vaccine Schedule</h1>
-<p class="scope-block">Standard immunizations administered to Canadian Armed Forces members. Always confirm current CF H Svcs Gp directives — schedules may change with new NACI recommendations or operational requirements.</p>
+<h1>NAS Immunization Schedule</h1>
+<p class="scope-block">Standard NAS immunization schedule. Always confirm current CF H Svcs Gp directives — schedules may change with new NACI recommendations or operational requirements.</p>
 
-<h2>Routine CAF Immunizations</h2>
-<p>Every CAF member must maintain currency on the following vaccines as part of their baseline immunization profile:</p>
-<ul>
-  <li><strong>Tetanus–Diphtheria–Pertussis (Tdap/Td):</strong> Tdap once in adulthood, then Td booster every 10 years. Ensure wound-related boosters are given if &gt;5 years since last dose.</li>
-  <li><strong>Influenza (Inactivated):</strong> Annually, typically Oct–Nov. All CAF members are required to receive the seasonal flu vaccine each year.</li>
-  <li><strong>Hepatitis A:</strong> Two-dose series (0, 6–12 months). Required for all CAF members.</li>
-  <li><strong>Hepatitis B:</strong> Three-dose series (0, 1, 6 months). Anti-HBs titre checked post-series; non-responders may need a second series.</li>
-  <li><strong>Hepatitis A+B Combined (Twinrix):</strong> Three-dose series (0, 1, 6 months) or accelerated schedule (0, 7d, 21d + 12-month booster). Often used in lieu of separate Hep A and Hep B series.</li>
-  <li><strong>MMR (Measles–Mumps–Rubella):</strong> Two documented doses or serologic proof of immunity. Born before 1970 generally considered immune to measles.</li>
-  <li><strong>Polio (IPV):</strong> Primary series plus one adult booster if not previously received.</li>
-  <li><strong>Varicella:</strong> Two doses if no documented history of disease or serology negative. Check titre if uncertain.</li>
-  <li><strong>Meningococcal (Conjugate — Men-C-ACYW):</strong> One dose; required for all CAF personnel.</li>
-</ul>
+<h2>Routine NAS Immunizations</h2>
+<table class="imm-table">
+<thead>
+<tr>
+  <th>Vaccine</th>
+  <th>Dose / Route</th>
+  <th>Schedule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>
+    <span class="vaccine-name">Hep A (Havrix)</span><br>
+    <span class="vaccine-route">Person-to-person or water contamination</span>
+  </td>
+  <td>1 mL IM</td>
+  <td>2 doses: initial &amp; 6 months</td>
+</tr>
+<tr>
+  <td>
+    <span class="vaccine-name">Hep B (Engerix)</span><br>
+    <span class="vaccine-route">Blood</span>
+  </td>
+  <td>1 mL IM</td>
+  <td>3 doses: initial, 1 month &amp; 6 months<br><span class="note">Two Twinrix doses counts as one dose</span></td>
+</tr>
+<tr>
+  <td>
+    <span class="vaccine-name">Tetanus, Diphtheria &amp; Pertussis (Adacel / Boostrix)</span><br>
+    <span class="vaccine-route">OR Tetanus &amp; Diphtheria</span><br>
+    <span class="vaccine-route">Respiratory, contaminated soil</span>
+  </td>
+  <td>0.5 mL IM</td>
+  <td>
+    3 doses then booster every 10 years:<br>
+    1. Initial (Tdap-IPV)<br>
+    2. After 8 weeks — give Polio and Td absorbed<br>
+    3. 6–12 months after 2nd dose — give Polio and Td absorbed<br>
+    4. After 1 month — give Polio<br>
+    <span class="note">One Tdap must be given as an adult</span>
+  </td>
+</tr>
+<tr>
+  <td>
+    <span class="vaccine-name">Polio (Imovax)</span><br>
+    <span class="vaccine-route">Fecal-oral</span>
+  </td>
+  <td>0.5 mL SC</td>
+  <td>4 doses: initial, 8 weeks, 6–12 months, and 4 weeks after last<br><span class="note">Refer to Tdap schedule above — given concurrently</span></td>
+</tr>
+<tr>
+  <td>
+    <span class="vaccine-name">MMR</span><br>
+    <span class="vaccine-route">Airborne</span>
+  </td>
+  <td>0.5 mL SC<br><span class="live-tag">Live vaccine</span></td>
+  <td>2 doses, one month apart<br><span class="note">Rashes and fever are common adverse effects</span></td>
+</tr>
+<tr>
+  <td>
+    <span class="vaccine-name">Varicella</span><br>
+    <span class="vaccine-route">Respiratory, blisters</span>
+  </td>
+  <td>0.5 mL SC<br><span class="live-tag">Live vaccine</span></td>
+  <td>If no reported history of disease and titres show non-immune:<br>2 doses — initial and 1 month<br><span class="note">Rashes are a common adverse effect</span></td>
+</tr>
+<tr>
+  <td>
+    <span class="vaccine-name">Meningitis (Nimenrix)</span><br>
+    <span class="vaccine-route">Respiratory</span>
+  </td>
+  <td>0.5 mL IM</td>
+  <td>Booster every 5 years, as required<br><span class="note">Required for close quarters (ships, barracks)</span></td>
+</tr>
+</tbody>
+</table>
 
-<h2>Deployment / Operational Immunizations</h2>
-<p>Additional vaccines may be required based on area of operations, threat assessment, and CF H Svcs Gp directives:</p>
-<ul>
-  <li><strong>Yellow Fever:</strong> Single dose (live vaccine); required for travel to endemic regions in Africa and South America. Valid for life per WHO (confirm CAF policy). Must be administered at a designated Yellow Fever Vaccination Centre.</li>
-  <li><strong>Typhoid:</strong> Injectable (Vi polysaccharide) — one dose, revaccinate every 3 years if risk continues. Oral (Ty21a) — 4 capsules over 7 days, revaccinate every 7 years.</li>
-  <li><strong>Japanese Encephalitis:</strong> Two-dose series (0, 28 days) for deployment to endemic areas in Asia/Western Pacific.</li>
-  <li><strong>Rabies (Pre-exposure):</strong> Three-dose series (0, 7, 21–28 days) for personnel at risk. Post-exposure still requires additional doses even if pre-vaccinated.</li>
-  <li><strong>Cholera / ETEC (Dukoral):</strong> Two oral doses (1–6 weeks apart) for deployments to endemic areas. Booster after 2 years.</li>
-  <li><strong>Anthrax:</strong> As directed by Surg Gen for specific threat environments. Multi-dose intramuscular series.</li>
-  <li><strong>Smallpox:</strong> As directed for specific threat environments. Live vaccine with significant contraindications.</li>
-  <li><strong>COVID-19:</strong> As per current CF H Svcs Gp directives and NACI recommendations.</li>
-</ul>
+<h2>Operational / Travel Vaccines</h2>
+<table class="imm-table">
+<thead>
+<tr>
+  <th>Vaccine</th>
+  <th>Dose / Route</th>
+  <th>Schedule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>
+    <span class="vaccine-name">Yellow Fever</span><br>
+    <span class="vaccine-route">Mosquitos</span>
+  </td>
+  <td>0.5 mL SC<br><span class="live-tag">Live vaccine</span></td>
+  <td>Once in a lifetime<br>Some deployments may require booster. 10 days to be effective.<br><span class="note">Attacks liver — <strong>egg allergy contraindication</strong>, no breastfeeding</span></td>
+</tr>
+<tr>
+  <td>
+    <span class="vaccine-name">Typhoid (Typhim Vi)</span><br>
+    <span class="vaccine-route">Food, water, feces</span>
+  </td>
+  <td>0.5 mL IM</td>
+  <td>Booster every 3 years, as required</td>
+</tr>
+<tr>
+  <td>
+    <span class="vaccine-name">Tick-Borne Encephalitis</span><br>
+    <span class="vaccine-route">European ticks</span>
+  </td>
+  <td>0.5 mL IM</td>
+  <td>3 doses: initial, 1–3 months, and 5–12 months after last</td>
+</tr>
+<tr>
+  <td>
+    <span class="vaccine-name">Japanese Encephalitis (Ixiaro)</span><br>
+    <span class="vaccine-route">Mosquitos, birds</span>
+  </td>
+  <td>0.5 mL IM</td>
+  <td>Primary: initial and 28 days (or initial &amp; 7 days)<br>Booster: 12–24 months later, if required</td>
+</tr>
+<tr>
+  <td>
+    <span class="vaccine-name">Rabies (Rabipur)</span><br>
+    <span class="vaccine-route">Animal saliva</span>
+  </td>
+  <td>1.0 mL IM</td>
+  <td>Pre-exposure: 3 doses (or 2 if time is short) — Day 0, Day 7, Day 21–28<br><span class="note">No booster needed after 3 doses unless a vet or high-risk occupation</span></td>
+</tr>
+<tr>
+  <td>
+    <span class="vaccine-name">Cholera</span><br>
+    <span class="vaccine-route">Contaminated food/water</span>
+  </td>
+  <td>Oral</td>
+  <td>2 doses: 1–6 weeks apart, at least 1 week before travel</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Other Vaccines</h2>
+<table class="imm-table">
+<thead>
+<tr>
+  <th>Vaccine</th>
+  <th>Dose / Route</th>
+  <th>Schedule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>
+    <span class="vaccine-name">Gardasil (HPV)</span><br>
+    <span class="vaccine-route">STI</span>
+  </td>
+  <td>0.5 mL IM</td>
+  <td>2 doses: initial &amp; 6 months<br><span class="note">3rd dose if immunocompromised</span></td>
+</tr>
+</tbody>
+</table>
 
 <h2>Documentation Requirements</h2>
 <ul>
@@ -51,74 +193,6 @@
   <li>Adverse events must be reported using the AEFI (Adverse Event Following Immunization) form and entered into CFHIS.</li>
   <li>Members should carry their yellow WHO International Certificate of Vaccination for international travel.</li>
 </ul>
-
-<h2>Quick Reference — Routine Schedule at a Glance</h2>
-<table style="width:100%; border-collapse:collapse; margin:1rem 0; font-size:0.92rem;">
-<thead>
-<tr style="background:#003366; color:#fff; text-align:left;">
-  <th style="padding:0.5rem;">Vaccine</th>
-  <th style="padding:0.5rem;">Doses</th>
-  <th style="padding:0.5rem;">Schedule</th>
-  <th style="padding:0.5rem;">Booster</th>
-</tr>
-</thead>
-<tbody>
-<tr style="border-bottom:1px solid #d0d7de;">
-  <td style="padding:0.5rem;">Tdap / Td</td>
-  <td style="padding:0.5rem;">1 Tdap + Td series</td>
-  <td style="padding:0.5rem;">Once, then q10yr</td>
-  <td style="padding:0.5rem;">Td every 10 years</td>
-</tr>
-<tr style="border-bottom:1px solid #d0d7de; background:#f9f9f9;">
-  <td style="padding:0.5rem;">Influenza</td>
-  <td style="padding:0.5rem;">1</td>
-  <td style="padding:0.5rem;">Annually (Oct–Nov)</td>
-  <td style="padding:0.5rem;">Annual</td>
-</tr>
-<tr style="border-bottom:1px solid #d0d7de;">
-  <td style="padding:0.5rem;">Hep A</td>
-  <td style="padding:0.5rem;">2</td>
-  <td style="padding:0.5rem;">0, 6–12 mo</td>
-  <td style="padding:0.5rem;">None</td>
-</tr>
-<tr style="border-bottom:1px solid #d0d7de; background:#f9f9f9;">
-  <td style="padding:0.5rem;">Hep B</td>
-  <td style="padding:0.5rem;">3</td>
-  <td style="padding:0.5rem;">0, 1, 6 mo</td>
-  <td style="padding:0.5rem;">Titre-based</td>
-</tr>
-<tr style="border-bottom:1px solid #d0d7de;">
-  <td style="padding:0.5rem;">Twinrix (A+B)</td>
-  <td style="padding:0.5rem;">3 (or 4 accel.)</td>
-  <td style="padding:0.5rem;">0, 1, 6 mo</td>
-  <td style="padding:0.5rem;">Titre-based</td>
-</tr>
-<tr style="border-bottom:1px solid #d0d7de; background:#f9f9f9;">
-  <td style="padding:0.5rem;">MMR</td>
-  <td style="padding:0.5rem;">2</td>
-  <td style="padding:0.5rem;">0, ≥28 days</td>
-  <td style="padding:0.5rem;">None</td>
-</tr>
-<tr style="border-bottom:1px solid #d0d7de;">
-  <td style="padding:0.5rem;">IPV (Polio)</td>
-  <td style="padding:0.5rem;">Series + 1 booster</td>
-  <td style="padding:0.5rem;">Per history</td>
-  <td style="padding:0.5rem;">One adult dose</td>
-</tr>
-<tr style="border-bottom:1px solid #d0d7de; background:#f9f9f9;">
-  <td style="padding:0.5rem;">Varicella</td>
-  <td style="padding:0.5rem;">2</td>
-  <td style="padding:0.5rem;">0, ≥28 days</td>
-  <td style="padding:0.5rem;">None</td>
-</tr>
-<tr>
-  <td style="padding:0.5rem;">Men-C-ACYW</td>
-  <td style="padding:0.5rem;">1</td>
-  <td style="padding:0.5rem;">Single dose</td>
-  <td style="padding:0.5rem;">Per risk assessment</td>
-</tr>
-</tbody>
-</table>
 </main>
 <footer class="site-footer">Last updated: 2026-02-12 &bull; Offline-first &bull; v0 framework</footer>
 </body>
