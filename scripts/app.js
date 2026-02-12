@@ -106,10 +106,39 @@
     setActive(currentIndex);
   }
 
+  /* ── Accordion ── */
+  function initAccordion() {
+    var headers = document.querySelectorAll(".accordion-header");
+    if (headers.length === 0) return;
+
+    Array.prototype.forEach.call(headers, function (header) {
+      header.addEventListener("click", function () {
+        var isExpanded = header.getAttribute("aria-expanded") === "true";
+        var content = header.nextElementSibling;
+
+        if (!content || !content.classList.contains("accordion-content")) return;
+
+        if (isExpanded) {
+          // Collapse
+          header.setAttribute("aria-expanded", "false");
+          content.style.maxHeight = "0";
+        } else {
+          // Expand
+          header.setAttribute("aria-expanded", "true");
+          var inner = content.querySelector(".accordion-content-inner");
+          if (inner) {
+            content.style.maxHeight = inner.scrollHeight + 20 + "px";
+          }
+        }
+      });
+    });
+  }
+
   /* ── Init on DOM ready ── */
   function initPage() {
     initSearch();
     initCarousel();
+    initAccordion();
   }
 
   if (document.readyState === "loading") {
