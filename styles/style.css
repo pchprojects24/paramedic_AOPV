@@ -110,12 +110,17 @@ body.home {
   color: #2f2f2f;
 }
 
-.content ul {
+.content ul,
+.content ol {
   padding-left: 1.25rem;
 }
 
 .content li {
   margin-bottom: 0.35rem;
+}
+
+.content ol {
+  margin-bottom: 1rem;
 }
 
 .content a {
@@ -483,6 +488,28 @@ body.home {
   border: 1px solid #d0d7de;
   border-radius: 6px;
   color: #666;
+}
+
+/* ── Warning callout ── */
+.warning-callout {
+  background: #fff0f0;
+  border-left: 4px solid #cc0000;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.95rem;
+  color: #5a0000;
+}
+
+/* ── Safety note ── */
+.safety-note {
+  background: #fff8e1;
+  border-left: 4px solid #e65100;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.95rem;
+  color: #4a3000;
 }
 
 /* ── Footer ── */

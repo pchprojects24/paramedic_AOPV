@@ -127,7 +127,15 @@
           header.setAttribute("aria-expanded", "true");
           var inner = content.querySelector(".accordion-content-inner");
           if (inner) {
-            content.style.maxHeight = inner.scrollHeight + 20 + "px";
+            // Use none to allow content to size naturally for large sections
+            content.style.maxHeight = inner.scrollHeight + 40 + "px";
+            // After transition, switch to none so nested content can resize
+            content.addEventListener("transitionend", function handler() {
+              if (header.getAttribute("aria-expanded") === "true") {
+                content.style.maxHeight = "none";
+              }
+              content.removeEventListener("transitionend", handler);
+            });
           }
         }
       });
