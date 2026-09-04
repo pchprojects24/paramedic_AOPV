@@ -1,221 +1,170 @@
 # Paramedic Aid Memoir — Development Map
 
-*Last reviewed: 2026-03-16*
+*Last reviewed: 2026-09-04*
 
 ---
 
 ## Project Overview
 
-**Paramedic Aid Memoir** is a static, offline-first HTML reference application for shipboard paramedics. It provides quick access to equipment guides, diagnostic procedures, medical protocols, and operational routines — with no external dependencies, no build step, and no network requirements.
+**Paramedic Aid Memoir** is a static HTML reference for paramedics and
+other medical personnel joining an AOPV. No build step and no package
+manager. See `README.md` for how to run and author it.
+
+The project is served online and is free to depend on a connection. An
+earlier "offline-first" constraint was dropped on 2026-09-04; the site no
+longer claims offline capability anywhere, and external references are
+linked rather than mirrored.
 
 ---
 
-## Tech Stack
+## Where the project actually stands
 
-| Layer | Technology |
-|-------|-----------|
-| Markup | HTML5 (semantic) |
-| Styling | CSS3 — single file `/styles/style.css` |
-| Scripting | Vanilla JavaScript (ES5, IIFE, no dependencies) |
-| Fonts | System font stack only |
-| Build | None — static files served directly |
-| Deployment | Git-based, manual |
+The site is roughly **40% of the way to a usable v1**. What exists is good;
+there is simply less of it than the file count suggests.
 
----
+| | Pages | Notes |
+|---|---|---|
+| Real content | 33 | i-STAT, equipment, Propaq, EMV+ 731, immunizations, water testing |
+| Placeholder shells | 25 | Framework only — heading and "content to be added" |
+| Landing + templates | 2 | `index.html`, i-STAT cartridge template |
 
-## Repository Structure
+### Complete sections
 
-```
-paramedic_AOPV/
-├── index.html                  # Landing page (carousel navigation)
-├── styles/style.css            # Main stylesheet
-├── scripts/app.js              # Carousel, accordion, search skeleton
-│
-├── sections/                   # CANONICAL content location
-│   ├── istat/                  # ✅ Complete (9 files)
-│   ├── equipment/              # ✅ Complete (8 files)
-│   ├── zoll-propaq/            # ✅ Complete (1 accordion file)
-│   ├── zoll-emv-731/           # ✅ Complete (1 accordion file)
-│   ├── immunizations/          # ✅ Complete (5 files)
-│   ├── admin/                  # ⚠️  Minimal (1 file)
-│   ├── water-testing/          # ⚠️  Stub — links to legacy folder
-│   ├── casualty-clearing/      # 🔶 Partial (3 files, some placeholder)
-│   ├── inventory/              # 🔶 Partial (5 files, search unimplemented)
-│   ├── point-of-care-tests/    # 🔴 Placeholder (5 files, no content)
-│   ├── routines/               # 🔴 Placeholder (4 files, no content)
-│   └── protocol-book/          # 🔴 Placeholder (future CAF integration)
-│
-└── [legacy root directories]   # ⚠️  Superseded — pending migration/removal
-    ├── admin/
-    ├── casualty-clearing/
-    ├── equipment-core/
-    ├── equipment-other/
-    ├── inventory-logistics/
-    ├── lab-poct/
-    ├── ports-alongside/
-    ├── protocol-book/
-    ├── routines/
-    └── water-testing/           # ← actual water testing content lives here
-```
+| Section | Pages | Contents |
+|---|---|---|
+| `sections/istat/` | 10 | Overview, daily/weekly checks, QC, troubleshooting, 4 cartridge guides + template |
+| `sections/equipment/` | 9 | Cocoon warming, Braun Infusomat, Schiller ECG, Invacare oxygen, Laerdal suction, Millipore incubator, Mindray N1, Hach DR900 |
+| `sections/zoll-propaq/` | 1 | 7-panel accordion: quick start, how-to, defib, cardioversion, pacing, troubleshooting, resources |
+| `sections/zoll-emv-731/` | 1 | Quick start, common functions, troubleshooting, care & consumables |
+| `sections/immunizations/` | 6 | Schedule, assistant immunizer, cold chain, administration, adverse reactions |
+| `sections/water-testing/` | 5 | Free chlorine, total chlorine, pH, Colilert bacteriology |
 
-### Status Key
-| Symbol | Meaning |
-|--------|---------|
-| ✅ | Complete — content authored and functional |
-| ⚠️  | Partial or structurally incomplete |
-| 🔶 | Mixed — some content exists, some is placeholder |
-| 🔴 | Placeholder only — no real content |
+### Placeholder sections
+
+| Section | Pages | Needs |
+|---|---|---|
+| `sections/point-of-care-tests/` | 5 | Procedures for pregnancy, rapid strep, troponin, monospot |
+| `sections/routines/` | 4 | Alongside, at-sea, and port routine checklists |
+| `sections/casualty-clearing/` | 6 | Roles, organization, fire/flood/isolated-casualty evolutions |
+| `sections/inventory/` | 5 | Inventory list, medication inventory, quick reference, ordering |
+| `sections/admin/` | 2 | Clearing-in, and whatever else belongs here |
+| `sections/protocol-book/` | 1 | Clinical protocol content |
 
 ---
 
-## JavaScript Components (`/scripts/app.js`)
+## The biggest gap: there is no clinical content
 
-| Component | Status | Notes |
-|-----------|--------|-------|
-| Carousel | ✅ Working | Horizontal scroll, dot indicators, prev/next buttons |
-| Accordion | ✅ Working | Dynamic height, collapse/expand |
-| Search | 🔴 Stub | Input renders; message: "No data loaded yet" |
+Every page currently in the repo is about **a machine or a logbook**. There
+are no drug doses, no treatment algorithms, no assessment guides, and
+nothing about what to do when a person is actually sick or injured.
 
----
+For an all-in-one manual aimed at someone *joining* an AOPV, three areas
+matter more than anything on the placeholder list above:
 
-## Content Completion Status
-
-### Complete Sections
-
-**i-STAT (`/sections/istat/`)** — 9 files
-- Overview, daily/weekly checks, QC procedures, troubleshooting, 5 cartridge type guides
-
-**Equipment (`/sections/equipment/`)** — 8 files
-- Cocoon transport incubator, Braun Infusomat, 12-lead ECG, oxygen equipment, suction, incubator, water colorimeter, patient monitor
-
-**ZOLL Propaq MD (`/sections/zoll-propaq/index.html`)**
-- Quick start, how-to guides, defibrillation, cardioversion, pacing, troubleshooting, external resources
-
-**ZOLL EMV+ 731 (`/sections/zoll-emv-731/index.html`)**
-- Quick start, common functions, troubleshooting, care & consumables
-
-**Immunizations (`/sections/immunizations/`)** — 5 files
-- Vaccine schedule, assistant immunizer role, cold chain, administration, adverse reactions
+1. **Onboarding / orientation.** Sick bay layout and where things live, who
+   you report to, the medical footprint of an AOPV (no physician aboard),
+   what reachback exists and how to raise it, what the first week looks
+   like.
+2. **Clinical reference.** Emergency drug card, core algorithms
+   (anaphylaxis, cardiac arrest, seizure), scope of practice, medical
+   direction — when to call and on what.
+3. **Evacuation.** CASEVAC/MEDEVAC planning: Arctic and remote timelines,
+   helo transfer, patient packaging for helo and RHIB, the 9-liner, who
+   authorises.
 
 ---
 
-### Incomplete Sections (Priority Development Areas)
+## Topic backlog inherited from the removed legacy tree
 
-#### 1. Water Testing — Migration Required
-- **Problem:** `/sections/water-testing/index.html` is a stub linking to the legacy `/water-testing/` root folder
-- **Legacy folder contains:** 5 fully authored guides (bacteriology, free-chlorine, pH, total-chlorine)
-- **Action:** Migrate content from `/water-testing/` into `/sections/water-testing/`, update internal links
+The legacy root directories were deleted in the 2026-09-04 cleanup. They
+contained no content, but their page titles encoded intended topics that
+have **no home in `sections/` yet**. Recorded here so the intent is not
+lost:
 
-#### 2. Casualty Clearing — Partial Content
-- **Files:** `index.html`, `roles-and-organization.html`, `evolutions.html`
-- **Action:** Complete "content to be added" placeholders; expand evolutions (fire, flood, isolated casualty)
-
-#### 3. Inventory — Search Unimplemented
-- **Files:** `index.html`, `ordering.html`, `inventory-list.html`, `medication-inventory.html`, `medications-quick-reference.html`
-- **Problem:** `inventory-list.html` and `medication-inventory.html` have search UI with no data backend
-- **Action:** Define data format (JSON array in page or linked file), implement JS filtering
-
-#### 4. Point-of-Care Tests — Empty Frameworks
-- **Files:** `index.html` + 4 test files (Pregnancy, Rapid Strep, Troponin, Monospot)
-- **Action:** Author procedure content for each test type
-
-#### 5. Ship Routines — All Placeholder
-- **Files:** `index.html`, `alongside.html`, `at-sea.html`, `port.html`
-- **Action:** Author checklist/procedure content for each operational context
-
-#### 6. Protocol Book — Future Integration
-- **File:** `index.html` (placeholder for CAF Med Tech/Paramedic protocol book)
-- **Action:** Determine source format and extraction/display approach
-
-#### 7. Admin — Minimal
-- **File:** `clearing-in.html` only
-- **Action:** Identify additional administrative procedures to document
+- **Ports & Alongside** — general arrival checklist, alongside medical
+  tasks, port-specific guides (St. John's NL was stubbed). This was a
+  top-level section in the original site and is currently absent from the
+  navigation entirely. Decide deliberately whether it returns.
+- **Where to Find Things** — sick bay stowage guide. Overlaps with the
+  onboarding gap above and is probably high value.
+- **Medical Duty Expectations** — what is expected of the medical department
+  day to day.
+- **QC, Storage & Expiry** — a cross-cutting POCT page, separate from the
+  per-test procedures.
+- **Forms & Templates** — admin paperwork.
+- **Medication Card Template** — a per-drug card format for the medication
+  quick reference.
+- **What Is Casualty Clearing? / Paramedic Role / Checklists** — finer
+  breakdown than the current `sections/casualty-clearing/` provides.
 
 ---
 
-## Technical Debt
+## Technical debt
 
-### High Priority
+### Resolved 2026-09-04
 
-| Issue | Location | Action |
-|-------|----------|--------|
-| Legacy directory duplication | Root-level folders | Migrate content then remove after verifying all links updated |
-| Water testing fragmentation | `/sections/water-testing/` + `/water-testing/` | Consolidate into sections/ |
-| Search not functional | `inventory-list.html`, `medication-inventory.html` | Implement data + filter logic in app.js |
-| No README | Repository root | Create README.md with setup, purpose, contribution guidelines |
+- Removed 47 orphaned, contentless legacy pages across nine root
+  directories.
+- Removed `index.backup.html` and the superseded root `style.css`.
+- Migrated water testing into `sections/water-testing/` on the shared
+  stylesheet, replacing ~150 lines of duplicated inline CSS per page.
+- Fixed 5 broken `../equipment/` links.
+- Added `README.md` and `scripts/check-links.py`.
+- Dropped the offline-first constraint: removed the claim from all 58
+  page footers, the landing-page hero pill, the source-file comments, and
+  the "requires internet" labels on external references.
 
-### Medium Priority
+### Outstanding
 
-| Issue | Location | Action |
-|-------|----------|--------|
-| Legacy `style.css` at root | `/style.css` | Verify nothing references it; delete |
-| Single CSS breakpoint | `/styles/style.css` | Add tablet (768px) breakpoint |
-| Incomplete ARIA coverage | Various pages | Audit and add missing labels, roles |
-| No skip-to-content link | All pages | Add to shared header pattern |
+| Priority | Issue | Action |
+|---|---|---|
+| High | Legacy `water-testing/` folder still on disk | Content is migrated; delete the 5 files. See note below. |
+| High | Search is non-functional | `initSearch` in `app.js` always answers "no data loaded yet". Build a generated `search-index.json` and filter client-side. |
+| Medium | Header/footer duplicated across every page | A shared JS include or a page generator; do this *before* the file count doubles during the content phase. |
+| Medium | Hand-typed footer dates | Move to a per-page review date with a source-of-truth line. |
+| Medium | Accordion collapse does not animate | `initAccordion` sets `max-height: none` on `transitionend`; `none → 0` is not animatable. |
+| Medium | Accordion headers lack `aria-controls` | Add id/`aria-controls` pairing. |
+| Low | One CSS breakpoint (480px) | Add a tablet breakpoint. |
+| Low | No print stylesheet | Checklists will get printed. |
+| Low | No dark mode | Night sick bay. |
+| Low | No CI | Wire `scripts/check-links.py` into a GitHub Action. |
+| Low | Carousel hides 3 of 4 top-level groups | Reconsider against a flat index once search works. |
 
-### Low Priority
-
-| Issue | Notes |
-|-------|-------|
-| No meta descriptions | Add to all pages for potential indexing |
-| No automated link-checking | Consider adding a simple CI check |
-| No HTML validation CI | Could add htmlhint or similar |
-| index.backup.html at root | Remove once confirmed unneeded |
-
----
-
-## Recommended Development Sequence
-
-### Phase 1 — Structural Cleanup
-1. Create `README.md` (purpose, setup, structure, contribution guide)
-2. Migrate `/water-testing/` content into `/sections/water-testing/`
-3. Delete `style.css` (root legacy) and `index.backup.html` after verification
-4. Audit and remove or archive remaining legacy root directories
-
-### Phase 2 — Complete Placeholder Sections
-1. Point-of-care tests (4 test procedures)
-2. Ship routines (alongside, at-sea, port checklists)
-3. Casualty clearing (complete placeholder content)
-4. Admin (identify missing procedures)
-
-### Phase 3 — Implement Search
-1. Define JSON data format for inventory/medication lists
-2. Implement client-side filter in `app.js`
-3. Populate data files for both inventory pages
-
-### Phase 4 — Protocol Book
-1. Determine source material format (PDF, Word, etc.)
-2. Decide on display approach (inline HTML, embedded PDF, paginated accordion)
-3. Author or extract content
-
-### Phase 5 — Quality & Polish
-1. Add tablet/desktop breakpoints to CSS
-2. Complete ARIA audit
-3. Add skip-to-content links
-4. Add meta descriptions to all pages
-5. Set up basic CI (link checker, HTML validation)
+> **Note on the legacy `water-testing/` folder:** its content has been fully
+> migrated to `sections/water-testing/` and is no longer linked from
+> anywhere. The five files remain on disk only because the automated
+> deletion was blocked during the cleanup. Remove with:
+> `git rm -r water-testing/`
+> `scripts/check-links.py` will report zero broken links and zero orphans
+> once it is gone.
 
 ---
 
-## File Count Summary
+## Recommended sequence
 
-| Category | Count |
-|----------|-------|
-| HTML files (sections/) | 53 |
-| HTML files (legacy/) | 57 |
-| CSS files | 2 |
-| JS files | 1 |
-| **Total** | **113** |
+**Phase 1 — Structural cleanup.** *(done 2026-09-04, except the folder note above)*
 
-Total codebase: ~6,200 lines (~1 MB)
+**Phase 2 — Make navigation work.**
+1. Generate `search-index.json` from page content; wire up real filtering
+   in `app.js` to replace the stub.
+2. Add CI running the link checker.
 
----
+Now that the site can rely on a connection, a search library from a CDN is
+a legitimate option here rather than hand-rolling the filter — weigh it
+against the current zero-dependency footprint, which loads fast on a poor
+connection.
 
-## Notes for Contributors
+**Phase 3 — Fix the authoring model.** Shared header/footer, page
+generator or template script. Do this before writing 40 more pages.
 
-- **No build step** — edit HTML/CSS/JS files directly and open in browser
-- **No external dependencies** — do not add CDN links; keep everything self-contained
-- **Offline-first is a hard requirement** — no fetch calls to external APIs
-- **Content dates** — use HTML comments (`<!-- Updated: YYYY-MM-DD -->`) at the top of pages
-- **Navigation pattern** — all pages should include the shared sticky header with a "Home" link back to `index.html`
-- **Accordion pattern** — for long-form single-page content, use the accordion component as implemented in `zoll-propaq/index.html`
+**Phase 4 — Content, in value order.**
+1. Onboarding / orientation
+2. CASEVAC / MEDEVAC
+3. Point-of-care tests
+4. Ship routines
+5. Casualty clearing
+6. Inventory and medications
+7. Protocol book
+
+**Phase 5 — Polish.** Dark mode, print stylesheet, tablet breakpoint,
+ARIA audit, skip-to-content, back-to-top.
