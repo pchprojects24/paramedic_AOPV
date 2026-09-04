@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Offline link and orphan checker for the Paramedic Aid Memoir.
+"""Link and orphan checker for the Paramedic Aid Memoir.
 
 Usage:  python3 scripts/check-links.py
 
@@ -10,8 +10,8 @@ Checks, over every .html file in the repo:
   3. Pages still referencing a stylesheet or script that does not exist.
 
 Exits 1 if any broken link is found, so it can be used as a CI gate.
-External (http/https) links are listed but not fetched — the site is
-offline-first and must never depend on network access to validate.
+External (http/https) links are counted but not fetched, so the check runs
+fast and gives the same answer with or without a network connection.
 """
 
 import os

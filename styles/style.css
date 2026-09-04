@@ -1,5 +1,5 @@
 /* Paramedic Aid Memoir — shared stylesheet */
-/* Offline-first: system fonts only, no external dependencies */
+/* System font stack; no external font loading. */
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -683,11 +683,4 @@ body.home {
 .link-list a:focus {
   background: #e8f0fe;
   border-color: #003366;
-}
-
-.link-list .external-tag {
-  display: block;
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: #6a6a6a;
 }

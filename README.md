@@ -1,12 +1,11 @@
 # Paramedic Aid Memoir
 
-An offline-first quick-reference manual for paramedics and other medical
-personnel joining an Arctic and Offshore Patrol Vessel (AOPV).
+A quick-reference manual for paramedics and other medical personnel
+joining an Arctic and Offshore Patrol Vessel (AOPV).
 
 It is a plain static website: HTML, one stylesheet, one small vanilla
-JavaScript file. No build step, no package manager, no external
-dependencies, no network calls. Clone it, open `index.html` in a browser,
-and it works — including with no connectivity at sea.
+JavaScript file. No build step and no package manager — clone it, open
+`index.html` in a browser, and it works.
 
 ## Running it
 
@@ -75,7 +74,7 @@ the same skeleton:
 <p class="scope-block">One line on what this page covers and when to use it.</p>
 ...
 </main>
-<footer class="site-footer">Last updated: YYYY-MM-DD &bull; Offline-first</footer>
+<footer class="site-footer">Last updated: YYYY-MM-DD</footer>
 </body>
 </html>
 ```
@@ -91,19 +90,19 @@ Adjust the `../../` prefixes to the page's depth.
 | `.safety-note` | Orange caution |
 | `.warning-callout` | Red warning — hazard or hard stop |
 | `.page-list` | Vertical list of links to other pages |
-| `.link-list` | Link list with room for an `.external-tag` sub-label |
+| `.link-list` | Link list, used for reference and external links |
 | `.card-grid` | Grid of large tap targets |
 | `<details>`/`<summary>` | Collapsible detail, styled by default |
 | `.accordion` | Long single-page content — see `sections/zoll-propaq/index.html` |
 
 ## House rules
 
-- **Offline-first is a hard requirement.** No CDN links, no web fonts, no
-  external scripts, no `fetch` to external APIs. If you add an external
-  reference link, tag it so the reader knows it needs connectivity:
-  `<span class="external-tag">External link &mdash; requires internet</span>`
-- **No build step.** Edit files directly.
-- **System fonts only.**
+- **No build step.** Edit files directly; the site is served as-is.
+- **Keep dependencies deliberate.** The site currently ships zero external
+  dependencies and loads fast on a bad connection. If you add a library,
+  font, or CDN link, add it because it earns its place — not by habit.
+- **Link out freely.** Manufacturer manuals and official method PDFs are
+  linked directly rather than mirrored.
 - **Every page gets a `Last updated:` date** in the footer, and a
   `<meta name="description">`.
 - **Every page links Home**, and back to its section index.
@@ -116,8 +115,9 @@ python3 scripts/check-links.py
 ```
 
 Reports broken internal links and pages unreachable from `index.html`.
-Exits non-zero if any link is broken, so it works as a CI gate. It never
-makes network requests; external links are counted but not fetched.
+Exits non-zero if any link is broken, so it works as a CI gate. External
+links are counted but not fetched, so it runs fast and gives the same
+answer with or without a connection.
 
 ## Scope and status
 

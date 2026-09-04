@@ -6,10 +6,14 @@
 
 ## Project Overview
 
-**Paramedic Aid Memoir** is a static, offline-first HTML reference for
-paramedics and other medical personnel joining an AOPV. No build step, no
-dependencies, no network requirement. See `README.md` for how to run and
-author it.
+**Paramedic Aid Memoir** is a static HTML reference for paramedics and
+other medical personnel joining an AOPV. No build step and no package
+manager. See `README.md` for how to run and author it.
+
+The project is served online and is free to depend on a connection. An
+earlier "offline-first" constraint was dropped on 2026-09-04; the site no
+longer claims offline capability anywhere, and external references are
+linked rather than mirrored.
 
 ---
 
@@ -106,6 +110,9 @@ lost:
   stylesheet, replacing ~150 lines of duplicated inline CSS per page.
 - Fixed 5 broken `../equipment/` links.
 - Added `README.md` and `scripts/check-links.py`.
+- Dropped the offline-first constraint: removed the claim from all 58
+  page footers, the landing-page hero pill, the source-file comments, and
+  the "requires internet" labels on external references.
 
 ### Outstanding
 
@@ -113,8 +120,6 @@ lost:
 |---|---|---|
 | High | Legacy `water-testing/` folder still on disk | Content is migrated; delete the 5 files. See note below. |
 | High | Search is non-functional | `initSearch` in `app.js` always answers "no data loaded yet". Build a generated `search-index.json` and filter client-side. |
-| High | "Offline-first" is claimed but not implemented | No service worker, no manifest. Hosted on GitHub Pages it will not work offline or install to a home screen. |
-| Medium | 26 external PDF links are useless at sea | Mirror locally, or keep the `.external-tag` labelling now used in water testing. |
 | Medium | Header/footer duplicated across every page | A shared JS include or a page generator; do this *before* the file count doubles during the content phase. |
 | Medium | Hand-typed footer dates | Move to a per-page review date with a source-of-truth line. |
 | Medium | Accordion collapse does not animate | `initAccordion` sets `max-height: none` on `transitionend`; `none → 0` is not animatable. |
@@ -139,10 +144,15 @@ lost:
 
 **Phase 1 — Structural cleanup.** *(done 2026-09-04, except the folder note above)*
 
-**Phase 2 — Make it a real offline app.**
-1. Service worker + web manifest + icons; verify install-to-home-screen.
-2. Generate `search-index.json` from page content; wire up real filtering.
-3. Add CI running the link checker.
+**Phase 2 — Make navigation work.**
+1. Generate `search-index.json` from page content; wire up real filtering
+   in `app.js` to replace the stub.
+2. Add CI running the link checker.
+
+Now that the site can rely on a connection, a search library from a CDN is
+a legitimate option here rather than hand-rolling the filter — weigh it
+against the current zero-dependency footprint, which loads fast on a poor
+connection.
 
 **Phase 3 — Fix the authoring model.** Shared header/footer, page
 generator or template script. Do this before writing 40 more pages.

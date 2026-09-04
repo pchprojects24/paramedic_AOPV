@@ -1,5 +1,4 @@
 /* Paramedic Aid Memoir — shared JS */
-/* Offline-first: no external dependencies */
 
 (function () {
   "use strict";
